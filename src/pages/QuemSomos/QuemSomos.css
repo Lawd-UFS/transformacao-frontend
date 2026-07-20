@@ -1,0 +1,277 @@
+/* =====================
+   Placeholders genéricos
+   ===================== */
+.placeholder-image {
+  background-color: var(--bg-topbar);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  border: 2px dashed var(--action-color);
+  width: 100%;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 380px;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-placeholder {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #032261 100%);
+}
+
+.hero-placeholder .hero-overlay {
+  display: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(4, 50, 139, 0.55) 0%,
+    rgba(4, 50, 139, 0.85) 100%
+  );
+}
+
+.hero-body {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 50px;
+}
+
+.hero-title {
+  color: var(--secondary-color);
+  font-size: 4.5rem;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.intro-section {
+  padding: 70px 20px;
+}
+
+.intro-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.intro-image-wrapper {
+  flex: 1 1 45%;
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.intro-image-placeholder {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--primary-color);
+  background-color: var(--bg-topbar);
+  border-radius: 16px;
+  border: 2px dashed var(--action-color);
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+.intro-text {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-left: 5px solid var(--secondary-color);
+  padding-left: 20px;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  line-height: 1.7;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.intro-text p + p {
+  border-top: 1px solid rgba(4, 50, 139, 0.1);
+  padding-top: 16px;
+  margin-top: 8px;
+}
+
+.como-comecou-section {
+  padding: 40px 20px 30px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 16px;
+}
+
+.section-title.center {
+  text-align: center;
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.como-comecou-text {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+
+.identity-section {
+  padding: 60px 0;
+  background-color: transparent;
+}
+
+.identity-section > .identity-cards {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.identity-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.identity-card {
+  border-radius: 20px;
+  border: 1px solid var(--action-color);
+  overflow: hidden;
+  box-shadow: 2px 8px 24px rgba(4, 50, 139, 0.1);
+}
+
+.card-header {
+  background-color: var(--primary-color);
+  padding: 18px 30px;
+  text-align: center;
+}
+
+.card-header .card-title {
+  color: var(--secondary-color);
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.card-body {
+  background-color: #fff;
+  padding: 28px 30px;
+  color: var(--text-dark);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.identity-row {
+  display: flex;
+  gap: 24px;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.valores-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+  gap: 12px;
+}
+
+.valores-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 18px;
+  break-inside: avoid;
+}
+
+.valores-list li::before {
+  content: "•";
+  color: var(--secondary-color);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* =====================
+   Collage Section
+   ===================== */
+.collage-section {
+  padding: 40px 20px;
+}
+
+.collage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.collage-photo {
+  height: 250px;
+  border-radius: 12px;
+}
+
+/* =====================
+   Timeline Section
+   ===================== */
+.timeline-section {
+  padding: 60px 20px 80px;
+}
+
+/* =====================
+   Responsividade
+   ===================== */
+@media (max-width: 900px) {
+  .intro-content {
+    flex-direction: column;
+  }
+
+  .intro-image-wrapper {
+    flex: unset;
+    width: 100%;
+    max-height: 320px;
+  }
+
+  .identity-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .highlight-text {
+    font-size: 1.15rem;
+  }
+
+  .collage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .valores-list {
+    columns: 1;
+  }
+}
