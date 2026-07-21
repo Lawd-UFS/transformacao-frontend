@@ -1,5 +1,7 @@
 import React from 'react';
 import { Timeline } from '../../components/Timeline/Timeline';
+import equipeImg from '../../assets/quem-somos-equipe.jpg';
+import heroImg from '../../assets/quem-somos-banner.png';
 
 import './QuemSomos.css';
 
@@ -34,7 +36,7 @@ const timelineEvents = [
 export const QuemSomos: React.FC = () => {
   return (
     <div className="quem-somos-page">
-      <section className="hero-section hero-placeholder">
+      <section className="hero-section" style={{ backgroundImage: `url(${heroImg})` }}>
         <div className="hero-overlay" />
         <div className="container hero-body">
           <h1 className="hero-title">Nossa<br/>história</h1>
@@ -44,7 +46,7 @@ export const QuemSomos: React.FC = () => {
       <section className="intro-section container">
         <div className="intro-content">
           <div className="intro-image-wrapper">
-            <div className="intro-image-placeholder">Imagem da Equipe</div>
+            <img src={equipeImg} alt="Equipe TransformAção" className="intro-team-photo" />
           </div>
           <div className="intro-text">
             <p className="highlight-text">
