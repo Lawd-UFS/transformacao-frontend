@@ -1,0 +1,77 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  /* Imagem de fundo centralizada e cobrindo toda a área */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ── Overlay: degradê da esquerda (opaco) para direita (translúcido) ── */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(var(--color-primary-500-rgb), 0.88) 0%,
+    rgba(var(--color-primary-500-rgb), 0.75) 35%,
+    rgba(var(--color-primary-500-rgb), 0.45) 65%,
+    rgba(var(--color-primary-500-rgb), 0.20) 100%
+  );
+  z-index: 1;
+}
+
+/* ── Área de conteúdo (texto) ── */
+.hero__conteudo {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--space-16) var(--container-padding);
+}
+
+/* ── Título principal ── */
+.hero__titulo {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: var(--line-height-snug);
+  /* max-width estreito para forçar quebra em 3 linhas (~2 palavras por linha) */
+  max-width: 420px;
+  letter-spacing: -0.01em;
+}
+
+/* "Onde o amor se torna" — âmbar */
+.hero__titulo-destaque {
+  color: var(--color-accent-500);
+}
+
+/* "ação." — branco */
+.hero__titulo-branco {
+  color: var(--color-neutral-0);
+}
+
+/* ── Responsividade ── */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero__titulo {
+    font-size: var(--font-size-3xl);
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__titulo {
+    font-size: var(--font-size-2xl);
+    max-width: 260px;
+  }
+}

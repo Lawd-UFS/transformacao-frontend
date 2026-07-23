@@ -1,0 +1,110 @@
+/* ==========================================================================
+   SecaoSobre — Seção "Sobre o projeto" com intro + card de estatísticas
+   ========================================================================== */
+
+.secao-sobre {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--space-16) var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+/* ── Linha intro: texto à esquerda, foto à direita ── */
+.secao-sobre__intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.secao-sobre__texto {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
+  text-align: justify;
+}
+
+.secao-sobre__texto-destaque {
+  color: var(--color-text-default);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ── Foto ── */
+.secao-sobre__imagem-wrapper {
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.secao-sobre__imagem {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Card de estatísticas ── */
+.secao-sobre__card-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+
+  background-color: var(--color-primary-600);
+  border: 3px solid var(--color-accent-500);
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-10) var(--space-8);
+}
+
+/* ── Item de estatística ── */
+.secao-sobre__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.secao-sobre__stat-numero {
+  font-family: var(--font-family-base);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: var(--font-weight-black);
+  color: var(--color-accent-500);
+  line-height: 1;
+}
+
+.secao-sobre__stat-descricao {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-0);
+  text-align: center;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 768px) {
+  .secao-sobre__intro {
+    grid-template-columns: 1fr;
+  }
+
+  .secao-sobre__imagem {
+    height: 220px;
+  }
+
+  .secao-sobre__card-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .secao-sobre__stat {
+    border-bottom: 1px solid rgba(var(--color-primary-500-rgb), 0.3);
+    padding-bottom: var(--space-6);
+  }
+
+  .secao-sobre__stat:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
