@@ -22,12 +22,12 @@ export function Hero({
       aria-label="Seção principal"
     >
       {/* Overlay com degradê azul sobre a foto */}
-      <div className="hero__overlay" />
+      <div className="hero_overlay" />
 
-      <div className="hero__conteudo">
-        <h1 className="hero__titulo">
-          <span className="hero__titulo-destaque">{textoDestaque} </span>
-          <span className="hero__titulo-branco">{textoBranco}</span>
+      <div className="hero_conteudo">
+        <h1 className="hero_titulo">
+          <span className="hero_titulo-destaque">{textoDestaque} </span>
+          <span className="hero_titulo-branco">{textoBranco}</span>
         </h1>
       </div>
     </section>

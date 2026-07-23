@@ -1,0 +1,178 @@
+/* ==========================================================================
+   SecaoObras — "Conheça as famílias já impactadas"
+   ========================================================================== */
+
+.secao-obras {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--space-16) var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+/* ── Cabeçalho ── */
+.secao-obras__cabecalho {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.secao-obras__titulo {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-primary-700);
+  line-height: 1.2;
+}
+
+.secao-obras__titulo-destaque {
+  color: var(--color-accent-500);
+}
+
+.secao-obras__subtitulo {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-regular);
+}
+
+/* ── Grid de cards ── */
+.secao-obras__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  width: 100%;
+}
+
+/* ── Card individual ── */
+.obra-card {
+  border-radius: var(--border-radius-xl);
+  border: 3px solid var(--color-accent-500);
+  overflow: hidden;
+  background: var(--color-neutral-0);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.obra-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* O comparador não herda o border-radius do card porque ele é um child direto */
+.obra-card__comparador {
+  width: 100%;
+}
+
+/* Sobrescreve o border-radius/border do comparador dentro do card */
+.obra-card__comparador .comparador {
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* ── Área de informações ── */
+.obra-card__info {
+  padding: var(--space-5) var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: var(--color-bg-subtle, #f0f7ff);
+}
+
+.obra-card__titulo {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-700);
+  line-height: 1.3;
+}
+
+.obra-card__numero {
+  font-weight: var(--font-weight-regular);
+  color: var(--color-primary-500);
+}
+
+/* Localização com ícone de pin */
+.obra-card__localizacao {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1, 4px);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.obra-card__pin {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+}
+
+/* ── Badges de status ── */
+.obra-card__badge {
+  display: inline-block;
+  padding: 2px var(--space-3);
+  border-radius: 999px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  width: fit-content;
+}
+
+.obra-card__badge--andamento {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.obra-card__badge--concluido {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* ── Botão Ver mais ── */
+.secao-obras__rodape {
+  display: flex;
+  justify-content: center;
+}
+
+.secao-obras__btn-ver-mais {
+  padding: var(--space-4) var(--space-10);
+  background: var(--color-primary-600);
+  color: var(--color-neutral-0);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  border-radius: var(--border-radius-xl);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.secao-obras__btn-ver-mais:hover {
+  background: var(--color-primary-700);
+  transform: translateY(-2px);
+}
+
+.secao-obras__btn-ver-mais:active {
+  transform: translateY(0);
+}
+
+/* ── Responsividade ── */
+@media (max-width: 900px) {
+  .secao-obras__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .secao-obras__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .secao-obras__titulo {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+}

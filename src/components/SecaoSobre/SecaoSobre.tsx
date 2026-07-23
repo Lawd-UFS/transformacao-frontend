@@ -14,9 +14,9 @@ interface PropsSecaoSobre {
 }
 
 const estatisticasPadrao: Estatistica[] = [
-  { numero: '+10', descricao: 'Obras Realizadas' },
-  { numero: '+100', descricao: 'Vidas Transformadas' },
-  { numero: '+50', descricao: 'Voluntários em Ação' },
+  { numero: '+10', descricao: 'obras realizadas' },
+  { numero: '+100', descricao: 'vidas transformadas' },
+  { numero: '+50', descricao: 'voluntários em ação' },
 ]
 
 export function SecaoSobre({
