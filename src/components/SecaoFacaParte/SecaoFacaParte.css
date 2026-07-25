@@ -1,0 +1,219 @@
+/* ==========================================================================
+   SecaoFacaParte — CTA cards + carrossel de fotos
+   ========================================================================== */
+
+.secao-faca-parte {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ══════════════════════════════════════════════
+   Bloco 1 — CTA (fundo azul escuro)
+   ══════════════════════════════════════════════ */
+.faca-parte-cta {
+  background-color: var(--color-primary-700);
+  padding: var(--space-16) var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-10);
+}
+
+/* Título */
+.faca-parte-titulo {
+  font-family: var(--font-family-base);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-0);
+  text-align: center;
+}
+
+.faca-parte-titulo-destaque {
+  color: var(--color-accent-500);
+  font-style: italic;
+}
+
+/* Grid de 3 cards */
+.faca-parte-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  width: 100%;
+  max-width: var(--container-max-width);
+}
+
+/* ── Card ── */
+.faca-parte-card {
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-neutral-0);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faca-parte-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+
+/* Cabeçalho azul claro do card */
+.faca-parte-card-header {
+  background-color: var(--color-primary-200, #93c5fd);
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.faca-parte-card-titulo {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-700);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* Corpo branco do card */
+.faca-parte-card-corpo {
+  flex: 1;
+  padding: var(--space-6) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  background: var(--color-neutral-0);
+}
+
+.faca-parte-card-descricao {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary-700);
+  text-align: center;
+  line-height: var(--line-height-relaxed);
+}
+
+/* Botão "Saiba mais" */
+.faca-parte-card-btn {
+  display: inline-block;
+  padding: var(--space-3) var(--space-8);
+  background-color: var(--color-accent-500);
+  color: var(--color-primary-800);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  border-radius: var(--border-radius-md);
+  text-decoration: none;
+  transition: filter 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.faca-parte-card-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* ══════════════════════════════════════════════
+   Bloco 2 — Carrossel de fotos (fundo azul escuro)
+   ══════════════════════════════════════════════ */
+.faca-parte-galeria {
+  background-color: var(--color-primary-800, #1e3a6e);
+  padding: var(--space-6) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  overflow: hidden;
+}
+
+/* Wrapper que mascara o overflow da trilha */
+.galeria-trilha-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Trilha: todos os itens em linha, desliza via transform */
+.galeria-trilha {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.galeria-foto-wrapper {
+  flex: 0 0 25%;
+  /* 4 fotos visíveis */
+  padding: 0 var(--space-1, 4px);
+}
+
+.galeria-foto {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Setas de navegação ── */
+.galeria-seta {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: var(--color-neutral-0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  z-index: 2;
+}
+
+.galeria-seta svg {
+  width: 20px;
+  height: 20px;
+}
+
+.galeria-seta-anterior {
+  margin-left: var(--space-4);
+}
+
+.galeria-seta-proxima {
+  margin-right: var(--space-4);
+}
+
+.galeria-seta:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.08);
+}
+
+.galeria-seta:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ── Responsividade ── */
+@media (max-width: 900px) {
+  .faca-parte-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .galeria-foto-wrapper {
+    flex: 0 0 50%;
+    /* 2 fotos visíveis */
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria-foto-wrapper {
+    flex: 0 0 100%;
+    /* 1 foto visível */
+  }
+
+  .galeria-foto {
+    height: 220px;
+  }
+}

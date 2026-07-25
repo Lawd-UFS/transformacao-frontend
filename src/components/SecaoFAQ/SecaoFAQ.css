@@ -1,0 +1,120 @@
+/* ==========================================================================
+   SecaoFAQ — Perguntas frequentes (Accordion)
+   ========================================================================== */
+
+.secao-faq {
+  width: 100%;
+  max-width: 900px; /* FAQ geralmente fica melhor num container mais estreito para leitura */
+  margin: 0 auto;
+  padding: var(--space-12) var(--container-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.secao-faq-cabecalho {
+  text-align: center;
+}
+
+.secao-faq-titulo {
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: var(--color-primary-700);
+}
+
+/* ── Lista de perguntas ── */
+.secao-faq-lista {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Botão da pergunta ── */
+.faq-pergunta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding: var(--space-4) 0;
+  color: var(--color-primary-700);
+  transition: color 0.2s ease;
+}
+
+.faq-pergunta:hover {
+  color: var(--color-primary-600);
+}
+
+.faq-pergunta-conteudo {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+}
+
+.faq-icone-pergunta {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.faq-icone-seta {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-left: var(--space-4);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 2px;
+}
+
+.faq-icone-seta-girar {
+  transform: rotate(-180deg);
+}
+
+/* ── Resposta (Accordion com grid-template-rows para animar height) ── */
+.faq-resposta-wrapper {
+  display: grid;
+  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-resposta-conteudo {
+  overflow: hidden;
+}
+
+.faq-resposta-texto {
+  padding-left: calc(24px + var(--space-3)); /* Alinhado com o texto da pergunta (ícone + gap) */
+  padding-bottom: var(--space-4);
+  padding-right: var(--space-8);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-lg);
+  color: var(--color-primary-700);
+  line-height: var(--line-height-relaxed);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ── Responsividade ── */
+@media (max-width: 600px) {
+  .faq-pergunta-conteudo {
+    font-size: var(--font-size-lg);
+  }
+  
+  .faq-resposta-texto {
+    font-size: var(--font-size-base);
+    padding-right: 0;
+  }
+}
