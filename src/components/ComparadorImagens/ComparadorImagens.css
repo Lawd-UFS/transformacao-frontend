@@ -16,7 +16,7 @@
 }
 
 /* ── Imagens ── */
-.comparador__imagem {
+.comparador-imagem {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -26,25 +26,8 @@
   pointer-events: none;
 }
 
-/* wrapper que faz o clip da imagem ANTES */
-.comparador__antes-wrapper {
-  position: absolute;
-  inset: 0 auto 0 0;   /* left=0, right=auto */
-  height: 100%;
-  overflow: hidden;
-  will-change: width;
-}
-
-.comparador__imagem--antes {
-  width: auto;         /* mantém proporção sem esticar */
-  min-width: 100vw;    /* garante que preenche o container pai */
-  position: static;    /* dentro do wrapper, posição normal */
-  height: 100%;
-  object-fit: cover;
-}
-
 /* ── Linha divisória ── */
-.comparador__divisor {
+.comparador-divisor {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -57,7 +40,7 @@
 }
 
 /* ── Handle circular ── */
-.comparador__handle {
+.comparador-handle {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -78,14 +61,14 @@
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.comparador__divisor:hover .comparador__handle,
-.comparador__divisor:active .comparador__handle {
+.comparador-divisor:hover .comparador-handle,
+.comparador-divisor:active .comparador-handle {
   transform: translate(-50%, -50%) scale(1.12);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
 /* ── Labels ANTES / DEPOIS ── */
-.comparador__label {
+.comparador-label {
   position: absolute;
   top: var(--space-3);
   padding: var(--space-1, 4px) var(--space-3);
@@ -100,10 +83,10 @@
   pointer-events: none;
 }
 
-.comparador__label--antes {
+.comparador-label-antes {
   left: var(--space-3);
 }
 
-.comparador__label--depois {
+.comparador-label-depois {
   right: var(--space-3);
 }

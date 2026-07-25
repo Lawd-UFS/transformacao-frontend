@@ -1,4 +1,11 @@
 import { ComparadorImagens } from '../ComparadorImagens/ComparadorImagens'
+/* ── Fotos reais das obras ── */
+import antesNinha from '../../assets/casas/antes-ninha.jpg'
+import depoisNinha from '../../assets/casas/depois-ninha.jpg'
+import antesMirian from '../../assets/casas/antes-mirian.jpg'
+import depoisMirian from '../../assets/casas/depois-mirian.jpg'
+import antesMichelle from '../../assets/casas/antes-michelle.png'
+import depoisMichelle from '../../assets/casas/depois-michelle.jpg'
 import './SecaoObras.css'
 
 /* ── Tipos ── */
@@ -19,10 +26,6 @@ interface PropsSecaoObras {
   onVerMais?: () => void
 }
 
-/* ── Dados padrão (placeholder) ── */
-import placeholderAntes from '../../assets/hero-voluntarios.png'
-import placeholderDepois from '../../assets/voluntarios-grupo.png'
-
 const obrasPadrao: Obra[] = [
   {
     id: 8,
@@ -30,8 +33,8 @@ const obrasPadrao: Obra[] = [
     localizacao: 'Nossa Senhora do Socorro/SE',
     status: 'andamento',
     ano: 2026,
-    imagemAntes: placeholderAntes,
-    imagemDepois: placeholderDepois,
+    imagemAntes: antesNinha,
+    imagemDepois: depoisNinha,
   },
   {
     id: 7,
@@ -39,8 +42,8 @@ const obrasPadrao: Obra[] = [
     localizacao: 'Nossa Senhora do Socorro/SE',
     status: 'concluido',
     ano: 2025,
-    imagemAntes: placeholderAntes,
-    imagemDepois: placeholderDepois,
+    imagemAntes: antesMirian,
+    imagemDepois: depoisMirian,
   },
   {
     id: 6,
@@ -48,8 +51,8 @@ const obrasPadrao: Obra[] = [
     localizacao: 'Nossa Senhora do Socorro/SE',
     status: 'concluido',
     ano: 2025,
-    imagemAntes: placeholderAntes,
-    imagemDepois: placeholderDepois,
+    imagemAntes: antesMichelle,
+    imagemDepois: depoisMichelle,
   },
 ]
 
@@ -64,24 +67,24 @@ export function SecaoObras({ obras = obrasPadrao, onVerMais }: PropsSecaoObras) 
     <section className="secao-obras" aria-label="Obras realizadas">
 
       {/* Cabeçalho */}
-      <div className="secao-obras__cabecalho">
-        <h2 className="secao-obras__titulo">
+      <div className="secao-obras-cabecalho">
+        <h2 className="secao-obras-titulo">
           Conheça as famílias{' '}
-          <span className="secao-obras__titulo-destaque">já impactadas</span>{' '}
+          <span className="secao-obras-titulo-destaque">já impactadas</span>{' '}
           pelo projeto
         </h2>
-        <p className="secao-obras__subtitulo">
+        <p className="secao-obras-subtitulo">
           Arraste para o lado e veja o antes e depois de cada transformação
         </p>
       </div>
 
       {/* Grid de cards */}
-      <div className="secao-obras__grid">
+      <div className="secao-obras-grid">
         {obras.map((obra) => (
           <article key={obra.id} className="obra-card">
 
             {/* Comparador antes/depois */}
-            <div className="obra-card__comparador">
+            <div className="obra-card-comparador">
               <ComparadorImagens
                 imagemAntes={obra.imagemAntes}
                 imagemDepois={obra.imagemDepois}
@@ -91,22 +94,22 @@ export function SecaoObras({ obras = obrasPadrao, onVerMais }: PropsSecaoObras) 
             </div>
 
             {/* Informações */}
-            <div className="obra-card__info">
-              <h3 className="obra-card__titulo">
+            <div className="obra-card-info">
+              <h3 className="obra-card-titulo">
                 {obra.titulo}{' '}
-                <span className="obra-card__numero">| Obra {String(obra.id).padStart(2, '0')}</span>
+                <span className="obra-card-numero">| Obra {String(obra.id).padStart(2, '0')}</span>
               </h3>
 
-              <p className="obra-card__localizacao">
-                <svg className="obra-card__pin" viewBox="0 0 24 24" fill="none"
+              <p className="obra-card-localizacao">
+                <svg className="obra-card-pin" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                  <circle cx="12" cy="9" r="2.5"/>
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                  <circle cx="12" cy="9" r="2.5" />
                 </svg>
                 {obra.localizacao}
               </p>
 
-              <span className={`obra-card__badge obra-card__badge--${obra.status}`}>
+              <span className={`obra-card-badge obra-card-badge-${obra.status}`}>
                 {labelStatus[obra.status]} – {obra.ano}
               </span>
             </div>
@@ -116,8 +119,8 @@ export function SecaoObras({ obras = obrasPadrao, onVerMais }: PropsSecaoObras) 
       </div>
 
       {/* Botão Ver mais */}
-      <div className="secao-obras__rodape">
-        <button className="secao-obras__btn-ver-mais" onClick={onVerMais}>
+      <div className="secao-obras-rodape">
+        <button className="secao-obras-btn-ver-mais" onClick={onVerMais}>
           Ver mais obras
         </button>
       </div>

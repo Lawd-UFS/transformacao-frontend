@@ -6,7 +6,7 @@ interface PropsComparadorImagens {
   imagemDepois: string
   altAntes?: string
   altDepois?: string
-  posicaoInicial?: number // 0–100, padrão 50
+  posicaoInicial?: number
 }
 
 export function ComparadorImagens({
@@ -51,40 +51,36 @@ export function ComparadorImagens({
       onMouseUp={onMouseUp}
       onMouseLeave={onMouseUp}
     >
-      {/* Imagem DEPOIS (base, full-width) */}
+      {/* Imagem DEPOIS */}
       <img
         src={imagemDepois}
         alt={altDepois}
-        className="comparador__imagem comparador__imagem--depois"
+        className="comparador-imagem"
         draggable={false}
       />
 
-      {/* Imagem ANTES (clipada à esquerda) */}
-      <div
-        className="comparador__antes-wrapper"
-        style={{ width: `${posicao}%` }}
-      >
-        <img
-          src={imagemAntes}
-          alt={altAntes}
-          className="comparador__imagem comparador__imagem--antes"
-          draggable={false}
-        />
-      </div>
+      {/* Imagem ANTES */}
+      <img
+        src={imagemAntes}
+        alt={altAntes}
+        className="comparador-imagem"
+        style={{ clipPath: `inset(0 ${100 - posicao}% 0 0)` }}
+        draggable={false}
+      />
 
       {/* Labels */}
-      <span className="comparador__label comparador__label--antes">ANTES</span>
-      <span className="comparador__label comparador__label--depois">DEPOIS</span>
+      <span className="comparador-label comparador-label-antes">ANTES</span>
+      <span className="comparador-label comparador-label-depois">DEPOIS</span>
 
       {/* Linha + handle arrastável */}
       <div
-        className="comparador__divisor"
+        className="comparador-divisor"
         style={{ left: `${posicao}%` }}
         onMouseDown={onMouseDown}
         onTouchMove={onTouchMove}
         onTouchStart={onTouchMove}
       >
-        <div className="comparador__handle">
+        <div className="comparador-handle">
           <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
             <path d="M8 5l-5 7 5 7M16 5l5 7-5 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
           </svg>

@@ -14,14 +14,14 @@
 }
 
 /* ── Cabeçalho ── */
-.secao-obras__cabecalho {
+.secao-obras-cabecalho {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
 }
 
-.secao-obras__titulo {
+.secao-obras-titulo {
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-bold);
   font-size: clamp(2rem, 4vw, 3rem);
@@ -29,18 +29,18 @@
   line-height: 1.2;
 }
 
-.secao-obras__titulo-destaque {
+.secao-obras-titulo-destaque {
   color: var(--color-accent-500);
 }
 
-.secao-obras__subtitulo {
+.secao-obras-subtitulo {
   font-size: var(--font-size-lg);
   color: var(--color-text-muted);
   font-weight: var(--font-weight-regular);
 }
 
 /* ── Grid de cards ── */
-.secao-obras__grid {
+.secao-obras-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-8);
@@ -62,20 +62,19 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* O comparador não herda o border-radius do card porque ele é um child direto */
-.obra-card__comparador {
+.obra-card-comparador {
   width: 100%;
 }
 
 /* Sobrescreve o border-radius/border do comparador dentro do card */
-.obra-card__comparador .comparador {
+.obra-card-comparador .comparador {
   border-radius: 0;
   border: none;
   box-shadow: none;
 }
 
 /* ── Área de informações ── */
-.obra-card__info {
+.obra-card-info {
   padding: var(--space-5) var(--space-5) var(--space-6);
   display: flex;
   flex-direction: column;
@@ -83,7 +82,7 @@
   background: var(--color-bg-subtle, #f0f7ff);
 }
 
-.obra-card__titulo {
+.obra-card-titulo {
   font-family: var(--font-family-base);
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
@@ -91,13 +90,13 @@
   line-height: 1.3;
 }
 
-.obra-card__numero {
+.obra-card-numero {
   font-weight: var(--font-weight-regular);
   color: var(--color-primary-500);
 }
 
 /* Localização com ícone de pin */
-.obra-card__localizacao {
+.obra-card-localizacao {
   display: flex;
   align-items: center;
   gap: var(--space-1, 4px);
@@ -105,7 +104,7 @@
   color: var(--color-text-muted);
 }
 
-.obra-card__pin {
+.obra-card-pin {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
@@ -113,7 +112,7 @@
 }
 
 /* ── Badges de status ── */
-.obra-card__badge {
+.obra-card-badge {
   display: inline-block;
   padding: 2px var(--space-3);
   border-radius: 999px;
@@ -122,23 +121,23 @@
   width: fit-content;
 }
 
-.obra-card__badge--andamento {
+.obra-card-badge-andamento {
   background: #fef3c7;
   color: #92400e;
 }
 
-.obra-card__badge--concluido {
+.obra-card-badge-concluido {
   background: #d1fae5;
   color: #065f46;
 }
 
 /* ── Botão Ver mais ── */
-.secao-obras__rodape {
+.secao-obras-rodape {
   display: flex;
   justify-content: center;
 }
 
-.secao-obras__btn-ver-mais {
+.secao-obras-btn-ver-mais {
   padding: var(--space-4) var(--space-10);
   background: var(--color-primary-600);
   color: var(--color-neutral-0);
@@ -151,28 +150,28 @@
   transition: background 0.2s ease, transform 0.15s ease;
 }
 
-.secao-obras__btn-ver-mais:hover {
+.secao-obras-btn-ver-mais:hover {
   background: var(--color-primary-700);
   transform: translateY(-2px);
 }
 
-.secao-obras__btn-ver-mais:active {
+.secao-obras-btn-ver-mais:active {
   transform: translateY(0);
 }
 
 /* ── Responsividade ── */
 @media (max-width: 900px) {
-  .secao-obras__grid {
+  .secao-obras-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .secao-obras__grid {
+  .secao-obras-grid {
     grid-template-columns: 1fr;
   }
 
-  .secao-obras__titulo {
+  .secao-obras-titulo {
     font-size: clamp(1.6rem, 6vw, 2.2rem);
   }
 }

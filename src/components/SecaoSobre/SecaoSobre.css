@@ -13,14 +13,14 @@
 }
 
 /* ── Linha intro: texto à esquerda, foto à direita ── */
-.secao-sobre__intro {
+.secao-sobre-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: var(--space-12);
 }
 
-.secao-sobre__texto {
+.secao-sobre-texto {
   font-family: var(--font-family-base);
   font-size: var(--font-size-2xl);
   line-height: var(--line-height-relaxed);
@@ -28,19 +28,19 @@
   text-align: justify;
 }
 
-.secao-sobre__texto-destaque {
+.secao-sobre-texto-destaque {
   font-weight: var(--font-weight-bold);
 }
 
 /* ── Foto ── */
-.secao-sobre__imagem-wrapper {
+.secao-sobre-imagem-wrapper {
   border-radius: var(--border-radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 4px solid var(--color-primary-500);
 }
 
-.secao-sobre__imagem {
+.secao-sobre-imagem {
   width: 100%;
   height: 280px;
   object-fit: cover;
@@ -48,7 +48,7 @@
 }
 
 /* ── Card de estatísticas ── */
-.secao-sobre__card-stats {
+.secao-sobre-card-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
@@ -60,13 +60,13 @@
 }
 
 /* ── Item de estatística ── */
-.secao-sobre__stat {
+.secao-sobre-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.secao-sobre__stat-numero {
+.secao-sobre-stat-numero {
   font-family: var(--font-family-base);
   font-size: clamp(5rem, 10vw, 8rem);
   font-weight: var(--font-weight-black);
@@ -74,7 +74,7 @@
   line-height: 1;
 }
 
-.secao-sobre__stat-descricao {
+.secao-sobre-stat-descricao {
   font-family: var(--font-family-base);
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
@@ -84,25 +84,25 @@
 
 /* ── Responsividade ── */
 @media (max-width: 768px) {
-  .secao-sobre__intro {
+  .secao-sobre-intro {
     grid-template-columns: 1fr;
   }
 
-  .secao-sobre__imagem {
+  .secao-sobre-imagem {
     height: 220px;
   }
 
-  .secao-sobre__card-stats {
+  .secao-sobre-card-stats {
     grid-template-columns: 1fr;
     gap: var(--space-8);
   }
 
-  .secao-sobre__stat {
+  .secao-sobre-stat {
     border-bottom: 1px solid rgba(var(--color-primary-500-rgb), 0.3);
     padding-bottom: var(--space-6);
   }
 
-  .secao-sobre__stat:last-child {
+  .secao-sobre-stat:last-child {
     border-bottom: none;
     padding-bottom: 0;
   }

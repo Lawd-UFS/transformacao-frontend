@@ -21,35 +21,35 @@ const estatisticasPadrao: Estatistica[] = [
 
 export function SecaoSobre({
   texto = 'Somos uma organização sem fins lucrativos, formada por voluntários de diversas áreas e dedicada',
-  textoDestaque = 'a transformar a realidade de famílias',
+  textoDestaque = 'a transformar a realidade de famílias.',
   imagem = imagemGrupo,
   estatisticas = estatisticasPadrao,
 }: PropsSecaoSobre) {
   return (
     <section className="secao-sobre" aria-label="Sobre o projeto">
 
-      {/* ── Linha intro: texto + foto ── */}
-      <div className="secao-sobre__intro">
-        <p className="secao-sobre__texto">
+      {/* Linha intro: texto + foto */}
+      <div className="secao-sobre-intro">
+        <p className="secao-sobre-texto">
           {texto}{' '}
-          <strong className="secao-sobre__texto-destaque">{textoDestaque}</strong>
+          <strong className="secao-sobre-texto-destaque">{textoDestaque}</strong>
         </p>
 
-        <div className="secao-sobre__imagem-wrapper">
+        <div className="secao-sobre-imagem-wrapper">
           <img
             src={imagem}
             alt="Equipe de voluntários do projeto Transformação"
-            className="secao-sobre__imagem"
+            className="secao-sobre-imagem"
           />
         </div>
       </div>
 
-      {/* ── Card de estatísticas ── */}
-      <div className="secao-sobre__card-stats">
+      {/* Card de estatísticas */}
+      <div className="secao-sobre-card-stats">
         {estatisticas.map((stat) => (
-          <div key={stat.descricao} className="secao-sobre__stat">
-            <span className="secao-sobre__stat-numero">{stat.numero}</span>
-            <span className="secao-sobre__stat-descricao">{stat.descricao}</span>
+          <div key={stat.descricao} className="secao-sobre-stat">
+            <span className="secao-sobre-stat-numero">{stat.numero}</span>
+            <span className="secao-sobre-stat-descricao">{stat.descricao}</span>
           </div>
         ))}
       </div>
