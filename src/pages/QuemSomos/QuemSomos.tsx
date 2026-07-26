@@ -61,7 +61,7 @@ export const QuemSomos: React.FC = () => {
           </div>
           <div className="intro-text">
             <p className="regular-text">
-              No ano de 2019 iniciamos nossas atividades informalmentel, contando apenas com um grupo de amigos e alguns empresários locais, conseguimos nossa primeira transformação, a partir daí o projeto tomou corpo e avançou para atender mais famílias, hoje somos uma <strong>OSC - Organização da Sociedade Civil</strong>, e mais parceiros aderiram ao projeto por acreditar que uma moradia digna vai além da estrutura física.
+              No ano de 2019 iniciamos nossas atividades informalmente, contando apenas com um grupo de amigos e alguns empresários locais, conseguimos nossa primeira transformação, a partir daí o projeto tomou corpo e avançou para atender mais famílias, hoje somos uma <strong>OSC - Organização da Sociedade Civil</strong>, e mais parceiros aderiram ao projeto por acreditar que uma moradia digna vai além da estrutura física.
               <br /> 
               Ela representa segurança, acolhimento, bem-estar e a possibilidade de um novo começo para quem vive naquele espaço.
             </p>
