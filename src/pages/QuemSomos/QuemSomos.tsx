@@ -2,6 +2,11 @@ import React from 'react';
 import { Timeline } from '../../components/Timeline/Timeline';
 import equipeImg from '../../assets/quem-somos-equipe.jpg';
 import heroImg from '../../assets/quem-somos-banner.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import './QuemSomos.css';
 
@@ -121,11 +126,41 @@ export const QuemSomos: React.FC = () => {
         </div>
       </section>
 
-      <section className="collage-section container">
-        <div className="collage-grid">
-          <div className="placeholder-image collage-photo">Imagem Reforma 1</div>
-          <div className="placeholder-image collage-photo">Imagem Reforma 2</div>
-          <div className="placeholder-image collage-photo">Imagem Reforma 3</div>
+      <section className="reformas-carousel-section container">
+        <div className="reformas-carousel-wrapper">
+          <div className="swiper-button-prev custom-swiper-prev"></div>
+          <Swiper
+            modules={[Autoplay, Navigation, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            loop={true}
+            navigation={{
+              nextEl: '.custom-swiper-next',
+              prevEl: '.custom-swiper-prev',
+            }}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              }
+            }}
+            className="reformas-swiper"
+          >
+            {[1, 2, 3, 4, 5, 6].map((item) => (
+              <SwiperSlide key={item}>
+                <div className="reforma-slide-content">
+                  <div className="reforma-image-placeholder">
+                    Imagem Reforma {item}
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="swiper-button-next custom-swiper-next"></div>
         </div>
       </section>
 
