@@ -8,11 +8,13 @@ import { SecaoFacaParte } from './components/SecaoFacaParte/SecaoFacaParte';
 import { SecaoParcerias } from './components/SecaoParcerias/SecaoParcerias';
 import { SecaoFAQ } from './components/SecaoFAQ/SecaoFAQ';
 import { QuemSomos } from './pages/QuemSomos/QuemSomos';
+import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
   return (
     <AccessibilityProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<BaseLayout />}>
             <Route index element={
