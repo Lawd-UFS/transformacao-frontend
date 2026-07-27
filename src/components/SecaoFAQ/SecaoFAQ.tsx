@@ -32,6 +32,26 @@ const faqsPadrao: FAQ[] = [
     pergunta: 'Preciso ter experiência ou ser de área técnica para ser voluntário?',
     resposta: 'Não. Existem oportunidades para todos os perfis, desde apoio nas ações até participação nas equipes internas do projeto.',
   },
+  {
+    id: 4,
+    pergunta: 'Posso contribuir com minha formação ou experiência profissional?',
+    resposta: 'Sim. Também contamos com voluntários especializados em diferentes áreas, que ajudam o projeto com seu conhecimento e experiência profissional.',
+  },
+  {
+    id: 5,
+    pergunta: 'Como faço para doar?',
+    resposta: 'As doações podem ser feitas pela seção Faça parte, na opção de Doação. Não existe valor mínimo para contribuir, qualquer valor já faz diferença.',
+  },
+  {
+    id: 6,
+    pergunta: 'Como minha empresa pode participar?',
+    resposta: 'Sua empresa pode contribuir com materiais, mobiliário ou apoio financeiro para ajudar a tornar as obras possíveis',
+  },
+  {
+    id: 7,
+    pergunta: 'Minha empresa pode apoiar um projeto específico ou o projeto como um todo?',
+    resposta: 'Sim. As empresas podem apoiar projetos específicos ou contribuir de forma geral e contínua com o projeto. É só entrar em contato para conversarmos sobre a melhor forma de ajudar.',
+  },
 ]
 
 export function SecaoFAQ({ faqs = faqsPadrao }: { faqs?: FAQ[] }) {
