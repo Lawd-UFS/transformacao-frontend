@@ -7,6 +7,7 @@ import { SecaoObras } from './components/SecaoObras/SecaoObras';
 import { SecaoFacaParte } from './components/SecaoFacaParte/SecaoFacaParte';
 import { SecaoParcerias } from './components/SecaoParcerias/SecaoParcerias';
 import { SecaoFAQ } from './components/SecaoFAQ/SecaoFAQ';
+import { QuemSomos } from './pages/QuemSomos/QuemSomos';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <SecaoFAQ />
               </>
             } />
+            <Route path="quem-somos" element={<QuemSomos />} />
           </Route>
         </Routes>
       </BrowserRouter>
