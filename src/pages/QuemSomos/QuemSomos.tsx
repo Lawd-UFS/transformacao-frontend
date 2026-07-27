@@ -1,7 +1,16 @@
 import React from 'react';
 import { Timeline } from '../../components/Timeline/Timeline';
-import equipeImg from '../../assets/quem-somos-equipe.jpg';
-import heroImg from '../../assets/quem-somos-banner.png';
+import heroImg from '../../assets/quem-somos/banner-quem-somos.png';
+import aboutLeftImg from '../../assets/quem-somos/imagem-1-quem-somos.png';
+import aboutRight1Img from '../../assets/quem-somos/imagem-2-quem-somos.png';
+import aboutRight2Img from '../../assets/quem-somos/imagem-3-quem-somos.png';
+import carrossel1Img from '../../assets/quem-somos/carrossel-1-quem-somos.png';
+import carrossel2Img from '../../assets/quem-somos/carrossel-2-quem-somos.png';
+import carrossel3Img from '../../assets/quem-somos/carrossel-3-quem-somos.png';
+import carrossel4Img from '../../assets/quem-somos/carrossel-4-quem-somos.png';
+import carrossel5Img from '../../assets/quem-somos/carrossel-5-quem-somos.jpg';
+import carrossel6Img from '../../assets/quem-somos/carrossel-6-quem-somos.jpg';
+import carrossel7Img from '../../assets/quem-somos/carrossel-7-quem-somos.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -51,7 +60,7 @@ export const QuemSomos: React.FC = () => {
       <section className="intro-section container">
         <div className="intro-content">
           <div className="intro-image-wrapper">
-            <img src={equipeImg} alt="TransformAção 1" className="intro-team-photo" />
+            <img src={aboutLeftImg} alt="TransformAção 1" className="intro-team-photo" />
           </div>
           <div className="intro-text">
             <p className="regular-text">
@@ -62,7 +71,7 @@ export const QuemSomos: React.FC = () => {
 
         <div className="intro-content reverse">
           <div className="intro-image-wrapper">
-            <img src={equipeImg} alt="TransformAção 2" className="intro-team-photo" />
+            <img src={aboutRight1Img} alt="TransformAção 2" className="intro-team-photo" />
           </div>
           <div className="intro-text">
             <p className="regular-text">
@@ -75,7 +84,7 @@ export const QuemSomos: React.FC = () => {
 
         <div className="intro-content">
           <div className="intro-image-wrapper">
-            <img src={equipeImg} alt="TransformAção 3" className="intro-team-photo" />
+            <img src={aboutRight2Img} alt="TransformAção 3" className="intro-team-photo" />
           </div>
           <div className="intro-text">
             <p className="regular-text">
@@ -150,12 +159,10 @@ export const QuemSomos: React.FC = () => {
             }}
             className="reformas-swiper"
           >
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <SwiperSlide key={item}>
+            {[carrossel1Img, carrossel2Img, carrossel3Img, carrossel4Img, carrossel5Img, carrossel6Img, carrossel7Img].map((imgSrc, index) => (
+              <SwiperSlide key={index}>
                 <div className="reforma-slide-content">
-                  <div className="reforma-image-placeholder">
-                    Imagem Reforma {item}
-                  </div>
+                  <img src={imgSrc} alt={`Reforma ${index + 1}`} style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px'}} />
                 </div>
               </SwiperSlide>
             ))}
