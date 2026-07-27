@@ -12,15 +12,18 @@
   align-items: center;
 }
 
-/* ── Overlay: degradê da esquerda (opaco) para direita (translúcido) ── */
+/* ── Overlay: degradê da esquerda (opaco) para direita (transparente) — igual ao Quem Somos ── */
 .hero_overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right,
-      rgba(var(--color-primary-500-rgb), 0.88) 0%,
-      rgba(var(--color-primary-500-rgb), 0.75) 35%,
-      rgba(var(--color-primary-500-rgb), 0.45) 65%,
-      rgba(var(--color-primary-500-rgb), 0.20) 100%);
+  background: linear-gradient(
+    to right,
+    #04328b 0%,
+    rgba(4, 50, 139, 0.95) 25%,
+    rgba(4, 50, 139, 0.65) 45%,
+    rgba(4, 50, 139, 0.20) 60%,
+    transparent 75%
+  );
   z-index: 1;
 }
 
@@ -36,18 +39,17 @@
 
 /* ── Título principal ── */
 .hero_titulo {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-title);
   font-weight: var(--font-weight-bold);
-  font-size: clamp(6rem, 10vw, 10rem);
+  font-size: clamp(3.5rem, 6vw, 6rem);
   line-height: 0.9;
-  /* ocupa ~metade da largura da página */
   max-width: 70%;
   letter-spacing: -0.03em;
 }
 
 /* "Onde o amor se torna" — âmbar */
 .hero_titulo-destaque {
-  color: var(--color-accent-500);
+  color: var(--secondary-color);
 }
 
 /* "ação." — branco */
@@ -70,7 +72,7 @@
   }
 
   .hero_titulo {
-    font-size: clamp(3rem, 12vw, 5rem);
+    font-size: clamp(2.5rem, 8vw, 4rem);
     max-width: 90%;
     line-height: 0.95;
   }
@@ -78,7 +80,7 @@
 
 @media (max-width: 480px) {
   .hero_titulo {
-    font-size: clamp(2.5rem, 14vw, 4rem);
+    font-size: clamp(2rem, 10vw, 3.5rem);
     max-width: 95%;
   }
 }

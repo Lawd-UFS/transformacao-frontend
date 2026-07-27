@@ -6,26 +6,26 @@
   width: 100%;
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: var(--space-16) var(--container-padding);
+  padding: var(--space-12) var(--container-padding) 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
+  gap: var(--space-16);
 }
 
 /* ── Linha intro: texto à esquerda, foto à direita ── */
 .secao-sobre-intro {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   align-items: center;
   gap: var(--space-12);
 }
 
 .secao-sobre-texto {
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-2xl);
-  line-height: var(--line-height-relaxed);
-  color: var(--color-primary-700);
+  font-size: 1.60rem;
+  line-height: 1.45;
+  color: var(--primary-color);
   text-align: justify;
+  max-width: 450px;
 }
 
 .secao-sobre-texto-destaque {
@@ -42,7 +42,7 @@
 
 .secao-sobre-imagem {
   width: 100%;
-  height: 280px;
+  height: 330px;
   object-fit: cover;
   display: block;
 }
@@ -56,7 +56,7 @@
   background-color: var(--color-primary-600);
   border: 3px solid var(--color-accent-500);
   border-radius: var(--border-radius-xl);
-  padding: var(--space-10) var(--space-8);
+  padding: var(--space-6) var(--space-8);
 }
 
 /* ── Item de estatística ── */
@@ -67,18 +67,17 @@
 }
 
 .secao-sobre-stat-numero {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-title);
   font-size: clamp(5rem, 10vw, 8rem);
   font-weight: var(--font-weight-black);
-  color: var(--color-accent-500);
+  color: var(--secondary-color);
   line-height: 1;
 }
 
 .secao-sobre-stat-descricao {
-  font-family: var(--font-family-base);
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
-  color: var(--color-neutral-0);
+  color: var(--text-light);
   text-align: center;
 }
 
