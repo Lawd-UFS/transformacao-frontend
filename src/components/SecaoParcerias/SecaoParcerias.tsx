@@ -23,7 +23,7 @@ export function SecaoParcerias({ parceiros = parceirosPadrao }: PropsSecaoParcer
     <section className="secao-parcerias" aria-labelledby="titulo-parcerias">
       <div className="secao-parcerias-cabecalho">
         <h2 id="titulo-parcerias" className="secao-parcerias-titulo">
-          Quem apoia a nossa causa
+          Nossas empresas <span className="secao-parcerias-titulo-destaque">parceiras</span>
         </h2>
       </div>
 

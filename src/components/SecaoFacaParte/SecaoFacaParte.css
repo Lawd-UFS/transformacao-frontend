@@ -22,15 +22,15 @@
 
 /* Título */
 .faca-parte-titulo {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-title);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: var(--font-weight-bold);
-  color: var(--color-neutral-0);
+  color: var(--text-light);
   text-align: center;
 }
 
 .faca-parte-titulo-destaque {
-  color: var(--color-accent-500);
+  color: var(--secondary-color);
   font-style: italic;
 }
 
@@ -55,7 +55,6 @@
 }
 
 .faca-parte-card:hover {
-  transform: translateY(-4px);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
 }
 
@@ -70,10 +69,10 @@
 }
 
 .faca-parte-card-titulo {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-title);
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
-  color: var(--color-primary-700);
+  color: var(--primary-color);
   text-align: center;
   line-height: 1.3;
 }
@@ -92,7 +91,7 @@
 
 .faca-parte-card-descricao {
   font-size: var(--font-size-lg);
-  color: var(--color-primary-700);
+  color: var(--primary-color);
   text-align: center;
   line-height: var(--line-height-relaxed);
 }
@@ -102,8 +101,7 @@
   display: inline-block;
   padding: var(--space-3) var(--space-8);
   background-color: var(--color-accent-500);
-  color: var(--color-primary-800);
-  font-family: var(--font-family-base);
+  color: var(--primary-color);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   border-radius: var(--border-radius-md);
@@ -121,77 +119,56 @@
    Bloco 2 — Carrossel de fotos (fundo azul escuro)
    ══════════════════════════════════════════════ */
 .faca-parte-galeria {
-  background-color: var(--color-primary-800, #1e3a6e);
   padding: var(--space-6) 0;
   display: flex;
   align-items: center;
   gap: var(--space-4);
   overflow: hidden;
+  position: relative;
 }
 
-/* Wrapper que mascara o overflow da trilha */
-.galeria-trilha-wrapper {
-  flex: 1;
-  overflow: hidden;
-}
-
-/* Trilha: todos os itens em linha, desliza via transform */
-.galeria-trilha {
-  display: flex;
-  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.galeria-foto-wrapper {
-  flex: 0 0 25%;
-  /* 4 fotos visíveis */
-  padding: 0 var(--space-1, 4px);
-}
-
-.galeria-foto {
+.faca-parte-carousel-override {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 80px;
 }
 
-/* ── Setas de navegação ── */
-.galeria-seta {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  color: var(--color-neutral-0);
+.faca-parte-carousel-override .reformas-swiper {
+  padding-bottom: 50px;
+}
+
+.faca-parte-carousel-override .reforma-slide-content {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(4, 50, 139, 0.1);
+  background-color: var(--card-bg, #f8fafc);
+  height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.15s ease;
-  z-index: 2;
+  border: 2px solid var(--action-color);
 }
 
-.galeria-seta svg {
-  width: 20px;
-  height: 20px;
+.faca-parte-carousel-override .custom-swiper-prev,
+.faca-parte-carousel-override .custom-swiper-next {
+  color: var(--primary-color) !important;
+  top: calc(50% - 25px) !important;
+  transform: translateY(-50%) !important;
+  margin-top: 0 !important;
 }
 
-.galeria-seta-anterior {
-  margin-left: var(--space-4);
+.faca-parte-carousel-override .custom-swiper-prev {
+  left: 0 !important;
 }
 
-.galeria-seta-proxima {
-  margin-right: var(--space-4);
+.faca-parte-carousel-override .custom-swiper-next {
+  right: 0 !important;
 }
 
-.galeria-seta:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.08);
-}
-
-.galeria-seta:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
+.faca-parte-carousel-override .swiper-pagination-bullet-active {
+  background: var(--color-primary-500) !important;
 }
 
 /* ── Responsividade ── */
@@ -200,20 +177,14 @@
     grid-template-columns: 1fr;
     max-width: 480px;
   }
-
-  .galeria-foto-wrapper {
-    flex: 0 0 50%;
-    /* 2 fotos visíveis */
-  }
 }
 
-@media (max-width: 600px) {
-  .galeria-foto-wrapper {
-    flex: 0 0 100%;
-    /* 1 foto visível */
+@media (max-width: 768px) {
+  .faca-parte-carousel-override {
+    padding: 0 10px;
   }
-
-  .galeria-foto {
-    height: 220px;
+  .faca-parte-carousel-override .custom-swiper-prev,
+  .faca-parte-carousel-override .custom-swiper-next {
+    display: none !important;
   }
 }

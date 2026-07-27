@@ -18,11 +18,15 @@
 }
 
 .secao-parcerias-titulo {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-title);
   font-weight: var(--font-weight-bold);
   font-size: clamp(1.75rem, 4vw, 2.5rem);
-  color: var(--color-primary-700);
+  color: var(--primary-color);
   line-height: 1.2;
+}
+
+.secao-parcerias-titulo-destaque {
+  color: var(--secondary-color);
 }
 
 /* ── Grid de parceiros ── */
@@ -45,7 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-primary-500);
+  color: var(--primary-color);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   text-align: center;

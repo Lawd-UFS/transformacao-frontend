@@ -1,4 +1,5 @@
 import { ComparadorImagens } from '../ComparadorImagens/ComparadorImagens'
+import { Link } from 'react-router-dom'
 /* ── Fotos reais das obras ── */
 import antesNinha from '../../assets/casas/antes-ninha.jpg'
 import depoisNinha from '../../assets/casas/depois-ninha.jpg'
@@ -23,7 +24,6 @@ interface Obra {
 
 interface PropsSecaoObras {
   obras?: Obra[]
-  onVerMais?: () => void
 }
 
 const obrasPadrao: Obra[] = [
@@ -62,7 +62,7 @@ const labelStatus: Record<StatusObra, string> = {
 }
 
 /* ── Componente ── */
-export function SecaoObras({ obras = obrasPadrao, onVerMais }: PropsSecaoObras) {
+export function SecaoObras({ obras = obrasPadrao }: PropsSecaoObras) {
   return (
     <section className="secao-obras" aria-label="Obras realizadas">
 
@@ -120,9 +120,9 @@ export function SecaoObras({ obras = obrasPadrao, onVerMais }: PropsSecaoObras) 
 
       {/* Botão Ver mais */}
       <div className="secao-obras-rodape">
-        <button className="secao-obras-btn-ver-mais" onClick={onVerMais}>
+        <Link to="/obras" className="secao-obras-btn-ver-mais" style={{ textDecoration: 'none', display: 'inline-block' }}>
           Ver mais obras
-        </button>
+        </Link>
       </div>
 
     </section>

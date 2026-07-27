@@ -1,5 +1,9 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import foto1 from '../../assets/hero-voluntarios.png'
 import './SecaoFacaParte.css'
 
@@ -45,12 +49,6 @@ export function SecaoFacaParte({
   cards = cardsPadrao,
   fotos = fotosPadrao,
 }: PropsSecaoFacaParte) {
-  const [indice, setIndice] = useState(0)
-  const visiveis = 4
-  const max = Math.max(0, fotos.length - visiveis)
-
-  const anterior = () => setIndice((i) => Math.max(0, i - 1))
-  const proximo = () => setIndice((i) => Math.min(max, i + 1))
 
   return (
     <section className="secao-faca-parte" aria-label="Faça parte da transformação">
@@ -81,47 +79,43 @@ export function SecaoFacaParte({
 
       {/* ── Bloco 2: Carrossel de fotos ── */}
       <div className="faca-parte-galeria" aria-label="Fotos dos mutirões">
-        <button
-          className="galeria-seta galeria-seta-anterior"
-          onClick={anterior}
-          disabled={indice === 0}
-          aria-label="Foto anterior"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-        </button>
-
-        <div className="galeria-trilha-wrapper">
-          <div
-            className="galeria-trilha"
-            style={{ transform: `translateX(-${indice * (100 / visiveis)}%)` }}
+        <div className="reformas-carousel-wrapper faca-parte-carousel-override">
+          <div className="swiper-button-prev custom-swiper-prev"></div>
+          <Swiper
+            modules={[Autoplay, Navigation, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            loop={true}
+            navigation={{
+              nextEl: '.custom-swiper-next',
+              prevEl: '.custom-swiper-prev',
+            }}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              }
+            }}
+            className="reformas-swiper"
           >
             {fotos.map((src, i) => (
-              <div key={i} className="galeria-foto-wrapper">
-                <img
-                  src={src}
-                  alt={`Foto do mutirão ${i + 1}`}
-                  className="galeria-foto"
-                  draggable={false}
-                />
-              </div>
+              <SwiperSlide key={i}>
+                <div className="reforma-slide-content">
+                  <img
+                    src={src}
+                    alt={`Foto do mutirão ${i + 1}`}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }}
+                  />
+                </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
+          <div className="swiper-button-next custom-swiper-next"></div>
         </div>
-
-        <button
-          className="galeria-seta galeria-seta-proxima"
-          onClick={proximo}
-          disabled={indice >= max}
-          aria-label="Próxima foto"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </button>
       </div>
 
     </section>
