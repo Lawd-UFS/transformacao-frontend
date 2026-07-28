@@ -8,6 +8,7 @@ import { SecaoFacaParte } from './components/SecaoFacaParte/SecaoFacaParte';
 import { SecaoParcerias } from './components/SecaoParcerias/SecaoParcerias';
 import { SecaoFAQ } from './components/SecaoFAQ/SecaoFAQ';
 import { QuemSomos } from './pages/QuemSomos/QuemSomos';
+import { Obras } from './pages/Obras/Obras';
 import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
               </>
             } />
             <Route path="quem-somos" element={<QuemSomos />} />
+            <Route path="obras" element={<Obras />} />
           </Route>
         </Routes>
       </BrowserRouter>
