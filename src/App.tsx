@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AccessibilityProvider } from './context/AccessibilityContext';
 import { BaseLayout } from './components/layout/BaseLayout/BaseLayout';
 import { QuemSomos } from './pages/QuemSomos/QuemSomos';
+import { Doacao } from './pages/Doacao/Doacao';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <Route path="/" element={<BaseLayout />}>
             <Route index element={<div className="container" style={{ padding: '40px 20px', minHeight: '50vh' }}><h1>Onde o amor se torna ação</h1></div>} />
             <Route path="quem-somos" element={<QuemSomos />} />
+            <Route path="doacao" element={<Doacao />} />
           </Route>
         </Routes>
       </BrowserRouter>
