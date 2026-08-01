@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Copy, Check, AlertTriangle } from 'lucide-react';
+import { PixModal } from '../../components/PixModal/PixModal';
 import './Doacao.css';
 
 import materiaisImg from '../../assets/doacao/materiais.png';
@@ -11,6 +12,7 @@ export const Doacao: React.FC = () => {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
   const [customAmount, setCustomAmount] = useState<string>('');
   const [pixCopied, setPixCopied] = useState<boolean>(false);
+  const [showPixModal, setShowPixModal] = useState<boolean>(false);
 
   const pixKey = 'transformacaoaju@gmail.com';
 
@@ -196,7 +198,11 @@ export const Doacao: React.FC = () => {
               </div>
 
               <div className="payment-btn-wrapper">
-                <button className="payment-btn" disabled={isAmountInvalid || customAmount === ''}>
+                <button
+                  className="payment-btn"
+                  disabled={isAmountInvalid || customAmount === ''}
+                  onClick={() => setShowPixModal(true)}
+                >
                   Fazer pagamento
                 </button>
               </div>
@@ -208,6 +214,13 @@ export const Doacao: React.FC = () => {
           *100% das doações são destinadas às ações e obras do projeto, incluindo compra de materiais e custos necessários para a realização das reformas.
         </p>
       </section>
+
+      {showPixModal && (
+        <PixModal
+          amount={numericAmount}
+          onClose={() => setShowPixModal(false)}
+        />
+      )}
     </div>
   );
 };
