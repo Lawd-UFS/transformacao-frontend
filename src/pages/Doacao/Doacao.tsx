@@ -23,8 +23,13 @@ export const Doacao: React.FC = () => {
   };
 
   const handleSelectAmount = (amount: number) => {
-    setSelectedAmount(amount);
-    setCustomAmount(amount.toFixed(2).replace('.', ','));
+    if (selectedAmount === amount) {
+      setSelectedAmount(null);
+      setCustomAmount('');
+    } else {
+      setSelectedAmount(amount);
+      setCustomAmount(amount.toFixed(2).replace('.', ','));
+    }
   };
 
   const handleCustomAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,7 +49,6 @@ export const Doacao: React.FC = () => {
 
   return (
     <div className="doacao-page">
-      {/* Hero Section */}
       <section className="doacao-hero">
         <div className="hero-overlay" />
         <div className="container hero-body">
@@ -54,9 +58,7 @@ export const Doacao: React.FC = () => {
         </div>
       </section>
 
-      {/* Conteúdo Principal */}
       <section className="doacao-container container">
-        {/* Seção Destinação de Recursos */}
         <div className="destination-section">
           <h2 className="section-title center">
             Veja como sua contribuição<br />ajuda cada obra acontecer
@@ -93,12 +95,10 @@ export const Doacao: React.FC = () => {
           </div>
         </div>
 
-        {/* Título dos Métodos */}
         <h2 className="section-title center methods-heading">
           Faça sua doação da forma que preferir
         </h2>
 
-        {/* Seção 1: Dados Bancários */}
         <div className="method-card">
           <div className="method-card-header">
             <span className="method-number">1</span>
@@ -126,46 +126,46 @@ export const Doacao: React.FC = () => {
           </div>
         </div>
 
-        {/* Seção 2: Via PIX */}
         <div className="method-card">
           <div className="method-card-header">
             <span className="method-number">2</span>
             <h3 className="method-card-title">Via PIX</h3>
           </div>
           <div className="method-card-body">
-            {/* 2.1 Chave Pix */}
             <div className="pix-sub-section">
               <div className="sub-number-row">
                 <span className="sub-number">2.1</span>
                 <p><strong>Chave Pix:</strong> {pixKey}</p>
+
+                <div className="mobile-break" />
+
+                <button
+                  onClick={handleCopyPix}
+                  className={`copy-pix-btn ${pixCopied ? 'copied' : ''}`}
+                >
+                  {pixCopied ? (
+                    <>
+                      <Check size={18} className="btn-icon" />
+                      Copiada!
+                    </>
+                  ) : (
+                    <>
+                      <Copy size={18} className="btn-icon" />
+                      Copiar
+                    </>
+                  )}
+                </button>
               </div>
-              <button
-                onClick={handleCopyPix}
-                className={`copy-pix-btn ${pixCopied ? 'copied' : ''}`}
-              >
-                {pixCopied ? (
-                  <>
-                    <Check size={18} className="btn-icon" />
-                    Copiada! ✓
-                  </>
-                ) : (
-                  <>
-                    <Copy size={18} className="btn-icon" />
-                    Copiar Chave Pix
-                  </>
-                )}
-              </button>
             </div>
 
             <div className="pix-divider" />
 
-            {/* 2.2 Doação direta pelo site */}
             <div className="pix-sub-section">
               <div className="sub-number-row">
                 <span className="sub-number">2.2</span>
                 <div>
                   <p><strong>Doação direta pelo site</strong></p>
-                  <p className="sub-description">Escolha abaixo um valor pré-definido<br />ou digite o valor que deseja doar</p>
+                  <p className="sub-description">Escolha abaixo um valor pré-definido ou digite o valor que deseja doar</p>
                 </div>
               </div>
 
@@ -211,7 +211,6 @@ export const Doacao: React.FC = () => {
           </div>
         </div>
 
-        {/* Nota de transparência */}
         <p className="transparency-footnote">
           *100% das doações são destinadas às ações e obras do projeto, incluindo compra de materiais e custos necessários para a realização das reformas.
         </p>

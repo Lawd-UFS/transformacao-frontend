@@ -1,12 +1,7 @@
-/* ==========================================================================
-   PÁGINA DE DOAÇÃO - Fiel ao protótipo "Site - Transformação"
-   ========================================================================== */
-
 .doacao-page {
   background-color: var(--bg-white);
 }
 
-/* ===================== Hero Section ===================== */
 .doacao-hero {
   position: relative;
   min-height: 500px;
@@ -50,13 +45,11 @@
   color: var(--secondary-color);
 }
 
-/* ===================== Container Principal ===================== */
 .doacao-container {
   padding-top: 60px;
   padding-bottom: 40px;
 }
 
-/* ===================== Seção de Destinação de Recursos ===================== */
 .destination-section {
   text-align: center;
   margin-bottom: 60px;
@@ -66,8 +59,9 @@
   font-size: 2rem;
   color: var(--primary-color);
   font-family: var(--font-family-title);
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 40px;
+  line-height: 0.9;
 }
 
 .section-title.center {
@@ -115,15 +109,14 @@
   line-height: 1.3;
 }
 
-/* ===================== Título "Faça sua doação..." ===================== */
 .methods-heading {
   margin-bottom: 36px;
 }
 
-/* ===================== Cards de Método de Pagamento ===================== */
 .method-card {
   max-width: 700px;
   margin: 0 auto 36px auto;
+  border: 3px solid var(--secondary-color);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(4, 50, 139, 0.12);
@@ -172,7 +165,6 @@
   color: var(--text-light);
 }
 
-/* ===================== Dados Bancários (Card 1) ===================== */
 .bank-body {
   padding-top: 4px;
 }
@@ -219,7 +211,6 @@
   line-height: 1.4;
 }
 
-/* ===================== Sub-seções do Pix (2.1 e 2.2) ===================== */
 .pix-sub-section {
   margin-bottom: 0;
 }
@@ -235,6 +226,15 @@
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 14px;
+}
+
+.mobile-break {
+  display: none;
+}
+
+.sub-number-row:first-child > button {
+  margin-top: -9px;
+  margin-left: 4px;
 }
 
 .sub-number {
@@ -265,7 +265,6 @@
   margin-top: 4px !important;
 }
 
-/* Botão Copiar Pix */
 .copy-pix-btn {
   display: inline-flex;
   align-items: center;
@@ -300,12 +299,12 @@
   flex-shrink: 0;
 }
 
-/* ===================== Botões de Valor Pré-definido ===================== */
 .method-card-body .preset-amounts-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  margin-bottom: 16px;
+  margin-top: 16px;
+  margin-bottom: 20px;
 }
 
 .method-card-body .preset-btn {
@@ -336,7 +335,6 @@
   transform: translateY(-2px);
 }
 
-/* ===================== Input Customizado ===================== */
 .method-card-body .custom-amount-wrapper {
   display: flex;
   flex-direction: column;
@@ -415,7 +413,6 @@
   flex-shrink: 0;
 }
 
-/* ===================== Botão "Fazer pagamento" ===================== */
 .payment-btn-wrapper {
   text-align: center;
   margin-top: 24px;
@@ -425,7 +422,7 @@
   display: inline-block;
   padding: 15px 42px;
   border-radius: 30px;
-  border: none;
+  border: 2px solid transparent;
   background-color: var(--secondary-color);
   color: var(--primary-color);
   font-family: var(--font-family-title);
@@ -435,6 +432,10 @@
   transition: var(--transition);
   box-shadow: 0 4px 18px rgba(240, 162, 33, 0.35);
   letter-spacing: 0.3px;
+}
+
+.payment-btn:not(:disabled) {
+  border-color: var(--bg-white);
 }
 
 .payment-btn:hover:not(:disabled) {
@@ -452,7 +453,6 @@
   cursor: not-allowed;
 }
 
-/* ===================== Nota de Transparência ===================== */
 .transparency-footnote {
   max-width: 700px;
   margin: 20px auto 0 auto;
@@ -462,9 +462,6 @@
   color: var(--text-muted);
 }
 
-/* ==========================================================================
-   RESPONSIVIDADE
-   ========================================================================== */
 
 @media (max-width: 768px) {
   .doacao-hero {
@@ -545,6 +542,23 @@
   .copy-pix-btn {
     margin-left: 0;
   }
+
+  .sub-number-row {
+    flex-wrap: wrap;
+  }
+
+  .mobile-break {
+    display: block;
+    width: 100%;
+    height: 0;
+  }
+
+  .pix-sub-section:first-child .sub-number-row .copy-pix-btn {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 8px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -563,5 +577,15 @@
 
   .destination-circle-item {
     max-width: 100px;
+  }
+
+  .pix-sub-section:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sub-number-row:first-child {
+    margin-top: 16px;
   }
 }
