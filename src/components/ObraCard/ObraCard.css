@@ -16,6 +16,10 @@
   transform: translateY(-4px);
 }
 
+.obra-card-clicavel {
+  cursor: pointer;
+}
+
 .obra-card-destaque {
   border-color: var(--secondary-color);
   box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);

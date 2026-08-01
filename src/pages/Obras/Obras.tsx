@@ -1,15 +1,22 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useCallback } from 'react';
 import { Hero } from '../../components/Hero/Hero';
 import { ObraCard } from '../../components/ObraCard/ObraCard';
+import { ModalObra } from '../../components/ModalObra/ModalObra';
+import { BannerFacaParte } from '../../components/BannerFacaParte/BannerFacaParte';
 import { obrasData } from '../../data/obras';
+import type { Obra } from '../../data/obras';
 import imagemFundoObras from '../../assets/hero-voluntarios.png';
 import './Obras.css';
 
 export const Obras: React.FC = () => {
-  // Ordena obras pelas mais recentes primeiro (maior ID ou maior ano)
+  const [obraSelecionada, setObraSelecionada] = useState<Obra | null>(null)
+
   const obrasOrdenadas = useMemo(() => {
     return [...obrasData].sort((a, b) => b.id - a.id);
   }, []);
+
+  const abrirModal = useCallback((obra: Obra) => setObraSelecionada(obra), [])
+  const fecharModal = useCallback(() => setObraSelecionada(null), [])
 
   return (
     <div className="obras-page">
@@ -30,21 +37,20 @@ export const Obras: React.FC = () => {
           </header>
 
           <div className="obras-lista-grid">
-            {obrasOrdenadas.map((obra, index) => {
-              // Destaca a obra mais recente (primeira da lista)
-              const isMaisRecente = index === 0;
-
-              return (
-                <ObraCard
-                  key={obra.id}
-                  obra={obra}
-                  destaque={isMaisRecente}
-                />
-              );
-            })}
+            {obrasOrdenadas.map((obra) => (
+              <ObraCard
+                key={obra.id}
+                obra={obra}
+                onClick={() => abrirModal(obra)}
+              />
+            ))}
           </div>
         </div>
       </section>
+
+      <BannerFacaParte />
+
+      <ModalObra obra={obraSelecionada} onFechar={fecharModal} />
     </div>
   );
 };

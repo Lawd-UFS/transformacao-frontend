@@ -5,6 +5,7 @@ import './ObraCard.css'
 interface PropsObraCard {
   obra: Obra
   destaque?: boolean
+  onClick?: () => void
 }
 
 const labelStatus: Record<StatusObra, string> = {
@@ -12,9 +13,16 @@ const labelStatus: Record<StatusObra, string> = {
   concluido: 'Concluído',
 }
 
-export function ObraCard({ obra, destaque = false }: PropsObraCard) {
+export function ObraCard({ obra, destaque = false, onClick }: PropsObraCard) {
   return (
-    <article className={`obra-card ${destaque ? 'obra-card-destaque' : ''}`}>
+    <article
+      className={`obra-card ${destaque ? 'obra-card-destaque' : ''} ${onClick ? 'obra-card-clicavel' : ''}`}
+      onClick={onClick}
+      role={onClick ? 'button' : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onKeyDown={onClick ? (e) => { if (e.key === 'Enter' || e.key === ' ') onClick() } : undefined}
+      aria-label={onClick ? `Ver detalhes: ${obra.titulo}` : undefined}
+    >
       {destaque && <div className="obra-card-selo-novo">MAIS RECENTE</div>}
       
       {/* Comparador antes/depois */}
@@ -50,3 +58,4 @@ export function ObraCard({ obra, destaque = false }: PropsObraCard) {
     </article>
   )
 }
+
