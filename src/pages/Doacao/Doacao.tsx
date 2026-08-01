@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
-import { Copy, Check, Hammer, HardHat, Armchair, Package, AlertTriangle } from 'lucide-react';
+import { Copy, Check, AlertTriangle } from 'lucide-react';
 import './Doacao.css';
+
+import materiaisImg from '../../assets/doacao/materiais.png';
+import maoDeObraImg from '../../assets/doacao/mao-de-obra.png';
+import mobiliarioImg from '../../assets/doacao/mobiliario.png';
+import itensBasicosImg from '../../assets/doacao/itens-basicos.png';
 
 export const Doacao: React.FC = () => {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
@@ -66,31 +71,19 @@ export const Doacao: React.FC = () => {
 
           <div className="destination-icons-row">
             <div className="destination-circle-item">
-              <div className="circle-icon">
-                <Hammer size={32} />
-              </div>
-              <span className="circle-label">materiais de<br />construção</span>
+              <img src={materiaisImg} alt="Materiais de construção" className="destination-circle-img" />
             </div>
 
             <div className="destination-circle-item">
-              <div className="circle-icon">
-                <HardHat size={32} />
-              </div>
-              <span className="circle-label">mão de obra</span>
+              <img src={maoDeObraImg} alt="Mão de obra" className="destination-circle-img" />
             </div>
 
             <div className="destination-circle-item">
-              <div className="circle-icon">
-                <Armchair size={32} />
-              </div>
-              <span className="circle-label">mobiliário</span>
+              <img src={mobiliarioImg} alt="Mobiliário" className="destination-circle-img" />
             </div>
 
             <div className="destination-circle-item">
-              <div className="circle-icon">
-                <Package size={32} />
-              </div>
-              <span className="circle-label">itens básicos<br />para as famílias</span>
+              <img src={itensBasicosImg} alt="Itens básicos para as famílias" className="destination-circle-img" />
             </div>
           </div>
         </div>

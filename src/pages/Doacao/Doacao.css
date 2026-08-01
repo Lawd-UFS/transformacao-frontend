@@ -6,6 +6,7 @@
   position: relative;
   min-height: 500px;
   background-color: var(--primary-color);
+  background-image: url('../../assets/doacao/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,16 +34,16 @@
 }
 
 .doacao-hero .hero-title {
-  color: var(--text-light);
+  color: var(--secondary-color);
   font-size: 4rem;
-  line-height: 1.05;
+  line-height: 1;
   font-weight: 800;
   margin: 0;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .doacao-hero .hero-title .highlight {
-  color: var(--secondary-color);
+  color: var(--text-light);
 }
 
 .doacao-container {
@@ -79,34 +80,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
-  max-width: 140px;
+  max-width: 220px;
 }
 
-.circle-icon {
-  width: 110px;
-  height: 110px;
+.destination-circle-img {
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  background-color: var(--secondary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--bg-white);
-  box-shadow: 0 6px 20px rgba(240, 162, 33, 0.3);
+  box-shadow: 0 6px 20px rgba(240, 162, 33, 0.25);
   transition: var(--transition);
+  object-fit: cover;
 }
 
-.circle-icon:hover {
+.destination-circle-img:hover {
   transform: scale(1.08);
-  box-shadow: 0 8px 28px rgba(240, 162, 33, 0.4);
-}
-
-.circle-label {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  text-align: center;
-  line-height: 1.3;
+  box-shadow: 0 8px 28px rgba(240, 162, 33, 0.45);
 }
 
 .methods-heading {
@@ -485,18 +473,9 @@
     gap: 20px;
   }
 
-  .circle-icon {
-    width: 80px;
-    height: 80px;
-  }
-
-  .circle-icon svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  .circle-label {
-    font-size: 0.78rem;
+  .destination-circle-img {
+    width: 150px;
+    height: 150px;
   }
 
   .method-card-header {
@@ -570,13 +549,9 @@
     gap: 14px;
   }
 
-  .circle-icon {
-    width: 68px;
-    height: 68px;
-  }
-
-  .destination-circle-item {
-    max-width: 100px;
+  .destination-circle-img {
+    width: 120px;
+    height: 120px;
   }
 
   .pix-sub-section:first-child {
