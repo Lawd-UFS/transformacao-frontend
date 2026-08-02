@@ -105,6 +105,15 @@ export function ModalObra({ obra, onFechar }: PropsModalObra) {
 
           <div className="modal-obra-corpo">
 
+            {/* ── História / Narrativa ── */}
+            {obra.historia && obra.historia.length > 0 && (
+              <div className="modal-obra-bloco modal-obra-bloco--historia">
+                {obra.historia.map((paragrafo, i) => (
+                  <p key={i} className="modal-obra-historia-paragrafo">{paragrafo}</p>
+                ))}
+              </div>
+            )}
+
             {/* ── Grid: Antes ── */}
             {fotosAntes.length > 0 && (
               <div className="modal-obra-bloco">

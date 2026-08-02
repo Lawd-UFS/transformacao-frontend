@@ -10,6 +10,7 @@ import { SecaoFAQ } from './components/SecaoFAQ/SecaoFAQ';
 import { QuemSomos } from './pages/QuemSomos/QuemSomos';
 import { Obras } from './pages/Obras/Obras';
 import { ScrollToTop } from './components/ScrollToTop';
+import { Doacao } from './pages/Doacao/Doacao';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             } />
             <Route path="quem-somos" element={<QuemSomos />} />
             <Route path="obras" element={<Obras />} />
+            <Route path="doacao" element={<Doacao />} />
           </Route>
         </Routes>
       </BrowserRouter>
