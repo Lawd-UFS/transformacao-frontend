@@ -94,6 +94,11 @@
     gap: 40px;
   }
 
+  .seja-voluntario-btn {
+    align-self: center;
+    text-align: center;
+  }
+
   .seja-voluntario-foto {
     width: 100%;
     height: 320px;
