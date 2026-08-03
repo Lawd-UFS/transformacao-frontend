@@ -1,0 +1,138 @@
+.volunteer-testimonials {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  background: #003399;
+}
+
+.volunteer-testimonials h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  text-align: center;
+}
+
+.volunteer-testimonials h1 span {
+  color: #eca635;
+}
+
+.volunteer-testimonials > button {
+  width: min(100%, 320px);
+  font-weight: 900;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  background-color: #f4a424;
+  color: #003399;
+  border: 4px solid #ffffff;
+  border-radius: 16px;
+  padding: 14px 22px;
+  cursor: pointer;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.volunteer-testimonials > button:hover {
+  background-color: #d28e20;
+  transform: translateY(-1px);
+}
+
+.testimonials-carousel {
+  width: min(100%, 960px);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  margin-top: 6px;
+}
+
+.carousel-arrow {
+  width: 56px;
+  height: 56px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 4.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.carousel-arrow:hover {
+  transform: scale(1.08);
+}
+
+.carousel-arrow:focus-visible,
+.volunteer-testimonials > button:focus-visible {
+  outline: 3px solid #eca635;
+  outline-offset: 4px;
+}
+
+.testimonial-card {
+  min-height: 198px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 22px 30px 24px;
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.02);
+  color: #ffffff;
+}
+
+.testimonial-card h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.testimonial-card blockquote {
+  margin: 0;
+  padding: 0 0 0 20px;
+  border-left: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.testimonial-card p {
+  margin: 0;
+  font-size: clamp(1rem, 1.8vw, 1.28rem);
+  font-style: italic;
+  line-height: 1.05;
+}
+
+.testimonial-author {
+  font-style: normal;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .volunteer-testimonials {
+    min-height: auto;
+    padding: 32px 16px 40px;
+  }
+
+  .testimonials-carousel {
+    gap: 12px;
+  }
+
+  .carousel-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 3.4rem;
+  }
+
+  .testimonial-card {
+    min-height: 220px;
+    padding: 18px 18px 20px;
+  }
+
+  .testimonial-card blockquote {
+    padding-left: 14px;
+  }
+}
