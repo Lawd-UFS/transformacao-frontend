@@ -1,68 +1,26 @@
-import { ComparadorImagens } from '../ComparadorImagens/ComparadorImagens'
+import { useMemo, useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
-/* ── Fotos reais das obras ── */
-import antesNinha from '../../assets/casas/antes-ninha.jpg'
-import depoisNinha from '../../assets/casas/depois-ninha.jpg'
-import antesMirian from '../../assets/casas/antes-mirian.jpg'
-import depoisMirian from '../../assets/casas/depois-mirian.jpg'
-import antesMichelle from '../../assets/casas/antes-michelle.png'
-import depoisMichelle from '../../assets/casas/depois-michelle.jpg'
+import { ObraCard } from '../ObraCard/ObraCard'
+import { ModalObra } from '../ModalObra/ModalObra'
+import { obrasData } from '../../data/obras'
+import type { Obra } from '../../data/obras'
 import './SecaoObras.css'
-
-/* ── Tipos ── */
-type StatusObra = 'andamento' | 'concluido'
-
-interface Obra {
-  id: number
-  titulo: string
-  localizacao: string
-  status: StatusObra
-  ano: number
-  imagemAntes: string
-  imagemDepois: string
-}
 
 interface PropsSecaoObras {
   obras?: Obra[]
 }
 
-const obrasPadrao: Obra[] = [
-  {
-    id: 8,
-    titulo: 'Casa da D. Ninha',
-    localizacao: 'Nossa Senhora do Socorro/SE',
-    status: 'andamento',
-    ano: 2026,
-    imagemAntes: antesNinha,
-    imagemDepois: depoisNinha,
-  },
-  {
-    id: 7,
-    titulo: 'Casa da Mirian',
-    localizacao: 'Nossa Senhora do Socorro/SE',
-    status: 'concluido',
-    ano: 2025,
-    imagemAntes: antesMirian,
-    imagemDepois: depoisMirian,
-  },
-  {
-    id: 6,
-    titulo: 'Casa da Michelle',
-    localizacao: 'Nossa Senhora do Socorro/SE',
-    status: 'concluido',
-    ano: 2025,
-    imagemAntes: antesMichelle,
-    imagemDepois: depoisMichelle,
-  },
-]
-
-const labelStatus: Record<StatusObra, string> = {
-  andamento: 'Andamento',
-  concluido: 'Concluído',
-}
-
 /* ── Componente ── */
-export function SecaoObras({ obras = obrasPadrao }: PropsSecaoObras) {
+export function SecaoObras({ obras = obrasData }: PropsSecaoObras) {
+  const [obraSelecionada, setObraSelecionada] = useState<Obra | null>(null)
+
+  const obrasExibidas = useMemo(() => {
+    return [...obras].sort((a, b) => b.id - a.id).slice(0, 3)
+  }, [obras])
+
+  const abrirModal = useCallback((obra: Obra) => setObraSelecionada(obra), [])
+  const fecharModal = useCallback(() => setObraSelecionada(null), [])
+
   return (
     <section className="secao-obras" aria-label="Obras realizadas">
 
@@ -80,41 +38,12 @@ export function SecaoObras({ obras = obrasPadrao }: PropsSecaoObras) {
 
       {/* Grid de cards */}
       <div className="secao-obras-grid">
-        {obras.map((obra) => (
-          <article key={obra.id} className="obra-card">
-
-            {/* Comparador antes/depois */}
-            <div className="obra-card-comparador">
-              <ComparadorImagens
-                imagemAntes={obra.imagemAntes}
-                imagemDepois={obra.imagemDepois}
-                altAntes={`Antes — ${obra.titulo}`}
-                altDepois={`Depois — ${obra.titulo}`}
-              />
-            </div>
-
-            {/* Informações */}
-            <div className="obra-card-info">
-              <h3 className="obra-card-titulo">
-                {obra.titulo}{' '}
-                <span className="obra-card-numero">| Obra {String(obra.id).padStart(2, '0')}</span>
-              </h3>
-
-              <p className="obra-card-localizacao">
-                <svg className="obra-card-pin" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                  <circle cx="12" cy="9" r="2.5" />
-                </svg>
-                {obra.localizacao}
-              </p>
-
-              <span className={`obra-card-badge obra-card-badge-${obra.status}`}>
-                {labelStatus[obra.status]} – {obra.ano}
-              </span>
-            </div>
-
-          </article>
+        {obrasExibidas.map((obra) => (
+          <ObraCard
+            key={obra.id}
+            obra={obra}
+            onClick={() => abrirModal(obra)}
+          />
         ))}
       </div>
 
@@ -124,6 +53,9 @@ export function SecaoObras({ obras = obrasPadrao }: PropsSecaoObras) {
           Ver mais obras
         </Link>
       </div>
+
+      {/* Modal de detalhes da obra */}
+      <ModalObra obra={obraSelecionada} onFechar={fecharModal} />
 
     </section>
   )

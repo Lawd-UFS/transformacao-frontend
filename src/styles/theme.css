@@ -179,6 +179,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (min-width: 1024px) {
+  html {
+    font-size: 14.5px; /* Reduz escala rem global no desktop, deixando tudo um pouco menor */
+  }
+}
+
 body {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
