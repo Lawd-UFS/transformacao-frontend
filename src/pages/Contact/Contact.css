@@ -1,0 +1,8 @@
+/* ==========================================================================
+   Página de Contato — "Fale conosco"
+   Fundo azul claro como no protótipo (página 10)
+   ========================================================================== */
+
+.contact-page {
+  background-color: var(--color-primary-50);
+}

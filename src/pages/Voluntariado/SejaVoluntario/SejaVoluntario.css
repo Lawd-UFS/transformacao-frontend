@@ -1,0 +1,106 @@
+.seja-voluntario {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.seja-voluntario-grid {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.seja-voluntario-texto {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.seja-voluntario-titulo {
+  font-family: var(--font-family-title);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.seja-voluntario-destaque {
+  color: var(--secondary-color);
+}
+
+.seja-voluntario-descricao {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--primary-color);
+  margin: 20px 0 0;
+}
+
+.seja-voluntario-btn {
+  display: inline-block;
+  margin-top: 28px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 18px 48px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-style: italic;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(4, 50, 139, 0.2);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.seja-voluntario-btn:hover {
+  transform: scale(1.04);
+  background-color: #f7b32b;
+  box-shadow: 0 6px 20px rgba(4, 50, 139, 0.3);
+}
+
+.seja-voluntario-btn:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 4px;
+}
+
+.seja-voluntario-foto {
+  flex: 1 1 50%;
+  height: 400px;
+  margin: 0;
+  border: 4px solid var(--primary-color);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(4, 50, 139, 0.15);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.seja-voluntario-foto:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 14px 35px rgba(4, 50, 139, 0.22);
+}
+
+.seja-voluntario-foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .seja-voluntario-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .seja-voluntario-btn {
+    align-self: center;
+    text-align: center;
+  }
+
+  .seja-voluntario-foto {
+    width: 100%;
+    height: 320px;
+  }
+}

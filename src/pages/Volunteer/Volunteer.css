@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Página de Voluntariado — estilos gerais + seção de foto de encerramento
+   ========================================================================== */
+
+.volunteer-page {
+  background-color: var(--color-neutral-0);
+}
+
+/* ── Foto de encerramento (galeria de voluntários no rodapé da página) ── */
+.volunteer-closing-photo {
+  width: 100%;
+  overflow: hidden;
+}
+
+.volunteer-closing-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 500px;
+}

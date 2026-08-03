@@ -1,0 +1,91 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 75vh;
+
+  /* Imagem de fundo centralizada e cobrindo toda a área */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ── Overlay: degradê da esquerda (opaco) para direita (transparente) — igual ao Quem Somos ── */
+.hero_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #04328b 0%,
+    rgba(4, 50, 139, 0.95) 25%,
+    rgba(4, 50, 139, 0.65) 45%,
+    rgba(4, 50, 139, 0.20) 60%,
+    transparent 75%
+  );
+  z-index: 1;
+}
+
+/* ── Área de conteúdo (texto) ── */
+.hero_conteudo {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--space-16) var(--container-padding);
+}
+
+/* ── Título principal ── */
+.hero_titulo {
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  line-height: 0.9;
+  max-width: 70%;
+  letter-spacing: -0.03em;
+}
+
+/* "Onde o amor se torna" — âmbar */
+.hero_titulo-destaque {
+  color: var(--secondary-color);
+}
+
+/* "ação." — branco */
+.hero_titulo-branco {
+  color: var(--color-neutral-0);
+}
+
+/* ── Responsividade ── */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60svh;
+    align-items: center;
+  }
+
+  /* overlay mais suave no mobile para manter a imagem visível e o texto legível */
+  .hero_overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(4, 50, 139, 0.8) 0%,
+      rgba(4, 50, 139, 0.4) 55%,
+      rgba(4, 50, 139, 0.1) 85%,
+      transparent 100%
+    );
+  }
+
+  .hero_titulo {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    max-width: 90%;
+    line-height: 0.95;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero_titulo {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+    max-width: 95%;
+  }
+}
