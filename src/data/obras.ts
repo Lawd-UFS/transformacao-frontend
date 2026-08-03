@@ -11,6 +11,8 @@ import antesPequenino from '../assets/casas/antes-pequenino.jpeg'
 import depoisPequenino from '../assets/casas/depois-pequenino.jpg'
 import antesApeDosGemeos from '../assets/casas/antes-gemeos.jpg'
 import depoisApeDosGemeos from '../assets/casas/depois-gemeos.jpg'
+import antesVeronica from '../assets/casas/antes-veronica.jpg'
+import depoisVeronica from '../assets/casas/depois-veronica.jpg'
 
 /* ── Mirian — múltiplas fotos ── */
 import mirianAntes1 from '../assets/casas/mirian/antes/20250809_094806.jpg'
@@ -77,7 +79,19 @@ import gemeosAntes5 from '../assets/casas/gemeos/antes/IMG-20220723-WA0025.jpg'
 import gemeosAntes6 from '../assets/casas/gemeos/antes/IMG-20220723-WA0027.jpg'
 import gemeosAntes7 from '../assets/casas/gemeos/antes/IMG-20220723-WA0030.jpg'
 import gemeosAntes8 from '../assets/casas/gemeos/antes/IMG-20220730-WA0044.jpg'
-import gemeosAntes9 from '../assets/casas/gemeos/antes/IMG-20251105-WA0088.jpg'
+
+/* ── Verônica — múltiplas fotos ── */
+import veronicaAntes1 from '../assets/casas/veronica/antes/1.jpg'
+import veronicaAntes2 from '../assets/casas/veronica/antes/2.jpg'
+import veronicaAntes3 from '../assets/casas/veronica/antes/3.jpg'
+import veronicaAntes4 from '../assets/casas/veronica/antes/4.jpg'
+import veronicaAntes5 from '../assets/casas/veronica/antes/5.jpg'
+
+import veronicaDepois1 from '../assets/casas/veronica/depois/1.jpg'
+import veronicaDepois2 from '../assets/casas/veronica/depois/2.jpg'
+import veronicaDepois3 from '../assets/casas/veronica/depois/3.jpg'
+import veronicaDepois4 from '../assets/casas/veronica/depois/4.jpg'
+import veronicaDepois5 from '../assets/casas/veronica/depois/5.jpg'
 
 /* ── Ninha — múltiplas fotos (somente antes por enquanto) ── */
 import ninhaAntes1 from '../assets/casas/ninha/antes/20260411_093634.jpg'
@@ -111,7 +125,7 @@ export interface Obra {
 export const obrasData: Obra[] = [
   {
     id: 8,
-    titulo: 'Casa da D. Ninha',
+    titulo: 'Casa da Ivaneide',
     localizacao: 'Nossa Senhora do Socorro/SE',
     status: 'andamento',
     ano: 2026,
@@ -129,27 +143,25 @@ export const obrasData: Obra[] = [
     imagemDepois: depoisMirian,
     fotosAntes: [mirianAntes1, mirianAntes2, mirianAntes3, mirianAntes4, mirianAntes5],
     fotosDepois: [mirianDepois1, mirianDepois2, mirianDepois3, mirianDepois4, mirianDepois5],
-    duracao: '4 meses',
-    voluntarios: 12,
-    recursosInvestidos: 'R$ 12.320',
-    depoimento: 'Sempre sonhei em ver minha casa sem goteiras e com as paredes seguras para meus filhos. O que o pessoal da TransformAção fez não foi só uma obra, foi devolver a paz para a nossa família.',
-    autorDepoimento: 'Mirian, moradora de N. Sra. do Socorro',
   },
   {
     id: 6,
     titulo: 'Casa da Michelle',
     localizacao: 'Nossa Senhora do Socorro/SE',
     status: 'concluido',
-    ano: 2025,
+    ano: 2024,
     imagemAntes: antesMichelle,
     imagemDepois: depoisMichelle,
     historia: [
       'Michelle conhece a vida pela luta. Mãe solteira de cinco filhos, ela acordava todos os dias carregando o peso da responsabilidade de proteger, alimentar e cuidar da sua família, mesmo quando quase nada lhe sobrava. Com uma renda de apenas R$ 800, ela fazia o impossível para que os filhos nunca perdessem a esperança.',
-      'Mas a realidade era cruel. A família vivia em um barraco, sem estrutura, sem segurança e sem as condições mínimas para oferecer conforto às crianças. Quando a chuva chegava, vinha também o medo. Medo da água invadindo, do frio, da insegurança e da incerteza sobre o amanhã.',
-      'Ainda assim, Michelle nunca desistiu. Porque o amor de uma mãe consegue resistir até nos cenários mais difíceis.',
+      'Mas a realidade era cruel.',
+      'A família vivia em um barraco, sem estrutura, sem segurança e sem as condições mínimas para oferecer conforto às crianças. Quando a chuva chegava, vinha também o medo. Medo da água invadindo, do frio, da insegurança e da incerteza sobre o amanhã.',
+      'Ainda assim, Michelle nunca desistiu.',
+      'Porque o amor de uma mãe consegue resistir até nos cenários mais difíceis.',
       'Foi então que o Projeto Transformação encontrou essa família e decidiu abraçar uma das maiores missões da sua história: construir, do zero, uma casa para Michelle e seus filhos. Não seria apenas levantar paredes. Seria construir dignidade, proteção e um novo começo para seis vidas que precisavam urgentemente de esperança.',
       'Cada tijolo colocado carregava solidariedade. Cada voluntário que chegou para ajudar fazia parte da realização de um sonho que, por muito tempo, parecia impossível. A corrida contra o tempo antes do período de chuvas não era apenas sobre terminar uma obra — era sobre garantir que aquelas crianças finalmente tivessem um lar seguro para dormir.',
-      'A casa de Michelle passou a representar muito mais do que concreto e telhado. Representou a força de uma mãe que nunca desistiu dos filhos e a união de pessoas que acreditaram que transformar vidas ainda vale a pena. Porque, às vezes, uma casa não muda apenas um endereço. Ela muda o destino de uma família inteira.',
+      'A casa de Michelle passou a representar muito mais do que concreto e telhado. Representou a força de uma mãe que nunca desistiu dos filhos e a união de pessoas que acreditaram que transformar vidas ainda vale a pena.',
+      'Porque, às vezes, uma casa não muda apenas um endereço. Ela muda o destino de uma família inteira.',
     ],
     fotosAntes: [michelleAntes1, michelleAntes2, michelleAntes3],
     fotosDepois: [michelleDepois1, michelleDepois2],
@@ -159,7 +171,7 @@ export const obrasData: Obra[] = [
     titulo: 'Casa da Ana',
     localizacao: 'Nossa Senhora do Socorro/SE',
     status: 'concluido',
-    ano: 2025,
+    ano: 2023,
     imagemAntes: antesAna,
     imagemDepois: depoisAna,
     historia: [
@@ -181,7 +193,7 @@ export const obrasData: Obra[] = [
     titulo: 'Casa do Pequenino',
     localizacao: 'Aracaju/SE',
     status: 'concluido',
-    ano: 2025,
+    ano: 2022,
     imagemAntes: antesPequenino,
     imagemDepois: depoisPequenino,
     historia: [
@@ -207,7 +219,7 @@ export const obrasData: Obra[] = [
     titulo: 'Apê dos Gêmeos',
     localizacao: 'Aracaju/SE',
     status: 'concluido',
-    ano: 2025,
+    ano: 2022,
     imagemAntes: antesApeDosGemeos,
     imagemDepois: depoisApeDosGemeos,
     historia: [
@@ -221,7 +233,30 @@ export const obrasData: Obra[] = [
     ],
     fotosAntes: [
       gemeosAntes1, gemeosAntes2, gemeosAntes3, gemeosAntes4, gemeosAntes5,
-      gemeosAntes6, gemeosAntes7, gemeosAntes8, gemeosAntes9,
+      gemeosAntes6, gemeosAntes7, gemeosAntes8,
+    ],
+  },
+  {
+    id: 2,
+    titulo: 'Casa da Verônica',
+    localizacao: 'Aracaju/SE',
+    status: 'concluido',
+    ano: 2021,
+    imagemAntes: antesVeronica,
+    imagemDepois: depoisVeronica,
+    historia: [
+      'Verônica é mãe de quatro filhas. Uma mulher forte, daquelas que aprenderam a enfrentar a vida mesmo quando tudo parecia difícil demais. Entre desafios, contas, preocupações e dias cansativos, ela nunca deixou faltar amor dentro de casa. Mesmo com tantas dificuldades, sempre encontrou forças para cuidar das filhas e seguir em frente.',
+      'Mas a realidade da família era dura. A casa, marcada pelo tempo e pelas limitações, já não oferecia o conforto e a segurança que elas mereciam. Em muitos momentos, Verônica precisou esconder o próprio cansaço para continuar sendo abrigo, proteção e esperança para suas meninas.',
+      'Ainda assim, ela nunca desistiu. Porque mãe não desiste.',
+      'E foi nesse cenário de luta silenciosa que o Projeto Transformação chegou através do Grupo de Apoio a Família – GAF. Não apenas para reformar uma casa, mas para devolver dignidade a uma mãe que passou a vida inteira colocando as filhas em primeiro lugar. Cada parede reconstruída, cada melhoria realizada e cada ajuda recebida passou a carregar um significado muito maior: mostrar para Verônica que ela não está sozinha.',
+      'Hoje, essa reforma representa recomeço. Representa noites mais tranquilas, sonhos renovados e a esperança de dias melhores para uma mãe que já venceu tantas batalhas sem nunca perder o amor dentro do peito.',
+      'Porque transformar uma casa é importante. Mas transformar a vida de uma família inteira é algo que fica para sempre.'
+    ],
+    fotosAntes: [
+      veronicaAntes1, veronicaAntes2, veronicaAntes3, veronicaAntes4, veronicaAntes5,
+    ],
+    fotosDepois: [
+      veronicaDepois1, veronicaDepois2, veronicaDepois3, veronicaDepois4, veronicaDepois5,
     ],
   },
 ]
