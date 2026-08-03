@@ -2,7 +2,7 @@ import React from 'react';
 import heroImg from '../../assets/empresas-parceiras/hero-voluntarios.jpg';
 import { SecaoParcerias } from '../../components/SecaoParcerias/SecaoParcerias';
 import { MolduraImagem } from '../../components/MolduraImagem/MolduraImagem';
-import hachuraImg from '../../assets/empresas-parceiras/hachura.png';
+import hachuraImg from '../../assets/compartilhado/hachura.png';
 
 import './Parceiras.css';
 
