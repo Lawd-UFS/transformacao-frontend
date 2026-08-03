@@ -353,3 +353,169 @@
     columns: 1;
   }
 }
+
+/* =====================
+   Seção de Benefícios
+   ===================== */
+.parceiras-page .beneficios-section {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.parceiras-page .beneficios-titulo {
+  font-family: var(--font-family-title);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.parceiras-page .beneficios-titulo-destaque {
+  color: var(--secondary-color);
+}
+
+.parceiras-page .beneficios-grid {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.parceiras-page .beneficios-imagem-col {
+  flex: 0 0 340px;
+  display: flex;
+  align-items: stretch;
+}
+
+.parceiras-page .beneficios-lista-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.parceiras-page .beneficio-card {
+  background-color: var(--action-color);
+  color: #ffffff;
+  padding: 18px 24px;
+  border-radius: 18px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(100, 162, 241, 0.2);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+  user-select: none;
+}
+
+.parceiras-page .beneficio-card:hover {
+  transform: translateX(6px) scale(1.02);
+  background-color: var(--primary-color);
+  box-shadow: 0 6px 18px rgba(4, 50, 139, 0.25);
+}
+
+/* Responsividade da Seção de Benefícios */
+@media (max-width: 900px) {
+  .parceiras-page .beneficios-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .parceiras-page .beneficios-imagem-col {
+    justify-content: center;
+  }
+  
+  .parceiras-page .beneficios-lista-col {
+    flex: unset;
+  }
+  
+  .parceiras-page .beneficio-card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* =====================
+   Seção Time CTA
+   ===================== */
+.parceiras-page .time-cta-section {
+  background-color: var(--primary-color);
+  padding: 85px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.parceiras-page .time-cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.parceiras-page .time-cta-titulo {
+  font-family: var(--font-family-title);
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.parceiras-page .time-cta-highlight {
+  color: var(--secondary-color);
+}
+
+.parceiras-page .time-cta-button-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.parceiras-page .time-cta-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 18px 48px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  font-style: italic; /* Italic key word styling matching the button text in screenshot */
+  border-radius: 12px; /* Smooth card-like radius matching design */
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.parceiras-page .time-cta-btn:hover {
+  transform: scale(1.04);
+  background-color: #f7b32b;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.parceiras-page .time-cta-sparkles {
+  position: absolute;
+  top: -28px;
+  right: -36px;
+  pointer-events: none;
+  animation: sparkles-float 2.5s ease-in-out infinite alternate;
+}
+
+.parceiras-page .time-cta-hachura-img {
+  width: 38px;
+  height: auto;
+  display: block;
+}
+
+@keyframes sparkles-float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-4px) rotate(4deg);
+  }
+}
