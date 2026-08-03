@@ -34,7 +34,7 @@
 }
 
 .secao-obras-subtitulo {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   color: var(--text-muted);
   font-weight: var(--font-weight-regular);
 }
