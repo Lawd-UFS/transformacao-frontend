@@ -1,4 +1,4 @@
-import imagemGrupo from '../../assets/hero-voluntarios.png'
+import imagemSobre from '../../assets/home/secao-sobre.png'
 import './SecaoSobre.css'
 
 interface Estatistica {
@@ -22,13 +22,12 @@ const estatisticasPadrao: Estatistica[] = [
 export function SecaoSobre({
   texto = 'Somos uma organização sem fins lucrativos, formada por voluntários de diversas áreas e dedicada',
   textoDestaque = 'a transformar a realidade de famílias.',
-  imagem = imagemGrupo,
+  imagem = imagemSobre,
   estatisticas = estatisticasPadrao,
 }: PropsSecaoSobre) {
   return (
     <section className="secao-sobre" aria-label="Sobre o projeto">
 
-      {/* Linha intro: texto + foto */}
       <div className="secao-sobre-intro">
         <p className="secao-sobre-texto">
           {texto}{' '}
@@ -44,7 +43,6 @@ export function SecaoSobre({
         </div>
       </div>
 
-      {/* Card de estatísticas */}
       <div className="secao-sobre-card-stats">
         {estatisticas.map((stat) => (
           <div key={stat.descricao} className="secao-sobre-stat">

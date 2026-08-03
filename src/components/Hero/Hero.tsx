@@ -1,4 +1,4 @@
-import imagemVoluntarios from '../../assets/hero-voluntarios.png'
+import imagemVoluntarios from '../../assets/home/hero-voluntarios.png'
 import './Hero.css'
 
 interface PropsHero {
