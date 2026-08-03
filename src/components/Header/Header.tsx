@@ -116,7 +116,7 @@ const Header: React.FC = () => {
                     <Link to="/voluntariado" onClick={handleLinkClick}>Ser voluntário</Link>
                   </li>
                   <li>
-                    <Link to="/parceria" onClick={handleLinkClick}>Ser empresa parceira</Link>
+                    <Link to="/parceiras" onClick={handleLinkClick}>Ser empresa parceira</Link>
                   </li>
                 </ul>
               </li>

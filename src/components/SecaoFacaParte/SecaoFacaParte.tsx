@@ -37,7 +37,7 @@ const cardsPadrao: CardEngajamento[] = [
     titulo: 'Ser empresa parceira',
     descricao:
       'Sua empresa pode contribuir com materiais, mobiliário ou apoio financeiro e ajudar a realizar sonhos.',
-    href: '/parceria',
+    href: '/parceiras',
   },
 ]
 
