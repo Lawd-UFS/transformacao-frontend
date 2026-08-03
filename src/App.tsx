@@ -13,7 +13,7 @@ import { ScrollToTop } from './components/ScrollToTop';
 import { Doacao } from './pages/Doacao/Doacao';
 import { Parceiras } from './pages/Parceiras/Parceiras';
 import { Contact } from './pages/Contact/Contact';
-import { Volunteer } from './pages/Volunteer/Volunteer';
+import { Voluntariado } from './pages/Voluntariado/Voluntariado';
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
             <Route path="parceiras" element={<Parceiras />} />
             <Route path="parceria" element={<Navigate to="/parceiras" replace />} />
             <Route path="contato" element={<Contact />} />
-            <Route path="voluntariado" element={<Volunteer />} />
+            <Route path="voluntariado" element={<Voluntariado />} />
           </Route>
         </Routes>
       </BrowserRouter>
