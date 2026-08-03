@@ -108,7 +108,7 @@
 /* ── Responsividade ── */
 @media (max-width: 600px) {
   .faq-pergunta-conteudo {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
   }
   
   .faq-resposta-texto {

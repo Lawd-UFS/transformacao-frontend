@@ -21,11 +21,11 @@
 }
 
 .secao-sobre-texto {
-  font-size: 1.60rem;
-  line-height: 1.45;
+  font-size: 1.35rem;
+  line-height: 1.5;
   color: var(--primary-color);
   text-align: justify;
-  max-width: 450px;
+  max-width: 480px;
 }
 
 .secao-sobre-texto-destaque {
@@ -42,7 +42,7 @@
 
 .secao-sobre-imagem {
   width: 100%;
-  height: 330px;
+  height: 300px;
   object-fit: cover;
   display: block;
 }
@@ -68,14 +68,14 @@
 
 .secao-sobre-stat-numero {
   font-family: var(--font-family-title);
-  font-size: clamp(5rem, 10vw, 8rem);
+  font-size: clamp(3.8rem, 6.5vw, 5rem);
   font-weight: var(--font-weight-black);
   color: var(--secondary-color);
   line-height: 1;
 }
 
 .secao-sobre-stat-descricao {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   color: var(--text-light);
   text-align: center;

@@ -19,6 +19,7 @@ export function ComparadorImagens({
   const [posicao, setPosicao] = useState(posicaoInicial)
   const containerRef = useRef<HTMLDivElement>(null)
   const arrastando = useRef(false)
+  const foiArrastado = useRef(false)
 
   const calcularPosicao = useCallback((clientX: number) => {
     const el = containerRef.current
@@ -29,19 +30,48 @@ export function ComparadorImagens({
   }, [])
 
   /* ── Mouse ── */
-  const onMouseDown = () => { arrastando.current = true }
+  const onMouseDown = () => { 
+    arrastando.current = true 
+    foiArrastado.current = false
+  }
 
   const onMouseMove = useCallback((e: React.MouseEvent) => {
     if (!arrastando.current) return
+    foiArrastado.current = true
     calcularPosicao(e.clientX)
   }, [calcularPosicao])
 
-  const onMouseUp = () => { arrastando.current = false }
+  const onMouseUp = () => { 
+    arrastando.current = false
+    // Reseta o status de arrasto logo após o evento de clique ser processado
+    setTimeout(() => {
+      foiArrastado.current = false
+    }, 50)
+  }
 
   /* ── Touch ── */
-  const onTouchMove = useCallback((e: React.TouchEvent) => {
+  const onTouchStart = useCallback((e: React.TouchEvent) => {
+    foiArrastado.current = false
     calcularPosicao(e.touches[0].clientX)
   }, [calcularPosicao])
+
+  const onTouchMove = useCallback((e: React.TouchEvent) => {
+    foiArrastado.current = true
+    calcularPosicao(e.touches[0].clientX)
+  }, [calcularPosicao])
+
+  const onTouchEnd = () => {
+    setTimeout(() => {
+      foiArrastado.current = false
+    }, 50)
+  }
+
+  const onClickCapture = (e: React.MouseEvent) => {
+    if (foiArrastado.current) {
+      e.stopPropagation()
+      e.preventDefault()
+    }
+  }
 
   return (
     <div
@@ -50,6 +80,8 @@ export function ComparadorImagens({
       onMouseMove={onMouseMove}
       onMouseUp={onMouseUp}
       onMouseLeave={onMouseUp}
+      onTouchEnd={onTouchEnd}
+      onClickCapture={onClickCapture}
     >
       {/* Imagem DEPOIS */}
       <img
@@ -78,7 +110,7 @@ export function ComparadorImagens({
         style={{ left: `${posicao}%` }}
         onMouseDown={onMouseDown}
         onTouchMove={onTouchMove}
-        onTouchStart={onTouchMove}
+        onTouchStart={onTouchStart}
       >
         <div className="comparador-handle">
           <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
