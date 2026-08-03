@@ -2,8 +2,10 @@
   position: relative;
   min-height: 650px;
   background-color: var(--primary-color);
+  /* A foto é retrato (1200x1600): o recorte horizontal precisa cair sobre o
+     grupo, que ocupa a faixa central da imagem. */
   background-size: cover;
-  background-position: 60% 28%;
+  background-position: center 42%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -42,7 +44,10 @@
 @media (max-width: 900px) {
   .voluntariado-hero {
     min-height: 480px;
-    background-position: 70% 20%;
+    /* Em telas estreitas o `cover` mostraria a foto retrato quase inteira e o
+       grupo ficaria minúsculo: ampliamos o recorte em vez de encolher as pessoas. */
+    background-size: 180% auto;
+    background-position: center 44%;
   }
 }
 

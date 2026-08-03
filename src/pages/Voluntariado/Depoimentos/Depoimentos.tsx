@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import hachura from '../../../assets/voluntariado/hachura.png';
+import hachura from '../../../assets/compartilhado/hachura.png';
 import { FORMULARIO_VOLUNTARIO_URL } from '../formulario';
 import './Depoimentos.css';
 
