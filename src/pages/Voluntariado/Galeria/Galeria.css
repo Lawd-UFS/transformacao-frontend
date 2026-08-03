@@ -1,0 +1,29 @@
+.galeria-voluntariado {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  width: 100%;
+  background-color: var(--bg-white);
+}
+
+.galeria-voluntariado-item {
+  margin: 0;
+  overflow: hidden;
+}
+
+.galeria-voluntariado-item img {
+  display: block;
+  width: 100%;
+  height: clamp(140px, 32vw, 220px);
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .galeria-voluntariado {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .galeria-voluntariado-item img {
+    height: clamp(180px, 22vw, 300px);
+  }
+}

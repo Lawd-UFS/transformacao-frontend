@@ -1,0 +1,41 @@
+    .banner-contact{
+        max-width:100%;
+        margin: 0 auto;
+        background-image: linear-gradient(to right, 
+                        rgba(0, 51, 153, 1) 0%,     
+                        rgba(0, 51, 153, 0.9) 30%,   
+                        rgba(0, 51, 153, 0.4) 65%,   
+                        rgba(0, 51, 153, 0) 100%), url('../../../assets/contato/hero.jpg');
+        background-position: center;
+        background-size: cover;
+        padding: 10px 0;
+    }
+    .banner-contact h1{
+        text-align: left;
+        width: 40%;
+        padding-left: 50px;
+        color: #fff;
+        font-size: 170%;
+    }
+    .banner-contact span{
+        color:#eca635
+    }
+@media (min-width: 768px) {
+    .banner-contact{
+        width:100%;
+        margin: 0 auto;
+        background-position: center;
+        background-size: cover;
+        padding: 50px 0;
+    }
+    .banner-contact h1{
+        text-align: left;
+        width: 40%;
+        padding-left: 100px;
+        color: #fff;
+        font-size: 500%;
+    }
+    .banner-contact span{
+        color:#eca635
+    }
+}
