@@ -1,0 +1,29 @@
+
+.Form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 3% clamp(0.5rem, 2vw, 1rem);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.form-embed {
+    width: min(100%, 920px);
+    overflow: hidden;
+}
+.Form iframe{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 900px;
+    height: clamp(900px, 150vh, 1500px);
+    border: 0;
+}
+@media (min-width: 768px) {
+    .Form iframe {
+        min-height: 1000px;
+        height: clamp(1000px, 135vh, 1650px);
+    }
+
+}
