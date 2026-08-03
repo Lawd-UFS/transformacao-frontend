@@ -5,17 +5,17 @@
 .banner-faca-parte {
   width: 100%;
   background-color: var(--color-primary-700);
-  padding: var(--space-12) var(--container-padding);
+  padding: var(--space-8) var(--container-padding);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--space-5);
 }
 
 /* ── Título ── */
 .banner-faca-parte-titulo {
   font-family: var(--font-family-base);
-  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: var(--font-weight-bold);
   color: var(--color-neutral-0);
   text-align: center;
@@ -31,7 +31,7 @@
 .banner-faca-parte-botoes {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-5);
+  gap: var(--space-4);
   justify-content: center;
 }
 
@@ -40,10 +40,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--space-5) var(--space-10);
+  padding: var(--space-3) var(--space-6);
   background-color: var(--color-primary-300);
   color: var(--color-primary-800);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-md);
   font-weight: var(--font-weight-bold);
   border-radius: var(--border-radius-xl);
   text-decoration: none;

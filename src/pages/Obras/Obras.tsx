@@ -1,22 +1,44 @@
-import React, { useMemo, useState, useCallback } from 'react';
+import React, { useMemo, useState, useCallback, useEffect } from 'react';
 import { Hero } from '../../components/Hero/Hero';
 import { ObraCard } from '../../components/ObraCard/ObraCard';
 import { ModalObra } from '../../components/ModalObra/ModalObra';
 import { BannerFacaParte } from '../../components/BannerFacaParte/BannerFacaParte';
 import { obrasData } from '../../data/obras';
 import type { Obra } from '../../data/obras';
-import imagemFundoObras from '../../assets/hero-voluntarios.png';
+import imagemFundoObras from '../../assets/obras/hero.jpg';
 import './Obras.css';
 
 export const Obras: React.FC = () => {
   const [obraSelecionada, setObraSelecionada] = useState<Obra | null>(null)
+  const [isMobile, setIsMobile] = useState(false)
+  const [limiteMobile, setLimiteMobile] = useState(3)
+
+  useEffect(() => {
+    const verificarMobile = () => {
+      setIsMobile(window.innerWidth <= 600)
+    }
+    verificarMobile()
+    window.addEventListener('resize', verificarMobile)
+    return () => window.removeEventListener('resize', verificarMobile)
+  }, [])
 
   const obrasOrdenadas = useMemo(() => {
     return [...obrasData].sort((a, b) => b.id - a.id);
   }, []);
 
+  const obrasExibidas = useMemo(() => {
+    if (isMobile) {
+      return obrasOrdenadas.slice(0, limiteMobile)
+    }
+    return obrasOrdenadas
+  }, [obrasOrdenadas, isMobile, limiteMobile])
+
   const abrirModal = useCallback((obra: Obra) => setObraSelecionada(obra), [])
   const fecharModal = useCallback(() => setObraSelecionada(null), [])
+
+  const handleVerMais = useCallback(() => {
+    setLimiteMobile((prev) => prev + 3)
+  }, [])
 
   return (
     <div className="obras-page">
@@ -37,7 +59,7 @@ export const Obras: React.FC = () => {
           </header>
 
           <div className="obras-lista-grid">
-            {obrasOrdenadas.map((obra) => (
+            {obrasExibidas.map((obra) => (
               <ObraCard
                 key={obra.id}
                 obra={obra}
@@ -45,6 +67,14 @@ export const Obras: React.FC = () => {
               />
             ))}
           </div>
+
+          {isMobile && limiteMobile < obrasOrdenadas.length && (
+            <div className="obras-lista-ver-mais-container">
+              <button className="obras-lista-ver-mais-btn" onClick={handleVerMais}>
+                Ver mais obras
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -54,3 +84,4 @@ export const Obras: React.FC = () => {
     </div>
   );
 };
+

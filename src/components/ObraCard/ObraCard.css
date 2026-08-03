@@ -78,7 +78,7 @@
 /* Localização com ícone de pin */
 .obra-card-localizacao {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--space-1, 4px);
   font-size: var(--font-size-sm);
   color: var(--text-muted);
@@ -90,6 +90,7 @@
   height: 14px;
   flex-shrink: 0;
   color: var(--text-muted);
+  margin-top: 3px; /* Alinha com o topo da primeira linha de texto */
 }
 
 /* ── Badges de status ── */
@@ -111,4 +112,12 @@
 .obra-card-badge-concluido {
   background: #d1fae5;
   color: #065f46;
+}
+
+/* ── Ajustes de alinhamento para Desktop ── */
+@media (min-width: 1024px) {
+  .obra-card-titulo {
+    min-height: 2.6em; /* Reserva espaço para até 2 linhas de título, garantindo alinhamento horizontal */
+    margin-bottom: var(--space-2); /* Aumenta o distanciamento em relação à localidade */
+  }
 }
