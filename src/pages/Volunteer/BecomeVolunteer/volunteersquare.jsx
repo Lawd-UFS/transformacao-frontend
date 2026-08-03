@@ -1,6 +1,6 @@
 import React from 'react'
 import './volunteersquare.css'
-import VolunteerGroup from '../../../assets/IMG-20251105-WA0069.jpg'
+import VolunteerGroup from '../../../assets/voluntariado/grupo-voluntarios.jpg'
 const Volunteersquare = () => {
   return (
     <div className="volunteer-square">
@@ -16,5 +16,4 @@ const Volunteersquare = () => {
   )
 }
 
-// IMG-20251105-WA0069.jpg
 export default Volunteersquare

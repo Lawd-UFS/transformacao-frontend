@@ -1,13 +1,13 @@
 import React from 'react'
 import './benefitssquare.css'
-import test from '../../../assets/IMG-20221210-WA0072.jpg'
+import beneficios from '../../../assets/voluntariado/beneficios-voluntariado.jpg'
 const Benefitssquare = () => {
   return (
     <div className="Benefits-square">
       <h1><span>Benefícios</span> do voluntariado</h1>
       <div className="Benefits-container">
       <article className="benefits-photograph">
-      <img src={test} alt="Teste" />
+      <img src={beneficios} alt="Voluntários em ação" />
       </article>
         <aside className="Benefits-text">
         <ol>

@@ -1,9 +1,9 @@
 import React from 'react'
 import './ourdepartments.css'
-import eng from '../../../assets/engineer-seventh-page.png'
-import arq from '../../../assets/architect-seventh-page.png'
-import blu from '../../../assets/logo-seventh-page.png'
-import coin from '../../../assets/coin-seventh-page.webp'
+import eng from '../../../assets/voluntariado/icone-engenharia.png'
+import arq from '../../../assets/voluntariado/icone-arquitetura.png'
+import blu from '../../../assets/voluntariado/icone-mutirao.png'
+import coin from '../../../assets/voluntariado/icone-financeiro.webp'
 
 const Ourdepartments = () => {
   return (
