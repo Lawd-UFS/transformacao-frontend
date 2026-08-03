@@ -4,7 +4,13 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import foto1 from '../../assets/hero-voluntarios.png'
+import foto1 from '../../assets/home/carrossel-1.png'
+import foto2 from '../../assets/home/carrossel-2.png'
+import foto3 from '../../assets/home/carrossel-3.png'
+import foto4 from '../../assets/home/carrossel-4.png'
+import foto5 from '../../assets/home/carrossel-5.jpg'
+import foto6 from '../../assets/home/carrossel-6.jpg'
+import foto7 from '../../assets/home/carrossel-7.jpg'
 import './SecaoFacaParte.css'
 
 /* ── Tipos ── */
@@ -41,8 +47,7 @@ const cardsPadrao: CardEngajamento[] = [
   },
 ]
 
-/* Adicione as fotos reais do mutirão em src/assets/mutirao/ */
-const fotosPadrao: string[] = [foto1, foto1, foto1, foto1]
+const fotosPadrao: string[] = [foto1, foto2, foto3, foto4, foto5, foto6, foto7]
 
 /* ── Componente ── */
 export function SecaoFacaParte({
