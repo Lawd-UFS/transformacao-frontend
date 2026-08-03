@@ -2,10 +2,14 @@ import React from 'react'
 import './banner-contact.css'
 const Banner_contact = () => {
     return (
-        <div className='banner-contact'>
-            <h1>Entre em <span>contato</span></h1>
-        </div>
-    )
-}
+        <section className="banner-contact">
+            <div className="container banner-contact-body">
+                <h1 className="banner-contact-titulo">
+                    Entre em <span className="banner-contact-destaque">contato</span>
+                </h1>
+            </div>
+        </section>
+    );
+};
 
 export default Banner_contact

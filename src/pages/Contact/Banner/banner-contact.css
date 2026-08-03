@@ -1,41 +1,60 @@
-    .banner-contact{
-        max-width:100%;
-        margin: 0 auto;
-        background-image: linear-gradient(to right, 
-                        rgba(0, 51, 153, 1) 0%,     
-                        rgba(0, 51, 153, 0.9) 30%,   
-                        rgba(0, 51, 153, 0.4) 65%,   
-                        rgba(0, 51, 153, 0) 100%), url('../../../assets/contato/hero.jpg');
-        background-position: center;
-        background-size: cover;
-        padding: 10px 0;
+.banner-contact {
+    position: relative;
+    width: 100%;
+    min-height: 650px;
+    background-image: linear-gradient(
+        to right,
+        #04328b 0%,
+        rgba(4, 50, 139, 0.95) 25%,
+        rgba(4, 50, 139, 0.65) 45%,
+        rgba(4, 50, 139, 0.20) 60%,
+        transparent 75%
+    ), url('../../../assets/imagem_01.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.banner-contact-body {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-contact-titulo {
+    font-family: var(--font-family-title);
+    font-size: clamp(3.25rem, 6vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--text-light, #ffffff);
+    margin: 0;
+    max-width: 700px;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.banner-contact-destaque {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .banner-contact {
+        min-height: 480px;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(4, 50, 139, 0.85) 0%,
+            rgba(4, 50, 139, 0.5) 55%,
+            rgba(4, 50, 139, 0.15) 85%,
+            transparent 100%
+        ), url('../../../assets/imagem_01.png');
     }
-    .banner-contact h1{
-        text-align: left;
-        width: 40%;
-        padding-left: 50px;
-        color: #fff;
-        font-size: 170%;
+
+    .banner-contact-titulo {
+        font-size: clamp(2.25rem, 8vw, 3.5rem);
     }
-    .banner-contact span{
-        color:#eca635
-    }
-@media (min-width: 768px) {
-    .banner-contact{
-        width:100%;
-        margin: 0 auto;
-        background-position: center;
-        background-size: cover;
-        padding: 50px 0;
-    }
-    .banner-contact h1{
-        text-align: left;
-        width: 40%;
-        padding-left: 100px;
-        color: #fff;
-        font-size: 500%;
-    }
-    .banner-contact span{
-        color:#eca635
+
+    .banner-contact-destaque {
+        display: block;
     }
 }
