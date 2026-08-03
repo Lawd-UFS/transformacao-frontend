@@ -12,6 +12,8 @@ import { Obras } from './pages/Obras/Obras';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Doacao } from './pages/Doacao/Doacao';
 import { Parceiras } from './pages/Parceiras/Parceiras';
+import { Contact } from './pages/Contact/Contact';
+import { Volunteer } from './pages/Volunteer/Volunteer';
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
             <Route path="doacao" element={<Doacao />} />
             <Route path="parceiras" element={<Parceiras />} />
             <Route path="parceria" element={<Navigate to="/parceiras" replace />} />
+            <Route path="contato" element={<Contact />} />
+            <Route path="voluntariado" element={<Volunteer />} />
           </Route>
         </Routes>
       </BrowserRouter>
