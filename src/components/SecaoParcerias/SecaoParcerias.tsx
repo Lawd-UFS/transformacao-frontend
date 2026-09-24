@@ -1,17 +1,14 @@
 import './SecaoParcerias.css'
 
-import logoImpacto from '../../assets/empresas-parceiras/logos-empresas/01_impacto.png'
-import logoCasaDasTintas from '../../assets/empresas-parceiras/logos-empresas/02_casa-das-tintas.png'
-import logoDeMelo from '../../assets/empresas-parceiras/logos-empresas/03_demelo.png'
-import logoBoxxeJeans from '../../assets/empresas-parceiras/logos-empresas/04_boxxe-jeans.png'
-import logoGaletoPrensado from '../../assets/empresas-parceiras/logos-empresas/05_galeto-prensado.png'
-import logoMobMoveis from '../../assets/empresas-parceiras/logos-empresas/06_mob-moveis.png'
-import logoCaju from '../../assets/empresas-parceiras/logos-empresas/07_caju.png'
-import logoSeuMoraesBarbearia from '../../assets/empresas-parceiras/logos-empresas/08_seu-moraes-barbearia.png'
-import logoGrupoGama from '../../assets/empresas-parceiras/logos-empresas/09_grupo-gama.png'
-import logoOleSorvetes from '../../assets/empresas-parceiras/logos-empresas/10_ole-sorvetes.png'
-import logoPafLogistica from '../../assets/empresas-parceiras/logos-empresas/11_paf-logistica.png'
-import logoUnio from '../../assets/empresas-parceiras/logos-empresas/12_unio.png'
+import logoImpacto from '../../assets/empresas-parceiras/logos-empresas/logo-impacto.png'
+import logoCasaDasTintas from '../../assets/empresas-parceiras/logos-empresas/logo-casa-tintas.png'
+import logoSerpaf from '../../assets/empresas-parceiras/logos-empresas/logo-serpaf.png'
+import logoDeMelo from '../../assets/empresas-parceiras/logos-empresas/logo-demelo.png'
+import logoInnovare from '../../assets/empresas-parceiras/logos-empresas/logo-innovare.png'
+import logoGaletoPrensado from '../../assets/empresas-parceiras/logos-empresas/logo-galeto-prensado.png'
+import logoPrimeEscritorio from '../../assets/empresas-parceiras/logos-empresas/logo-prime.png'
+import logoRotary from '../../assets/empresas-parceiras/logos-empresas/logo-rotary.png'
+import logoCaju from '../../assets/empresas-parceiras/logos-empresas/logo-caju.png'
 
 interface Parceiro {
   id: number
@@ -27,16 +24,13 @@ interface PropsSecaoParcerias {
 const parceirosPadrao: Parceiro[] = [
   { id: 1, nome: 'Impacto', logo: logoImpacto, site: 'https://www.instagram.com/impactoconstrucoes/' },
   { id: 2, nome: 'Casa das Tintas', logo: logoCasaDasTintas, site: 'https://www.casadastintas.com.br/' },
-  { id: 3, nome: 'De Melo', logo: logoDeMelo, site: 'https://www.instagram.com/demeloconstrutora/' },
-  { id: 4, nome: 'Boxxe Jeans', logo: logoBoxxeJeans, site: 'https://www.instagram.com/boxxejeans/' },
-  { id: 5, nome: 'Galeto Prensado', logo: logoGaletoPrensado, site: 'https://www.instagram.com/galetoprensado/' },
-  { id: 6, nome: 'Mob Móveis', logo: logoMobMoveis, site: 'https://www.instagram.com/mob.moveis/' },
-  { id: 7, nome: 'Caju', logo: logoCaju, site: 'https://www.caju.com.br/' },
-  { id: 8, nome: 'Seu Moraes Barbearia', logo: logoSeuMoraesBarbearia, site: 'https://www.instagram.com/seumoraesbarbearia/' },
-  { id: 9, nome: 'Grupo Gama', logo: logoGrupoGama, site: 'https://www.gama.eng.br/' },
-  { id: 10, nome: 'Olé Sorvetes', logo: logoOleSorvetes, site: 'https://www.instagram.com/olesorvetes/' },
-  { id: 11, nome: 'PAF Logística', logo: logoPafLogistica, site: 'https://www.paflogistica.com.br/' },
-  { id: 12, nome: 'Unio', logo: logoUnio, site: 'https://www.unio.co/' },
+  { id: 3, nome: 'Serpaf', logo: logoSerpaf, site: 'https://www.paflogistica.com.br/' },
+  { id: 4, nome: 'DeMelo', logo: logoDeMelo, site: 'https://www.instagram.com/demeloconstrutora/' },
+  { id: 5, nome: 'Innovare', logo: logoInnovare, site: 'https://www.instagram.com/_innovarehome/' },
+  { id: 6, nome: 'Galeto Prensado', logo: logoGaletoPrensado, site: 'https://www.instagram.com/galetoprensado/' },
+  { id: 7, nome: 'Prime Escritório', logo: logoPrimeEscritorio, site: 'https://www.instagram.com/primeescritorios/' },
+  { id: 8, nome: 'Rotary', logo: logoRotary, site: 'https://www.rotary.org/pt' },
+  { id: 9, nome: 'Caju', logo: logoCaju, site: 'https://www.caju.com.br/' },
 ]
 
 export function SecaoParcerias({ parceiros = parceirosPadrao }: PropsSecaoParcerias) {
