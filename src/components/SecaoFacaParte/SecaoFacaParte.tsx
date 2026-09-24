@@ -23,6 +23,7 @@ interface CardEngajamento {
 interface PropsSecaoFacaParte {
   cards?: CardEngajamento[]
   fotos?: string[]
+  exibirGaleria?: boolean
 }
 
 /* ── Dados padrão ── */
@@ -53,6 +54,7 @@ const fotosPadrao: string[] = [foto1, foto2, foto3, foto4, foto5, foto6, foto7, 
 export function SecaoFacaParte({
   cards = cardsPadrao,
   fotos = fotosPadrao,
+  exibirGaleria = true,
 }: PropsSecaoFacaParte) {
 
   return (
@@ -83,45 +85,47 @@ export function SecaoFacaParte({
       </div>
 
       {/* ── Bloco 2: Carrossel de fotos ── */}
-      <div className="faca-parte-galeria" aria-label="Fotos dos mutirões">
-        <div className="reformas-carousel-wrapper faca-parte-carousel-override">
-          <div className="swiper-button-prev custom-swiper-prev"></div>
-          <Swiper
-            modules={[Autoplay, Navigation, Pagination]}
-            spaceBetween={30}
-            slidesPerView={1}
-            loop={true}
-            navigation={{
-              nextEl: '.custom-swiper-next',
-              prevEl: '.custom-swiper-prev',
-            }}
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              }
-            }}
-            className="reformas-swiper"
-          >
-            {fotos.map((src, i) => (
-              <SwiperSlide key={i}>
-                <div className="reforma-slide-content">
-                  <img
-                    src={src}
-                    alt={`Foto do mutirão ${i + 1}`}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }}
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="swiper-button-next custom-swiper-next"></div>
+      {exibirGaleria && fotos.length > 0 && (
+        <div className="faca-parte-galeria" aria-label="Fotos dos mutirões">
+          <div className="reformas-carousel-wrapper faca-parte-carousel-override">
+            <div className="swiper-button-prev custom-swiper-prev"></div>
+            <Swiper
+              modules={[Autoplay, Navigation, Pagination]}
+              spaceBetween={30}
+              slidesPerView={1}
+              loop={true}
+              navigation={{
+                nextEl: '.custom-swiper-next',
+                prevEl: '.custom-swiper-prev',
+              }}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                }
+              }}
+              className="reformas-swiper"
+            >
+              {fotos.map((src, i) => (
+                <SwiperSlide key={i}>
+                  <div className="reforma-slide-content">
+                    <img
+                      src={src}
+                      alt={`Foto do mutirão ${i + 1}`}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div className="swiper-button-next custom-swiper-next"></div>
+          </div>
         </div>
-      </div>
+      )}
 
     </section>
   )
