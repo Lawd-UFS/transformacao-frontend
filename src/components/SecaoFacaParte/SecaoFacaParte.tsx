@@ -3,14 +3,14 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import foto1 from '../../assets/compartilhado/mutirao-1.png'
-import foto2 from '../../assets/compartilhado/mutirao-2.png'
-import foto3 from '../../assets/compartilhado/mutirao-3.png'
-import foto4 from '../../assets/compartilhado/mutirao-4.png'
-import foto5 from '../../assets/compartilhado/mutirao-5.jpg'
-import foto6 from '../../assets/compartilhado/mutirao-6.jpg'
-import foto7 from '../../assets/compartilhado/mutirao-7.jpg'
+import foto1 from '../../assets/home/galeria/galeria-1.jpg'
+import foto2 from '../../assets/home/galeria/galeria-2.jpg'
+import foto3 from '../../assets/home/galeria/galeria-3.jpg'
+import foto4 from '../../assets/home/galeria/galeria-4.jpg'
+import foto5 from '../../assets/home/galeria/galeria-5.jpg'
+import foto6 from '../../assets/home/galeria/galeria-6.jpg'
+import foto7 from '../../assets/home/galeria/galeria-7.jpg'
+import foto8 from '../../assets/home/galeria/galeria-8.jpg'
 import './SecaoFacaParte.css'
 
 /* ── Tipos ── */
@@ -47,7 +47,7 @@ const cardsPadrao: CardEngajamento[] = [
   },
 ]
 
-const fotosPadrao: string[] = [foto1, foto2, foto3, foto4, foto5, foto6, foto7]
+const fotosPadrao: string[] = [foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8]
 
 /* ── Componente ── */
 export function SecaoFacaParte({
