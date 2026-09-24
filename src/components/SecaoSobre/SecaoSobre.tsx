@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { Link } from 'react-router-dom'
 import imagemSobre from '../../assets/home/secao-sobre.jpg'
 import './SecaoSobre.css'
 
@@ -12,6 +13,8 @@ interface PropsSecaoSobre {
   textoDestaque?: string
   imagem?: string
   estatisticas?: Estatistica[]
+  botaoTexto?: string
+  botaoLink?: string
 }
 
 const estatisticasPadrao: Estatistica[] = [
@@ -25,12 +28,15 @@ export function SecaoSobre({
   textoDestaque,
   imagem = imagemSobre,
   estatisticas = estatisticasPadrao,
+  botaoTexto = 'Saiba mais',
+  botaoLink = '/quem-somos',
 }: PropsSecaoSobre) {
   return (
     <section className="secao-sobre" aria-label="Sobre o projeto">
 
       <div className="secao-sobre-intro">
-        <p className="secao-sobre-texto">
+        <div className="secao-sobre-conteudo">
+          <p className="secao-sobre-texto">
           {texto !== undefined ? (
             <>
               {texto}{' '}
@@ -52,6 +58,13 @@ export function SecaoSobre({
             </>
           )}
         </p>
+
+        {botaoTexto && botaoLink && (
+          <Link to={botaoLink} className="secao-sobre-btn">
+            {botaoTexto}
+          </Link>
+        )}
+      </div>
 
         <div className="secao-sobre-imagem-wrapper">
           <img

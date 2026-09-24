@@ -20,16 +20,50 @@
   gap: var(--space-12);
 }
 
+.secao-sobre-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  width: 100%;
+}
+
 .secao-sobre-texto {
   font-size: 1.35rem;
   line-height: 1.5;
   color: var(--primary-color);
   text-align: justify;
   max-width: 520px;
+  width: 100%;
 }
 
 .secao-sobre-texto-destaque {
   font-weight: var(--font-weight-bold);
+}
+
+/* ── Botão Quem Somos (padronizado com o botão Ver mais obras) ── */
+.secao-sobre-btn {
+  display: inline-block;
+  padding: var(--space-4) var(--space-10);
+  background: var(--color-primary-600);
+  color: var(--text-light);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  border-radius: var(--border-radius-xl);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.secao-sobre-btn:hover {
+  background: var(--color-primary-700);
+  transform: translateY(-2px);
+}
+
+.secao-sobre-btn:active {
+  transform: translateY(0);
 }
 
 /* ── Foto ── */
@@ -95,6 +129,14 @@
   .secao-sobre-intro {
     grid-template-columns: 1fr;
     gap: var(--space-6);
+  }
+
+  .secao-sobre-conteudo {
+    gap: var(--space-5);
+  }
+
+  .secao-sobre-btn {
+    padding: var(--space-3) var(--space-8);
   }
 
   .secao-sobre-texto {
