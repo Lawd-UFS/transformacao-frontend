@@ -1,5 +1,6 @@
 import React from 'react';
 import { Timeline } from '../../components/Timeline/Timeline';
+import { ComoFunciona } from '../../components/ComoFunciona/ComoFunciona';
 import { SecaoFacaParte } from '../../components/SecaoFacaParte/SecaoFacaParte';
 import heroImg from '../../assets/quem-somos/banner-quem-somos.jpg';
 import aboutLeftImg from '../../assets/quem-somos/imagem-1-quem-somos.jpg';
@@ -183,6 +184,8 @@ export const QuemSomos: React.FC = () => {
           <div className="swiper-button-next custom-swiper-next"></div>
         </div>
       </section>
+
+      <ComoFunciona />
 
       <section className="timeline-section container">
         <h2 className="section-title center">Nossa trajetória</h2>
