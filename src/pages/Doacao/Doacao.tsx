@@ -9,7 +9,7 @@ import mobiliarioImg from '../../assets/doacao/mobiliario.png';
 import itensBasicosImg from '../../assets/doacao/itens-basicos.png';
 
 // Link configurável para o formulário de doador mensal
-export const FORMULARIO_DOADOR_RECORRENTE_URL = 'https://forms.gle/CcR9Pazuqb7WXuQWA'; // TODO: Atualizar com o link definitivo do formulário de doação recorrente
+export const FORMULARIO_DOADOR_RECORRENTE_URL = 'https://forms.gle/s8c9qX11EvXSa2B76';
 
 export const Doacao: React.FC = () => {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);

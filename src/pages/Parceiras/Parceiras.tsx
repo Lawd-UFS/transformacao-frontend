@@ -8,7 +8,7 @@ import hachuraImg from '../../assets/compartilhado/hachura.png';
 
 import './Parceiras.css';
 
-const FORM_LINK = 'https://forms.gle/CcR9Pazuqb7WXuQWA';
+const FORM_LINK = 'https://forms.gle/cBVYY52DAMARZwAr7';
 
 export const Parceiras: React.FC = () => {
   return (
