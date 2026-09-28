@@ -15,6 +15,7 @@ import { Doacao } from './pages/Doacao/Doacao';
 import { Parceiras } from './pages/Parceiras/Parceiras';
 import { Contact } from './pages/Contact/Contact';
 import { Voluntariado } from './pages/Voluntariado/Voluntariado';
+import { Midia } from './pages/Midia/Midia';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="parceria" element={<Navigate to="/parceiras" replace />} />
             <Route path="contato" element={<Contact />} />
             <Route path="voluntariado" element={<Voluntariado />} />
+            <Route path="midia" element={<Midia />} />
           </Route>
         </Routes>
       </BrowserRouter>
