@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImg from '../../../assets/compartilhado/hero-voluntarios.jpg';
+import heroImg from '../../../assets/voluntariado/hero-voluntarios.jpg';
 import './BannerVoluntariado.css';
 
 export const BannerVoluntariado: React.FC = () => {

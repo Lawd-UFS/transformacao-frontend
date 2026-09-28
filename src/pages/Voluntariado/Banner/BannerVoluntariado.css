@@ -43,16 +43,34 @@
 
 @media (max-width: 900px) {
   .voluntariado-hero {
-    min-height: 480px;
-    /* Em telas estreitas o `cover` mostraria a foto retrato quase inteira e o
-       grupo ficaria minúsculo: ampliamos o recorte em vez de encolher as pessoas. */
-    background-size: 180% auto;
-    background-position: center 44%;
+    min-height: clamp(340px, 50vh, 480px);
+    background-size: cover;
+    background-position: center 30%;
+  }
+
+  .voluntariado-hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(4, 50, 139, 0.88) 0%,
+      rgba(4, 50, 139, 0.6) 50%,
+      rgba(4, 50, 139, 0.25) 80%,
+      transparent 100%
+    );
+  }
+
+  .voluntariado-hero-titulo {
+    font-size: clamp(2.2rem, 7vw, 3.2rem);
+    line-height: 1.1;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  .voluntariado-hero {
+    min-height: 320px;
+    background-position: center 25%;
+  }
+
   .voluntariado-hero-titulo {
-    font-size: 3rem;
+    font-size: clamp(1.85rem, 8.5vw, 2.4rem);
   }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import mutirao1 from '../../../assets/compartilhado/mutirao-1.png';
-import mutirao2 from '../../../assets/compartilhado/mutirao-2.png';
-import mutirao3 from '../../../assets/compartilhado/mutirao-3.png';
-import mutirao4 from '../../../assets/compartilhado/mutirao-4.png';
+import galeria1 from '../../../assets/voluntariado/galeria-1.jpg';
+import galeria2 from '../../../assets/voluntariado/galeria-2.jpg';
+import galeria3 from '../../../assets/voluntariado/galeria-3.jpg';
+import galeria4 from '../../../assets/voluntariado/galeria-4.jpg';
 import './Galeria.css';
 
 interface Foto {
@@ -11,10 +11,10 @@ interface Foto {
 }
 
 const fotos: Foto[] = [
-  { src: mutirao1, alt: 'Voluntários pintando a fachada de uma casa' },
-  { src: mutirao2, alt: 'Voluntários com rolos de tinta durante uma reforma' },
-  { src: mutirao3, alt: 'Voluntários de capacete trabalhando em um mutirão' },
-  { src: mutirao4, alt: 'Voluntários preparando a pintura de um corredor' },
+  { src: galeria1, alt: 'Voluntários pintando parede em corredor durante mutirão' },
+  { src: galeria2, alt: 'Voluntário montando estrutura de madeira com ferramentas' },
+  { src: galeria3, alt: 'Grupo de voluntários reunidos em círculo com capacetes azuis' },
+  { src: galeria4, alt: 'Voluntárias pintando estante em formato de casinha' },
 ];
 
 export const Galeria: React.FC = () => {

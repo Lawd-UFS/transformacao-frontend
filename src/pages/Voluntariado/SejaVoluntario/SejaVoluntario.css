@@ -1,6 +1,6 @@
 .seja-voluntario {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .seja-voluntario-grid {
@@ -39,6 +39,8 @@
 
 .seja-voluntario-btn {
   display: inline-block;
+  align-self: center;
+  text-align: center;
   margin-top: 28px;
   background-color: var(--secondary-color);
   color: var(--primary-color);
@@ -76,10 +78,6 @@
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
 }
 
-.seja-voluntario-foto:hover {
-  transform: translateY(-4px) scale(1.01);
-  box-shadow: 0 14px 35px rgba(4, 50, 139, 0.22);
-}
 
 .seja-voluntario-foto img {
   display: block;
@@ -89,18 +87,40 @@
 }
 
 @media (max-width: 900px) {
+  .seja-voluntario {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   .seja-voluntario-grid {
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
   }
 
   .seja-voluntario-btn {
     align-self: center;
     text-align: center;
+    max-width: 100%;
+    padding: 14px 32px;
+    font-size: 1.15rem;
   }
 
   .seja-voluntario-foto {
     width: 100%;
-    height: 320px;
+    height: clamp(240px, 50vw, 340px);
+  }
+}
+
+@media (max-width: 480px) {
+  .seja-voluntario {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .seja-voluntario-btn {
+    padding: 14px 20px;
+    font-size: 1.05rem;
+    width: 100%;
+    max-width: 320px;
   }
 }

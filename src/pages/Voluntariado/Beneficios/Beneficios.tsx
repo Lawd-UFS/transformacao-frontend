@@ -3,12 +3,12 @@ import beneficiosVoluntariado from '../../../assets/voluntariado/beneficios-volu
 import './Beneficios.css';
 
 const beneficios: string[] = [
-  'Melhoria na saúde física e mental',
-  'Redução de estresse e depressão',
-  'Sensação de bem estar e propósito',
-  'Desenvolvimento de habilidades',
-  'Aumento do autoconhecimento',
-  'Fortalece o Network',
+  'Contribui para a saúde física e mental',
+  'Ajuda a reduzir o estresse',
+  'Aumenta a sensação de bem-estar e de propósito',
+  'Desenvolve novas habilidades',
+  'Estimula o autoconhecimento',
+  'Amplia e fortalece o Network',
 ];
 
 export const Beneficios: React.FC = () => {
