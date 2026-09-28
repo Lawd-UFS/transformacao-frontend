@@ -33,6 +33,7 @@ function App() {
               </>
             } />
             <Route path="quem-somos" element={<QuemSomos />} />
+            <Route path="transparencia" element={<QuemSomos />} />
             <Route path="obras" element={<Obras />} />
             <Route path="doacao" element={<Doacao />} />
             <Route path="parceiras" element={<Parceiras />} />
