@@ -19,6 +19,7 @@ interface Parceiro {
 
 interface PropsSecaoParcerias {
   parceiros?: Parceiro[]
+  titulo?: React.ReactNode
 }
 
 const parceirosPadrao: Parceiro[] = [
@@ -33,12 +34,16 @@ const parceirosPadrao: Parceiro[] = [
   { id: 9, nome: 'Caju', logo: logoCaju, site: 'https://www.caju.com.br/' },
 ]
 
-export function SecaoParcerias({ parceiros = parceirosPadrao }: PropsSecaoParcerias) {
+export function SecaoParcerias({ parceiros = parceirosPadrao, titulo }: PropsSecaoParcerias) {
   return (
     <section className="secao-parcerias" aria-labelledby="titulo-parcerias">
       <div className="secao-parcerias-cabecalho">
         <h2 id="titulo-parcerias" className="secao-parcerias-titulo">
-          Nossas empresas <span className="secao-parcerias-titulo-destaque">parceiras</span>
+          {titulo ?? (
+            <>
+              Nossas empresas <span className="secao-parcerias-titulo-destaque">parceiras</span>
+            </>
+          )}
         </h2>
       </div>
 
