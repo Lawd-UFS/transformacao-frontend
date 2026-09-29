@@ -8,13 +8,16 @@ import maoDeObraImg from '../../assets/doacao/mao-de-obra.png';
 import mobiliarioImg from '../../assets/doacao/mobiliario.png';
 import itensBasicosImg from '../../assets/doacao/itens-basicos.png';
 
+// Link configurável para o formulário de doador mensal
+export const FORMULARIO_DOADOR_RECORRENTE_URL = 'https://forms.gle/s8c9qX11EvXSa2B76';
+
 export const Doacao: React.FC = () => {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
   const [customAmount, setCustomAmount] = useState<string>('');
   const [pixCopied, setPixCopied] = useState<boolean>(false);
   const [showPixModal, setShowPixModal] = useState<boolean>(false);
 
-  const pixKey = 'transformacaoaju@gmail.com';
+  const pixKey = '67.011.744/0001-82';
 
   const handleCopyPix = () => {
     navigator.clipboard.writeText(pixKey)
@@ -90,9 +93,26 @@ export const Doacao: React.FC = () => {
           </div>
         </div>
 
-        <h2 className="section-title center methods-heading">
-          Faça sua doação da forma que preferir
-        </h2>
+        <div className="doacao-intro-section">
+          <h2 className="section-title center">
+            Você pode fazer parte dessa<br />transformação de diferentes formas
+          </h2>
+          <p className="doacao-intro-text">
+            Você pode contribuir da forma que for melhor para você:{' '}
+            <strong>fazendo uma doação pontual ou tornando-se um doador mensal</strong>. Seja qual
+            for a sua escolha, toda contribuição é bem-vinda e nos ajuda a tornar nossas ações
+            possíveis e a levar dignidade a mais famílias.
+          </p>
+        </div>
+
+        <div className="doacao-pontual-section">
+          <h2 className="section-title center pontual-title">Doação pontual</h2>
+          <p className="doacao-pontual-text">
+            <strong>Você pode fazer uma doação pontual sempre que desejar</strong>, contribuindo
+            com o valor que estiver ao seu alcance. É uma forma simples de apoiar nossas ações de
+            acordo com suas possibilidades.
+          </p>
+        </div>
 
         <div className="method-card">
           <div className="method-card-header">
@@ -103,19 +123,27 @@ export const Doacao: React.FC = () => {
             <div className="bank-info-grid">
               <div className="bank-info-item">
                 <span className="bank-label">Banco</span>
-                <span className="bank-value">Nubank</span>
-              </div>
-              <div className="bank-info-item">
-                <span className="bank-label">Conta</span>
-                <span className="bank-value">54749581-0</span>
+                <span className="bank-value">Asaas I.P S.A (461)</span>
               </div>
               <div className="bank-info-item">
                 <span className="bank-label">Agência</span>
                 <span className="bank-value">0001</span>
               </div>
               <div className="bank-info-item">
+                <span className="bank-label">Conta</span>
+                <span className="bank-value">7505147-4</span>
+              </div>
+              <div className="bank-info-item">
+                <span className="bank-label">Tipo de conta</span>
+                <span className="bank-value">Conta de Pagamento</span>
+              </div>
+              <div className="bank-info-item">
                 <span className="bank-label">Titular</span>
-                <span className="bank-value">Luiz Fernando Costa Ferreira</span>
+                <span className="bank-value">PROJETO TRANSFORMACAO</span>
+              </div>
+              <div className="bank-info-item">
+                <span className="bank-label">CNPJ</span>
+                <span className="bank-value">67.011.744/0001-82</span>
               </div>
             </div>
           </div>
@@ -130,7 +158,7 @@ export const Doacao: React.FC = () => {
             <div className="pix-sub-section">
               <div className="sub-number-row">
                 <span className="sub-number">2.1</span>
-                <p><strong>Chave Pix:</strong> {pixKey}</p>
+                <p><strong>Chave Pix CNPJ:</strong> {pixKey}</p>
 
                 <div className="mobile-break" />
 
@@ -213,6 +241,41 @@ export const Doacao: React.FC = () => {
         <p className="transparency-footnote">
           *100% das doações são destinadas às ações e obras do projeto, incluindo compra de materiais e custos necessários para a realização das reformas.
         </p>
+
+        <section className="recorrente-section" aria-label="Doação recorrente">
+          <h2 className="section-title center recorrente-title">Doação recorrente</h2>
+          <p className="recorrente-text">
+            Você também pode{' '}
+            <strong>caminhar conosco todos os meses, contribuindo de forma recorrente</strong> e
+            ajudando a dar continuidade às nossas ações. As contribuições mensais nos ajudam a
+            contar com recursos de forma mais previsível e a planejar nosso trabalho com mais
+            segurança.
+          </p>
+
+          <div className="recorrente-chamada">
+            <h3 className="recorrente-subheading">Quer se tornar um doador recorrente?</h3>
+            <p className="recorrente-instrucoes">
+              É simples!{' '}
+              <strong>
+                Preencha o formulário abaixo com seus dados e escolha uma das opções de contribuição
+                mensal.
+              </strong>{' '}
+              Após recebermos suas informações, entraremos em contato para orientar você sobre os
+              próximos passos e realizar o cadastro da sua contribuição recorrente.
+            </p>
+
+            <div className="recorrente-btn-wrapper">
+              <a
+                href={FORMULARIO_DOADOR_RECORRENTE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="recorrente-btn"
+              >
+                Quero ser doador mensal
+              </a>
+            </div>
+          </div>
+        </section>
       </section>
 
       {showPixModal && (

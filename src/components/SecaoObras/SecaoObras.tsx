@@ -28,7 +28,7 @@ export function SecaoObras({ obras = obrasData }: PropsSecaoObras) {
       <div className="secao-obras-cabecalho">
         <h2 className="secao-obras-titulo">
           Conheça as famílias{' '}
-          <span className="secao-obras-titulo-destaque">já impactadas</span>{' '}
+          <br></br> <span className="secao-obras-titulo-destaque">já impactadas</span>{' '}
           pelo projeto
         </h2>
         <p className="secao-obras-subtitulo">

@@ -20,8 +20,8 @@ export const PixModal: React.FC<PixModalProps> = ({ amount, onClose }) => {
   }, []);
 
   const brCode = generatePixBrCode({
-    pixKey: 'transformacaoaju@gmail.com',
-    merchantName: 'Luiz Fernando C Ferreira',
+    pixKey: '67011744000182',
+    merchantName: 'PROJETO TRANSFORMACAO',
     merchantCity: 'Aracaju',
     amount,
     description: 'Doacao Projeto Transformacao',

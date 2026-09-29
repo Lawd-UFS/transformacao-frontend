@@ -13,8 +13,9 @@ export const SejaVoluntario: React.FC = () => {
             <span className="seja-voluntario-destaque">você</span>
           </h2>
           <p className="seja-voluntario-descricao">
-            Voluntários de todas as idades e áreas de atuação, unidos para ajudar famílias em
-            situação de vulnerabilidade social.
+            <strong>Voluntários de diferentes idades e áreas de atuação</strong>, unidos pelo
+            propósito de levar dignidade, conforto e esperança a famílias em situação de
+            vulnerabilidade social.
           </p>
           <a
             href={FORMULARIO_VOLUNTARIO_URL}

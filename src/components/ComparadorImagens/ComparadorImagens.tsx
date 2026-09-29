@@ -83,26 +83,30 @@ export function ComparadorImagens({
       onTouchEnd={onTouchEnd}
       onClickCapture={onClickCapture}
     >
-      {/* Imagem DEPOIS */}
+      {/* Camada DEPOIS (imagem e label) */}
       <img
         src={imagemDepois}
         alt={altDepois}
         className="comparador-imagem"
         draggable={false}
       />
+      <div className="comparador-overlay-depois">
+        <span className="comparador-label comparador-label-depois">DEPOIS</span>
+      </div>
 
-      {/* Imagem ANTES */}
-      <img
-        src={imagemAntes}
-        alt={altAntes}
-        className="comparador-imagem"
+      {/* Camada ANTES (imagem e label clipados juntos pela linha do seletor) */}
+      <div
+        className="comparador-camada-antes"
         style={{ clipPath: `inset(0 ${100 - posicao}% 0 0)` }}
-        draggable={false}
-      />
-
-      {/* Labels */}
-      <span className="comparador-label comparador-label-antes">ANTES</span>
-      <span className="comparador-label comparador-label-depois">DEPOIS</span>
+      >
+        <img
+          src={imagemAntes}
+          alt={altAntes}
+          className="comparador-imagem"
+          draggable={false}
+        />
+        <span className="comparador-label comparador-label-antes">ANTES</span>
+      </div>
 
       {/* Linha + handle arrastável */}
       <div

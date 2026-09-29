@@ -8,12 +8,14 @@ import { SecaoFacaParte } from './components/SecaoFacaParte/SecaoFacaParte';
 import { SecaoParcerias } from './components/SecaoParcerias/SecaoParcerias';
 import { SecaoFAQ } from './components/SecaoFAQ/SecaoFAQ';
 import { QuemSomos } from './pages/QuemSomos/QuemSomos';
+import { Transparencia } from './pages/Transparencia/Transparencia';
 import { Obras } from './pages/Obras/Obras';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Doacao } from './pages/Doacao/Doacao';
 import { Parceiras } from './pages/Parceiras/Parceiras';
 import { Contact } from './pages/Contact/Contact';
 import { Voluntariado } from './pages/Voluntariado/Voluntariado';
+import { Midia } from './pages/Midia/Midia';
 
 function App() {
   return (
@@ -33,12 +35,14 @@ function App() {
               </>
             } />
             <Route path="quem-somos" element={<QuemSomos />} />
+            <Route path="transparencia" element={<Transparencia />} />
             <Route path="obras" element={<Obras />} />
             <Route path="doacao" element={<Doacao />} />
             <Route path="parceiras" element={<Parceiras />} />
             <Route path="parceria" element={<Navigate to="/parceiras" replace />} />
             <Route path="contato" element={<Contact />} />
             <Route path="voluntariado" element={<Voluntariado />} />
+            <Route path="midia" element={<Midia />} />
           </Route>
         </Routes>
       </BrowserRouter>

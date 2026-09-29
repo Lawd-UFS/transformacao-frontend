@@ -1,24 +1,21 @@
-/* =====================
-   Placeholders genéricos
-   ===================== */
-.placeholder-image {
-  background-color: var(--bg-topbar);
-  color: var(--primary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  border-radius: var(--border-radius);
-  border: 2px dashed var(--action-color);
+/* ==========================================================================
+   Página Parceiras — Estilos
+   ========================================================================== */
+
+.parceiras-page {
   width: 100%;
+  overflow-x: hidden;
 }
 
+/* =====================
+   1. Hero Section
+   ===================== */
 .parceiras-page .hero-section {
   position: relative;
-  min-height: 650px;
-  background-color: #04328b;
+  min-height: 580px;
+  background-color: var(--primary-color, #04328b);
   background-size: cover;
-  background-position: 60% center;
+  background-position: center center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -29,336 +26,201 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    #04328b 0%,
-    rgba(4, 50, 139, 0.95) 25%,
-    rgba(4, 50, 139, 0.65) 45%,
-    rgba(4, 50, 139, 0.20) 60%,
-    transparent 75%
+    rgba(4, 50, 139, 0.95) 0%,
+    rgba(4, 50, 139, 0.85) 30%,
+    rgba(4, 50, 139, 0.50) 60%,
+    rgba(4, 50, 139, 0.20) 80%,
+    transparent 100%
   );
 }
 
 .parceiras-page .hero-body {
   position: relative;
   z-index: 1;
+  padding: 60px 20px;
 }
 
 .parceiras-page .hero-title {
   color: #ffffff;
-  font-size: clamp(3.5rem, 6vw, 6rem);
-  line-height: 1.05;
+  font-family: var(--font-family-title);
+  font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+  font-weight: 800;
+  line-height: 1.1;
   margin: 0;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
 }
 
 .parceiras-page .hero-title-highlight {
-  color: var(--secondary-color);
+  color: var(--secondary-color, #f7a81b);
 }
 
-.parceiras-page .intro-section {
-  padding: 70px 20px;
+/* =====================
+   2. Introdução
+   ===================== */
+.parceiras-page .parceiras-intro-section {
+  padding: 60px 20px 40px;
 }
 
-.parceiras-page .intro-content {
-  display: flex;
-  gap: 50px;
-  align-items: center;
-  margin-bottom: 80px;
-}
-
-.parceiras-page .intro-content:last-child {
-  margin-bottom: 0;
-}
-
-.parceiras-page .intro-content.reverse {
-  flex-direction: row-reverse;
-}
-
-.parceiras-page .intro-content.reverse .intro-text {
-  padding-left: 0;
-  padding-right: 30px;
+.parceiras-page .parceiras-intro-card {
+  max-width: 960px;
+  margin: 0 auto;
   text-align: left;
 }
 
-.parceiras-page .intro-image-wrapper {
-  flex: 1 1 50%;
-  display: flex;
-  border: 2px solid var(--action-color);
-  border-radius: 16px;
-  overflow: hidden;
-  height: 400px;
+.parceiras-page .parceiras-intro-text {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.65;
+  color: var(--primary-color, #04328b);
+  margin-bottom: 24px;
 }
 
-.parceiras-page .intro-team-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  box-shadow: 0 8px 30px rgba(4, 50, 139, 0.15);
-}
-
-.parceiras-page .intro-text {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0;
-  padding-left: 30px;
-  height: 400px;
-}
-
-.parceiras-page .intro-text p {
-  font-size: 1.1rem;
-  color: var(--primary-color);
-  line-height: 1.7;
-  margin: 0;
-  padding: 8px 0;
-}
-
-.parceiras-page .intro-text p + p {
-  border-top: 1px solid rgba(4, 50, 139, 0.1);
-  padding-top: 16px;
-  margin-top: 8px;
-}
-
-.parceiras-page .section-title {
-  font-size: 2.2rem;
-  color: var(--primary-color);
-  margin-bottom: 16px;
-}
-
-.parceiras-page .section-title.center {
-  text-align: center;
-}
-
-.parceiras-page .text-secondary {
-  color: var(--secondary-color);
-}
-
-/* CTA */
-.parceiras-page .cta-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-}
-
-.parceiras-page .parcerias-cta-btn {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  border: 2px solid var(--primary-color);
-  padding: 16px 36px;
-  font-size: 1.2rem;
+.parceiras-page .parceiras-intro-text.destaque {
   font-weight: 700;
-  border-radius: 50px;
+  margin-bottom: 36px;
+}
+
+.parceiras-page .parceiras-intro-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.parceiras-page .parceiras-primary-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--secondary-color, #f7a81b);
+  color: var(--primary-color, #04328b);
+  border: none;
+  padding: 14px 44px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: italic;
+  border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(4, 50, 139, 0.2);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(247, 168, 27, 0.35);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, box-shadow 0.25s ease;
 }
 
-.parceiras-page .parcerias-cta-btn:hover {
-  background-color: transparent;
-  color: var(--primary-color);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(4, 50, 139, 0.3);
+.parceiras-page .parceiras-primary-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  background-color: #f59e0b;
+  box-shadow: 0 6px 20px rgba(4, 50, 139, 0.25);
 }
 
-.parceiras-page .identity-section {
-  padding: 60px 0;
-  background-color: transparent;
+/* =====================
+   3. Como sua empresa pode participar?
+   ===================== */
+.parceiras-page .como-participar-section {
+  padding: 50px 20px 60px;
 }
 
-.parceiras-page .identity-section > .identity-cards {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.parceiras-page .identity-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-.parceiras-page .identity-card {
-  border-radius: 20px;
-  border: 2px solid var(--action-color);
-  overflow: hidden;
-  box-shadow: 2px 8px 24px rgba(4, 50, 139, 0.1);
-}
-
-.parceiras-page .card-header {
-  background-color: var(--primary-color);
-  padding: 18px 30px;
+.parceiras-page .como-participar-titulo {
+  font-family: var(--font-family-title);
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 700;
+  color: var(--primary-color, #04328b);
   text-align: center;
+  margin-bottom: 32px;
 }
 
-.parceiras-page .card-header .card-title {
-  color: var(--secondary-color);
-  margin: 0;
-  font-size: 1.6rem;
+.parceiras-page .como-participar-descricao {
+  max-width: 980px;
+  margin: 0 auto 50px;
+}
+
+.parceiras-page .como-participar-descricao p {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--primary-color, #04328b);
+  margin-bottom: 20px;
+}
+
+.parceiras-page .como-participar-descricao strong {
   font-weight: 700;
 }
 
-.parceiras-page .card-body {
-  background-color: #fff;
-  padding: 28px 30px;
-  color: var(--text-dark);
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
-
-.parceiras-page .identity-row {
+.parceiras-page .como-participar-cards {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1040px;
+  margin: 0 auto;
 }
 
-.parceiras-page .half-width {
-  flex: 1;
-}
-
-.parceiras-page .valores-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  columns: 2;
-  gap: 12px;
-}
-
-.parceiras-page .valores-list li {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 18px;
-  break-inside: avoid;
-}
-
-.parceiras-page .valores-list li::before {
-  content: "•";
-  color: var(--secondary-color);
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.parceiras-page .reformas-carousel-section {
-  padding: 60px 20px;
-}
-
-.parceiras-page .reformas-carousel-wrapper {
-  position: relative;
-  padding: 0 80px;
-}
-
-.parceiras-page .reformas-swiper {
-  padding-bottom: 50px;
-}
-
-.parceiras-page .reforma-slide-content {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(4, 50, 139, 0.1);
-  background-color: var(--card-bg, #f8fafc);
-  height: 350px;
+.parceiras-page .participar-card {
+  border: 2px solid var(--primary-color, #04328b);
+  border-radius: 22px;
+  padding: 38px 46px;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
+  gap: 48px;
+  box-shadow: 0 6px 24px rgba(4, 50, 139, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.parceiras-page .participar-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(4, 50, 139, 0.12);
+}
+
+.parceiras-page .participar-card-reverse {
+  flex-direction: row;
+}
+
+.parceiras-page .participar-card-icon-col {
+  flex: 0 0 200px;
+  display: flex;
   justify-content: center;
-  border: 2px solid var(--action-color);
+  align-items: center;
 }
 
-.parceiras-page .reforma-image-placeholder {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--primary-color);
-  opacity: 0.6;
+.parceiras-page .participar-card-icon {
+  width: 100%;
+  max-width: 180px;
+  max-height: 150px;
+  object-fit: contain;
+  display: block;
 }
 
-.parceiras-page .custom-swiper-prev,
-.parceiras-page .custom-swiper-next {
-  color: var(--primary-color) !important;
-  top: calc(50% - 25px) !important;
-  transform: translateY(-50%) !important;
-  margin-top: 0 !important;
+.parceiras-page .participar-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.parceiras-page .custom-swiper-prev {
-  left: 0 !important;
+.parceiras-page .participar-card-titulo {
+  font-family: var(--font-family-title);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--primary-color, #04328b);
+  text-align: center;
+  margin: 0 0 8px 0;
 }
 
-.parceiras-page .custom-swiper-next {
-  right: 0 !important;
+.parceiras-page .participar-card-titulo span {
+  display: inline-block;
+  border-bottom: 3.5px solid var(--secondary-color, #f7a81b);
+  padding-bottom: 4px;
 }
 
-@media (max-width: 768px) {
-  .parceiras-page .reformas-carousel-wrapper {
-    padding: 0 10px;
-  }
-  .parceiras-page .custom-swiper-prev,
-  .parceiras-page .custom-swiper-next {
-    display: none !important;
-  }
+.parceiras-page .participar-card-content p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--primary-color, #04328b);
+  margin: 0;
 }
 
-.parceiras-page .reformas-carousel-wrapper .swiper-pagination-bullet-active {
-  background: var(--primary-color) !important;
-}
-
-.parceiras-page .timeline-section {
-  padding: 60px 20px 80px;
-}
-
-/* =====================
-   Responsividade
-   ===================== */
-@media (max-width: 900px) {
-  .parceiras-page .intro-content,
-  .parceiras-page .intro-content.reverse {
-    flex-direction: column;
-    height: auto;
-  }
-  
-  .parceiras-page .intro-content .intro-text {
-    border-left: none;
-    padding-left: 0;
-    padding-top: 20px;
-    text-align: left;
-    height: auto;
-  }
-  
-  .parceiras-page .intro-content.reverse .intro-text {
-    border-right: none;
-    border-left: none;
-    padding-right: 0;
-    padding-left: 0;
-    padding-top: 20px;
-    text-align: left;
-    height: auto;
-  }
-
-  .parceiras-page .intro-image-wrapper {
-    flex: unset;
-    width: 100%;
-    height: 350px;
-  }
-
-  .parceiras-page .identity-row {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 768px) {
-  .parceiras-page .hero-title {
-    font-size: 3rem;
-  }
-
-  .parceiras-page .valores-list {
-    columns: 1;
-  }
+.parceiras-page .participar-card-content strong {
+  font-weight: 700;
 }
 
 /* =====================
-   Seção de Benefícios
+   4. Seção de Benefícios
    ===================== */
 .parceiras-page .beneficios-section {
-  padding-bottom: 50px;
+  padding: 40px 20px 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -367,14 +229,14 @@
 
 .parceiras-page .beneficios-titulo {
   font-family: var(--font-family-title);
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
   font-weight: 700;
   text-align: center;
-  color: var(--primary-color);
+  color: var(--primary-color, #04328b);
 }
 
 .parceiras-page .beneficios-titulo-destaque {
-  color: var(--secondary-color);
+  color: var(--secondary-color, #f7a81b);
 }
 
 .parceiras-page .beneficios-grid {
@@ -382,12 +244,12 @@
   align-items: stretch;
   justify-content: center;
   gap: 40px;
-  max-width: 1100px;
+  max-width: 1040px;
   width: 100%;
 }
 
 .parceiras-page .beneficios-imagem-col {
-  flex: 0 0 340px;
+  flex: 0 0 350px;
   display: flex;
   align-items: stretch;
 }
@@ -398,10 +260,11 @@
   flex-direction: column;
   gap: 16px;
   width: 100%;
+  justify-content: center;
 }
 
 .parceiras-page .beneficio-card {
-  background-color: var(--action-color);
+  background-color: var(--action-color, #64a2f1);
   color: #ffffff;
   padding: 18px 24px;
   border-radius: 18px;
@@ -415,35 +278,15 @@
 
 .parceiras-page .beneficio-card:hover {
   transform: translateX(6px) scale(1.02);
-  background-color: var(--primary-color);
+  background-color: var(--primary-color, #04328b);
   box-shadow: 0 6px 18px rgba(4, 50, 139, 0.25);
 }
 
-/* Responsividade da Seção de Benefícios */
-@media (max-width: 900px) {
-  .parceiras-page .beneficios-grid {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .parceiras-page .beneficios-imagem-col {
-    justify-content: center;
-  }
-  
-  .parceiras-page .beneficios-lista-col {
-    flex: unset;
-  }
-  
-  .parceiras-page .beneficio-card:hover {
-    transform: translateY(-3px);
-  }
-}
-
 /* =====================
-   Seção Time CTA
+   5. Seção Time CTA
    ===================== */
 .parceiras-page .time-cta-section {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color, #04328b);
   padding: 85px 20px;
   text-align: center;
   width: 100%;
@@ -453,12 +296,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
 }
 
 .parceiras-page .time-cta-titulo {
   font-family: var(--font-family-title);
-  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-size: clamp(2rem, 3.8vw, 3rem);
   font-weight: 700;
   color: #ffffff;
   margin: 0;
@@ -466,26 +309,36 @@
 }
 
 .parceiras-page .time-cta-highlight {
-  color: var(--secondary-color);
+  color: var(--secondary-color, #f7a81b);
+}
+
+.parceiras-page .time-cta-subtitulo {
+  color: #ffffff;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  margin: 0;
+  max-width: 900px;
+  width: 100%;
+  opacity: 0.95;
+  line-height: 1.5;
 }
 
 .parceiras-page .time-cta-button-wrapper {
   position: relative;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .parceiras-page .time-cta-btn {
   display: inline-block;
   text-decoration: none;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: var(--secondary-color, #f7a81b);
+  color: var(--primary-color, #04328b);
   border: none;
-  padding: 18px 48px;
+  padding: 18px 52px;
   font-size: 1.35rem;
   font-weight: 700;
-  font-style: italic; /* Italic key word styling matching the button text in screenshot */
-  border-radius: 12px; /* Smooth card-like radius matching design */
+  font-style: italic;
+  border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease;
@@ -493,7 +346,7 @@
 
 .parceiras-page .time-cta-btn:hover {
   transform: scale(1.04);
-  background-color: #f7b32b;
+  background-color: #f59e0b;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -517,5 +370,71 @@
   }
   100% {
     transform: translateY(-4px) rotate(4deg);
+  }
+}
+
+/* =====================
+   Responsividade
+   ===================== */
+@media (max-width: 900px) {
+  .parceiras-page .participar-card,
+  .parceiras-page .participar-card-reverse {
+    flex-direction: column;
+    padding: 30px 24px;
+    gap: 24px;
+    text-align: left;
+  }
+
+  .parceiras-page .participar-card-reverse .participar-card-icon-col {
+    order: -1;
+  }
+
+  .parceiras-page .participar-card-icon-col {
+    flex: unset;
+    margin-bottom: 8px;
+  }
+
+  .parceiras-page .participar-card-icon {
+    max-width: 140px;
+    max-height: 120px;
+  }
+
+  .parceiras-page .beneficios-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .parceiras-page .beneficios-imagem-col {
+    justify-content: center;
+    flex: unset;
+  }
+  
+  .parceiras-page .beneficios-lista-col {
+    flex: unset;
+  }
+  
+  .parceiras-page .beneficio-card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 600px) {
+  .parceiras-page .hero-section {
+    min-height: 480px;
+  }
+
+  .parceiras-page .participar-card {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .parceiras-page .participar-card-titulo {
+    font-size: 1.5rem;
+  }
+
+  .parceiras-page .time-cta-btn,
+  .parceiras-page .parceiras-primary-btn {
+    padding: 14px 32px;
+    font-size: 1.15rem;
   }
 }

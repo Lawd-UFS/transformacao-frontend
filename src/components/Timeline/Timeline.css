@@ -44,9 +44,12 @@
 .timeline-year {
   color: #fff;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-family: var(--font-family-title);
   letter-spacing: 0.5px;
+  text-align: center;
+  line-height: 1.15;
+  white-space: pre-line;
 }
 
 .timeline-content {
@@ -80,7 +83,7 @@
   }
 
   .timeline-year {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .timeline-title {

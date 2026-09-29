@@ -1,0 +1,261 @@
+.midia-page {
+  background-color: var(--bg-white, #ffffff);
+  width: 100%;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.midia-hero {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  background-color: #04328b;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.midia-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #04328b 0%,
+    rgba(4, 50, 139, 0.95) 25%,
+    rgba(4, 50, 139, 0.65) 45%,
+    rgba(4, 50, 139, 0.20) 60%,
+    transparent 75%
+  );
+  z-index: 1;
+}
+
+.midia-hero-body {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+.midia-hero-title {
+  font-family: var(--font-family-title, sans-serif);
+  font-weight: 700;
+  color: #ffffff;
+  font-size: clamp(2.25rem, 3.8vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 80%;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.midia-hero-word {
+  display: block;
+  white-space: nowrap;
+}
+
+.midia-hero-sub {
+  display: block;
+}
+
+.midia-hero-sub span {
+  color: var(--secondary-color, #f0a221);
+}
+
+/* ==========================================================================
+   Content Section
+   ========================================================================== */
+.midia-content-section {
+  padding: 64px 20px 96px;
+}
+
+.midia-container {
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.midia-description {
+  color: var(--primary-color, #04328b);
+  font-family: var(--font-family-base, inherit);
+  font-size: clamp(1.125rem, 2vw, 1.4rem);
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+  max-width: 860px;
+}
+
+.midia-description strong {
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Cards Grid
+   ========================================================================== */
+.midia-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  width: 100%;
+}
+
+.midia-card {
+  background-color: #f7faff;
+  border: 3px solid var(--secondary-color, #f0a221);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(4, 50, 139, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.midia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(4, 50, 139, 0.16);
+}
+
+.midia-card-image-link {
+  display: block;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #eaf1fa;
+}
+
+.midia-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.midia-card:hover .midia-card-img {
+  transform: scale(1.04);
+}
+
+.midia-card-body {
+  padding: 24px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 18px;
+}
+
+.midia-card-title {
+  font-family: var(--font-family-title, sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color, #04328b);
+  margin: 0;
+  text-align: center;
+}
+
+.midia-card-btn {
+  display: inline-block;
+  padding: 10px 28px;
+  background-color: var(--secondary-color, #f0a221);
+  color: var(--primary-color, #04328b);
+  font-family: var(--font-family, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-style: italic;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(240, 162, 33, 0.35);
+  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.midia-card-btn:hover,
+.midia-card-btn:focus-visible {
+  background-color: #d98e16;
+  color: var(--primary-color, #04328b);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(240, 162, 33, 0.45);
+  outline: none;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 768px) {
+  .midia-hero {
+    min-height: 60svh;
+    align-items: center;
+  }
+
+  .midia-hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(4, 50, 139, 0.8) 0%,
+      rgba(4, 50, 139, 0.4) 55%,
+      rgba(4, 50, 139, 0.1) 85%,
+      transparent 100%
+    );
+  }
+
+  .midia-hero-body {
+    padding: 32px 16px;
+  }
+
+  .midia-hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.05;
+    max-width: 90%;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .midia-content-section {
+    padding: 40px 16px 64px;
+  }
+
+  .midia-container {
+    gap: 36px;
+  }
+
+  .midia-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .midia-card-image-link {
+    height: 220px;
+  }
+
+  .midia-card-title {
+    font-size: 1.35rem;
+  }
+
+  .midia-card-btn {
+    font-size: 1.05rem;
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .midia-hero {
+    min-height: 50svh;
+  }
+
+  .midia-hero-body {
+    padding: 24px 16px;
+  }
+
+  .midia-hero-title {
+    font-size: clamp(1.6rem, 8.5vw, 2.2rem);
+    max-width: 95%;
+  }
+}

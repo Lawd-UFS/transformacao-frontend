@@ -8,14 +8,14 @@
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: var(--border-radius-xl);
-  border: 4px solid var(--color-primary-500);
+  border: 4px solid var(--primary-color);
   box-shadow: var(--shadow-lg);
   cursor: col-resize;
   user-select: none;
   -webkit-user-select: none;
 }
 
-/* ── Imagens ── */
+/* ── Imagens e Camadas ── */
 .comparador-imagem {
   position: absolute;
   inset: 0;
@@ -24,6 +24,20 @@
   object-fit: cover;
   display: block;
   pointer-events: none;
+}
+
+.comparador-overlay-depois {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.comparador-camada-antes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
 }
 
 /* ── Linha divisória ── */
@@ -35,7 +49,7 @@
   background: #fff;
   transform: translateX(-50%);
   cursor: col-resize;
-  z-index: 10;
+  z-index: 20;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -85,8 +99,12 @@
 
 .comparador-label-antes {
   left: var(--space-3);
+  background: #DEB00B;
+  color: #1a1a1a;
 }
 
 .comparador-label-depois {
   right: var(--space-3);
+  background: #7BD352;
+  color: #1a1a1a;
 }

@@ -154,12 +154,18 @@
   }
 
   .depoimentos-cta-hachura {
-    top: -20px;
-    right: -18px;
+    top: -18px;
+    right: -10px;
   }
 
   .depoimentos-cta-hachura img {
-    width: 28px;
+    width: 26px;
+  }
+
+  .depoimentos-cta-btn {
+    padding: 14px 28px;
+    font-size: 1.15rem;
+    max-width: calc(100vw - 48px);
   }
 
   .depoimentos-seta {
@@ -178,5 +184,44 @@
 
   .depoimento-texto p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .depoimentos-carrossel {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card card"
+      "prev next";
+    gap: 16px;
+    justify-items: center;
+  }
+
+  .depoimento-card {
+    grid-area: card;
+    width: 100%;
+    min-height: auto;
+    padding: 20px 16px;
+  }
+
+  .depoimentos-seta-anterior {
+    grid-area: prev;
+    justify-self: end;
+    margin-right: 12px;
+  }
+
+  .depoimentos-seta-proximo {
+    grid-area: next;
+    justify-self: start;
+    margin-left: 12px;
+  }
+
+  .depoimento-titulo {
+    font-size: 1.35rem;
+  }
+
+  .depoimento-texto p {
+    font-size: 0.95rem;
+    line-height: 1.55;
   }
 }

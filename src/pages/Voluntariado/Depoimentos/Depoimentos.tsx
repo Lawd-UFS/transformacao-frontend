@@ -11,18 +11,28 @@ interface Depoimento {
 const depoimentos: Depoimento[] = [
   {
     texto:
-      'Sou muito grato de poder ajudar em um projeto como o Transformação, pois conseguimos levar melhores condições de vida para as pessoas que não possuem o mínimo necessário para poder viver',
-    autor: 'Luiz | Equipe de comunicação',
+      'Fazer parte do TransformAção é, além de gratificante, um compromisso muito bonito com a sociedade: poder levar melhores condições de vida para as pessoas que não possuem o mínimo para viver e enfrentam grandes dificuldades no dia a dia. Fico feliz de poder fazer parte desse projeto e espero poder também influenciar muitas outras pessoas, para alcançarmos ainda mais famílias.',
+    autor: 'Luiz Felipe | Equipe de comunicação',
   },
   {
     texto:
-      'Participar do projeto é enxergar de perto o impacto de cada ação. Cada entrega e cada conversa mostram que pequenos gestos mudam realidades.',
-    autor: 'Mariana | Voluntária',
+      'Para mim, a arquitetura sempre foi uma ferramenta de dignidade, mas no Projeto TransformAção ela ganhou uma alma. Reformar o lar de famílias em vulnerabilidade vai muito além de erguer paredes; é devolver o respeito, a segurança e a esperança a quem mais precisa. Ver o brilho no olhar de uma mãe ou de uma criança ao receber uma casa segura ressignifica totalmente a minha profissão. No final, quem é verdadeiramente transformada sou eu.',
+    autor: 'Roselaine Pereira | Equipe de Arquitetura e Engenharia',
   },
   {
     texto:
-      'O voluntariado me aproximou de pessoas incríveis e me fez entender que solidariedade também é construção de futuro.',
-    autor: 'João | Apoio logístico',
+      'Sou voluntária desde a segunda obra e fazer parte do TransformAção é uma honra! Esse projeto não transforma apenas a vida das famílias, mas também a de cada voluntário. Como psicóloga, poder usar minha profissão na parte psicossocial do TransformAção me enche de orgulho e, a cada obra, me sinto ainda mais motivada a seguir com resiliência e dedicação!',
+    autor: 'Paula Bidegain | Equipe de Psicossocial',
+  },
+  {
+    texto:
+      'Sou voluntária desde a quarta obra aqui do TransformAção. Nesse tempo, vivi momentos especiais, conheci pessoas incríveis e me emocionei em cada obra. Eu fico muito feliz em fazer parte de um projeto voluntário tão bonito como esse e de poder ajudar a transformar a vida de várias famílias.',
+    autor: 'Beatriz Batista | Equipe de comunicação',
+  },
+  {
+    texto:
+      'Fazer parte do Projeto TransformAção é acreditar que solidariedade, união e trabalho voluntário podem mudar vidas. Nessa trajetória, acompanhei de perto histórias marcadas por desafios, mas também por esperança, acolhimento e recomeços. Cada obra realizada representa dignidade, cuidado, união e é inspirador ver tantas pessoas unidas pelo mesmo propósito, doando tempo, conhecimento e amor ao próximo.',
+    autor: 'Daniella Vivas Gonçalves | Equipe Jurídica',
   },
 ];
 

@@ -1,16 +1,16 @@
 import React from 'react';
 import { Timeline } from '../../components/Timeline/Timeline';
-import heroImg from '../../assets/quem-somos/banner-quem-somos.png';
-import aboutLeftImg from '../../assets/quem-somos/imagem-1-quem-somos.png';
-import aboutRight1Img from '../../assets/quem-somos/imagem-2-quem-somos.png';
-import aboutRight2Img from '../../assets/quem-somos/imagem-3-quem-somos.png';
-import carrossel1Img from '../../assets/quem-somos/carrossel-1-quem-somos.png';
-import carrossel2Img from '../../assets/quem-somos/carrossel-2-quem-somos.png';
-import carrossel3Img from '../../assets/quem-somos/carrossel-3-quem-somos.png';
-import carrossel4Img from '../../assets/quem-somos/carrossel-4-quem-somos.png';
-import carrossel5Img from '../../assets/quem-somos/carrossel-5-quem-somos.jpg';
-import carrossel6Img from '../../assets/quem-somos/carrossel-6-quem-somos.jpg';
-import carrossel7Img from '../../assets/quem-somos/carrossel-7-quem-somos.jpg';
+import { ComoFunciona } from '../../components/ComoFunciona/ComoFunciona';
+import { SecaoFacaParte } from '../../components/SecaoFacaParte/SecaoFacaParte';
+import heroImg from '../../assets/quem-somos/banner-quem-somos.jpg';
+import aboutLeftImg from '../../assets/quem-somos/imagem-1-quem-somos.jpg';
+import aboutRight1Img from '../../assets/quem-somos/imagem-2-quem-somos.jpg';
+import aboutRight2Img from '../../assets/quem-somos/imagem-3-quem-somos.jpg';
+import galeria1Img from '../../assets/quem-somos/galeria-1-quem-somos.jpg';
+import galeria2Img from '../../assets/quem-somos/galeria-2-quem-somos.png';
+import galeria3Img from '../../assets/quem-somos/galeria-3-quem-somos.png';
+import galeria4Img from '../../assets/quem-somos/galeria-4-quem-somos.jpg';
+import galeria5Img from '../../assets/quem-somos/galeria-5-quem-somos.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -21,29 +21,34 @@ import './QuemSomos.css';
 
 const timelineEvents = [
   {
-    year: '2020',
+    year: '2019',
     title: 'O Início',
-    description: 'Fundação do projeto em Aracaju, movido pelo desejo de unir voluntariado e moradia digna.',
+    description: 'Começamos com pequenas ações sociais, realizadas por um grupo de amigos, nos bairros mais carentes da nossa cidade. Através delas, percebemos que muitas famílias viviam em casas que comprometiam sua segurança e saúde, e assim nasceu o sonho de devolver dignidade através de um lar seguro.',
   },
   {
-    year: '2021',
-    title: 'Primeiras Transformações',
-    description: 'Fundação do projeto em Aracaju, movido pelo desejo de unir voluntariado e moradia digna.',
+    year: '2019',
+    title: 'Parceria',
+    description: 'Nesse mesmo ano, iniciamos nosso primeiro projeto em parceria com a Base Colaborativa, organização que fomenta projetos sociais.',
   },
   {
-    year: '2023',
+    year: '2020',
+    title: 'Primeira Transformação',
+    description: 'Mesmo com a pandemia, não paramos e aprendemos a ajudar de forma segura e remota, realizando pequenas ações e arrecadações enquanto preparávamos nosso primeiro mutirão. Após semanas de planejamento, doações e muito amor, entregamos nossa primeira casa reformada.',
+  },
+  {
+    year: '2021 à\n2024',
     title: 'Expansão e Impacto',
-    description: 'Conclusão da reforma da Casa de Ana em Nossa Sra. do Socorro, fortalecendo a rede de parceiros.',
+    description: 'Com a divulgação das ações, conseguimos alcançar novas empresas parceiras e novos voluntários. Criamos critérios técnicos e sociais de avaliação e seleção das famílias, e nesse período conseguimos entregar mais cinco imóveis reformados com segurança e dignidade.',
   },
   {
-    year: '2024',
+    year: '2025',
     title: 'Reconhecimento',
-    description: 'Execução da Casa de Michelle e ampliação da equipe técnica (Engenharia e Arquitetura).',
+    description: 'Nossas ações foram se concretizando e repercutindo positivamente. Aumentamos nosso portfólio de ações, nossa credibilidade e transparência, sempre pautados no respeito e na imersão dos voluntários em realidades totalmente distintas. Nesse mesmo ano, realizamos a entrega da nossa sexta casa.',
   },
   {
     year: '2026',
     title: 'Consolidação',
-    description: 'Lançamento da nova plataforma digital para divulgação e gestão do projeto.',
+    description: 'Em fevereiro de 2026, realizamos nossa primeira assembleia de fundação da Organização da Sociedade Civil (OSC), entidade sem fins lucrativos denominada Projeto Transformação. A partir dessa nova etapa, seguimos ainda mais firmes e esperamos contribuir de forma mais eficiente em nossas ações, pois cada tijolo e cada pintura representam esperança renovada para cada família que merece um lar digno.',
   },
 ];
 
@@ -64,7 +69,12 @@ export const QuemSomos: React.FC = () => {
           </div>
           <div className="intro-text">
             <p className="regular-text">
-              O Projeto <strong>TransformAção</strong> surgiu através de pequenas ações pontuais para melhoria da qualidade de vida de famílias que se encontram em vulnerabilidade social por conta de suas moradias, através de amigos (voluntários e profissionais) de várias áreas com o mesmo intuito de ajudar essas pessoas que não possuem condições financeiras para realizar reformas ou melhorias em suas casas, e por esse motivo tem sua dignidade afetada pela falta de um ambiente saudável para suas famílias.
+              <strong>
+                O Projeto TransformAção surgiu por meio de pequenas ações para melhorar a qualidade de vida de famílias que se encontram em situação de vulnerabilidade social por conta de suas moradias.
+              </strong>
+              <br />
+              <br />
+              Essas ações foram realizadas com alguns voluntários e profissionais de diferentes áreas, unidos pelo mesmo propósito de levar mais dignidade e proporcionar um ambiente saudável às famílias que não possuem condições financeiras para realizar reformas ou melhorias em suas casas.
             </p>
           </div>
         </div>
@@ -75,9 +85,10 @@ export const QuemSomos: React.FC = () => {
           </div>
           <div className="intro-text">
             <p className="regular-text">
-              No ano de 2019 iniciamos nossas atividades informalmente, contando apenas com um grupo de amigos e alguns empresários locais, conseguimos nossa primeira transformação, a partir daí o projeto tomou corpo e avançou para atender mais famílias, hoje somos uma <strong>OSC - Organização da Sociedade Civil</strong>, e mais parceiros aderiram ao projeto por acreditar que uma moradia digna vai além da estrutura física.
-              <br /> 
-              Ela representa segurança, acolhimento, bem-estar e a possibilidade de um novo começo para quem vive naquele espaço.
+              Em 2019, iniciamos nossas atividades contando apenas com um grupo de amigos e alguns empresários locais. Conseguimos nossa primeira transformação e, a partir daí, o projeto tomou corpo e avançou para atender mais famílias.
+              <br />
+              <br />
+              <strong>Hoje somos uma OSC - Organização da Sociedade Civil, e mais parceiros aderiram ao projeto</strong> por acreditarem que uma moradia digna vai além da estrutura física: representa segurança, acolhimento, bem-estar e a possibilidade de um novo começo para quem vive naquele espaço.
             </p>
           </div>
         </div>
@@ -88,9 +99,13 @@ export const QuemSomos: React.FC = () => {
           </div>
           <div className="intro-text">
             <p className="regular-text">
-              As nossas ações sem fins lucrativos, são formadas por voluntários de diferentes profissões, dedicados(as) a transformar a realidade de famílias em situação de vulnerabilidade, promovendo moradia digna, inclusão social e desenvolvimento comunitário.
+              Atualmente, nossas ações contam com voluntários de diferentes profissões, que buscam contribuir também para a inclusão social e o desenvolvimento comunitário, fortalecendo vínculos e incentivando o envolvimento da comunidade.
               <br />
-              Através das ações voluntárias, conseguimos transformar além da moradia e das famílias beneficiadas, buscando também a transformação dos voluntários através do envolvimento social e das ações em grupo.
+              <br />
+              <strong>Mas acreditamos que a transformação não acontece apenas para quem é atendido pelo projeto. Ela também alcança quem escolhe fazer parte dele.</strong>
+              <br />
+              <br />
+              Por meio do trabalho voluntário e das ações em grupo, nossos voluntários têm a oportunidade de compartilhar conhecimentos, aprender com diferentes experiências e contribuir para uma mudança coletiva.
             </p>
           </div>
         </div>
@@ -125,7 +140,6 @@ export const QuemSomos: React.FC = () => {
                   <li>Transparência</li>
                   <li>Solidariedade</li>
                   <li>Ética</li>
-                  <li>Independência</li>
                   <li>Compromisso social</li>
                   <li>Dignidade humana</li>
                 </ul>
@@ -159,7 +173,7 @@ export const QuemSomos: React.FC = () => {
             }}
             className="reformas-swiper"
           >
-            {[carrossel1Img, carrossel2Img, carrossel3Img, carrossel4Img, carrossel5Img, carrossel6Img, carrossel7Img].map((imgSrc, index) => (
+            {[galeria1Img, galeria2Img, galeria3Img, galeria4Img, galeria5Img].map((imgSrc, index) => (
               <SwiperSlide key={index}>
                 <div className="reforma-slide-content">
                   <img src={imgSrc} alt={`Reforma ${index + 1}`} style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px'}} />
@@ -171,10 +185,14 @@ export const QuemSomos: React.FC = () => {
         </div>
       </section>
 
+      <ComoFunciona />
+
       <section className="timeline-section container">
         <h2 className="section-title center">Nossa trajetória</h2>
         <Timeline events={timelineEvents} />
       </section>
+
+      <SecaoFacaParte exibirGaleria={false} />
     </div>
   );
 };

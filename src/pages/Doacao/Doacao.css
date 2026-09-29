@@ -98,6 +98,37 @@
   box-shadow: 0 8px 28px rgba(240, 162, 33, 0.45);
 }
 
+.doacao-intro-section {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.doacao-intro-text {
+  max-width: 840px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--primary-color);
+}
+
+.doacao-pontual-section {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.pontual-title {
+  margin-bottom: 16px;
+}
+
+.doacao-pontual-text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--primary-color);
+}
+
 .methods-heading {
   margin-bottom: 36px;
 }
@@ -451,6 +482,72 @@
   color: var(--text-muted);
 }
 
+.recorrente-section {
+  margin-top: 60px;
+  text-align: center;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recorrente-title {
+  margin-bottom: 20px;
+}
+
+.recorrente-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.recorrente-chamada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recorrente-subheading {
+  font-family: var(--font-family-title);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 14px;
+}
+
+.recorrente-instrucoes {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--primary-color);
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+.recorrente-btn-wrapper {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.recorrente-btn {
+  display: inline-block;
+  padding: 14px 38px;
+  border-radius: 12px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-family: var(--font-family-title);
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 18px rgba(240, 162, 33, 0.35);
+}
+
+.recorrente-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(240, 162, 33, 0.45);
+  background-color: #e09318;
+}
+
 
 @media (max-width: 768px) {
   .doacao-hero {
@@ -543,6 +640,29 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 8px;
+  }
+
+  .doacao-intro-text,
+  .doacao-pontual-text,
+  .recorrente-text,
+  .recorrente-instrucoes {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .recorrente-section {
+    margin-top: 45px;
+  }
+
+  .recorrente-subheading {
+    font-size: 1.25rem;
+  }
+
+  .recorrente-btn {
+    width: 100%;
+    max-width: 320px;
+    font-size: 1.05rem;
+    padding: 13px 20px;
   }
 }
 
