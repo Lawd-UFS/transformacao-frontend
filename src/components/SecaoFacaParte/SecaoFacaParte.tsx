@@ -116,6 +116,8 @@ export function SecaoFacaParte({
                     <img
                       src={src}
                       alt={`Foto do mutirão ${i + 1}`}
+                      loading="lazy"
+                      decoding="async"
                       style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }}
                     />
                   </div>

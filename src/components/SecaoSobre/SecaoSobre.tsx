@@ -71,6 +71,8 @@ export function SecaoSobre({
             src={imagem}
             alt="Equipe de voluntários do projeto Transformação"
             className="secao-sobre-imagem"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

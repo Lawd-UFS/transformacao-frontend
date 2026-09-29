@@ -126,7 +126,7 @@ export function ModalObra({ obra, onFechar }: PropsModalObra) {
                       onClick={() => abrirLightbox(fotosAntes, i)}
                       aria-label={`Ampliar foto antes ${i + 1}`}
                     >
-                      <img src={src} alt={`Antes ${i + 1} — ${obra.titulo}`} className="modal-obra-foto" />
+                      <img src={src} alt={`Antes ${i + 1} — ${obra.titulo}`} className="modal-obra-foto" loading="lazy" decoding="async" />
                       <span className="modal-obra-foto-lupa" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
                              strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
@@ -152,7 +152,7 @@ export function ModalObra({ obra, onFechar }: PropsModalObra) {
                       onClick={() => abrirLightbox(fotosDepois, i)}
                       aria-label={`Ampliar foto depois ${i + 1}`}
                     >
-                      <img src={src} alt={`Depois ${i + 1} — ${obra.titulo}`} className="modal-obra-foto" />
+                      <img src={src} alt={`Depois ${i + 1} — ${obra.titulo}`} className="modal-obra-foto" loading="lazy" decoding="async" />
                       <span className="modal-obra-foto-lupa" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
                              strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
