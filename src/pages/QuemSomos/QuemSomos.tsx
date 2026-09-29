@@ -65,7 +65,7 @@ export const QuemSomos: React.FC = () => {
       <section className="intro-section container">
         <div className="intro-content">
           <div className="intro-image-wrapper">
-            <img src={aboutLeftImg} alt="TransformAção 1" className="intro-team-photo" />
+            <img src={aboutLeftImg} alt="TransformAção 1" className="intro-team-photo" loading="lazy" decoding="async" />
           </div>
           <div className="intro-text">
             <p className="regular-text">
@@ -81,7 +81,7 @@ export const QuemSomos: React.FC = () => {
 
         <div className="intro-content reverse">
           <div className="intro-image-wrapper">
-            <img src={aboutRight1Img} alt="TransformAção 2" className="intro-team-photo" />
+            <img src={aboutRight1Img} alt="TransformAção 2" className="intro-team-photo" loading="lazy" decoding="async" />
           </div>
           <div className="intro-text">
             <p className="regular-text">
@@ -95,7 +95,7 @@ export const QuemSomos: React.FC = () => {
 
         <div className="intro-content">
           <div className="intro-image-wrapper">
-            <img src={aboutRight2Img} alt="TransformAção 3" className="intro-team-photo" />
+            <img src={aboutRight2Img} alt="TransformAção 3" className="intro-team-photo" loading="lazy" decoding="async" />
           </div>
           <div className="intro-text">
             <p className="regular-text">

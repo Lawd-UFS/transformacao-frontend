@@ -1,5 +1,5 @@
 import React from 'react'
-import imagemVoluntarios from '../../assets/home/hero-voluntarios.png'
+import imagemVoluntarios from '../../assets/home/hero-voluntarios.webp'
 import './Hero.css'
 
 interface PropsHero {

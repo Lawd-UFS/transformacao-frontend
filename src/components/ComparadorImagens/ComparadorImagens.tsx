@@ -89,6 +89,8 @@ export function ComparadorImagens({
         alt={altDepois}
         className="comparador-imagem"
         draggable={false}
+        loading="lazy"
+        decoding="async"
       />
       <div className="comparador-overlay-depois">
         <span className="comparador-label comparador-label-depois">DEPOIS</span>
@@ -104,6 +106,8 @@ export function ComparadorImagens({
           alt={altAntes}
           className="comparador-imagem"
           draggable={false}
+          loading="lazy"
+          decoding="async"
         />
         <span className="comparador-label comparador-label-antes">ANTES</span>
       </div>
