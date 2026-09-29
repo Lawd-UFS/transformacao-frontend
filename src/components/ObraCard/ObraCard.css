@@ -2,7 +2,7 @@
 .obra-card {
   position: relative;
   border-radius: var(--border-radius-xl);
-  border: 3px solid var(--color-accent-500);
+  border: 3px solid var(--primary-color);
   overflow: hidden;
   background: var(--color-neutral-0);
   box-shadow: var(--shadow-md);
@@ -21,8 +21,8 @@
 }
 
 .obra-card-destaque {
-  border-color: var(--secondary-color);
-  box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 20px rgba(4, 50, 139, 0.25);
 }
 
 .obra-card-selo-novo {

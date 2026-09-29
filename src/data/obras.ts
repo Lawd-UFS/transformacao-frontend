@@ -13,93 +13,108 @@ import antesApeDosGemeos from '../assets/casas/antes-gemeos.jpg'
 import depoisApeDosGemeos from '../assets/casas/depois-gemeos.jpg'
 import antesVeronica from '../assets/casas/antes-veronica.jpg'
 import depoisVeronica from '../assets/casas/depois-veronica.jpg'
+import antesEllen from '../assets/casas/antes-ellen.jpg'
+import depoisEllen from '../assets/casas/depois-ellen.jpg'
+
+/* ── Ninha — múltiplas fotos ── */
+import ninhaAntes1 from '../assets/casas/ninha/antes/ANTES___01.jpg'
+import ninhaAntes2 from '../assets/casas/ninha/antes/ANTES___02.jpg'
+import ninhaAntes3 from '../assets/casas/ninha/antes/ANTES___03.jpg'
+import ninhaAntes4 from '../assets/casas/ninha/antes/ANTES___04.jpg'
+import ninhaAntes5 from '../assets/casas/ninha/antes/ANTES___05.jpg'
+import ninhaAntes6 from '../assets/casas/ninha/antes/ANTES___06.jpg'
+import ninhaAntes7 from '../assets/casas/ninha/antes/ANTES___07.jpg'
+import ninhaDepois1 from '../assets/casas/ninha/depois/DEPOIS___01.jpg'
+import ninhaDepois2 from '../assets/casas/ninha/depois/DEPOIS___02.jpg'
+import ninhaDepois3 from '../assets/casas/ninha/depois/DEPOIS___03.jpg'
+import ninhaDepois4 from '../assets/casas/ninha/depois/DEPOIS___04.jpg'
+import ninhaDepois5 from '../assets/casas/ninha/depois/DEPOIS___05.jpg'
+import ninhaDepois6 from '../assets/casas/ninha/depois/DEPOIS___06.jpg'
+import ninhaDepois7 from '../assets/casas/ninha/depois/DEPOIS___07.jpg'
 
 /* ── Mirian — múltiplas fotos ── */
-import mirianAntes1 from '../assets/casas/mirian/antes/20250809_094806.jpg'
-import mirianAntes2 from '../assets/casas/mirian/antes/20250809_094838.jpg'
-import mirianAntes3 from '../assets/casas/mirian/antes/20250809_095050.jpg'
-import mirianAntes4 from '../assets/casas/mirian/antes/20250809_095641.jpg'
-import mirianAntes5 from '../assets/casas/mirian/antes/20250809_100839.jpg'
-import mirianDepois1 from '../assets/casas/mirian/depois/20251102_152019.jpg'
-import mirianDepois2 from '../assets/casas/mirian/depois/20251102_152824.jpg'
-import mirianDepois3 from '../assets/casas/mirian/depois/20251102_153113.jpg'
-import mirianDepois4 from '../assets/casas/mirian/depois/20251102_154318.jpg'
-import mirianDepois5 from '../assets/casas/mirian/depois/IMG-20260122-WA0024.jpg'
+import mirianAntes1 from '../assets/casas/mirian/antes/ANTES_1.jpg'
+import mirianAntes2 from '../assets/casas/mirian/antes/ANTES_2.jpg'
+import mirianAntes3 from '../assets/casas/mirian/antes/ANTES_3.jpg'
+import mirianAntes4 from '../assets/casas/mirian/antes/ANTES_4.jpg'
+import mirianAntes5 from '../assets/casas/mirian/antes/ANTES_5.jpg'
+import mirianAntes6 from '../assets/casas/mirian/antes/ANTES_6.jpg'
+import mirianAntes7 from '../assets/casas/mirian/antes/ANTES_7.jpg'
+import mirianDepois1 from '../assets/casas/mirian/depois/DEPOIS_1.jpg'
+import mirianDepois2 from '../assets/casas/mirian/depois/DEPOIS_2.jpg'
+import mirianDepois3 from '../assets/casas/mirian/depois/DEPOIS_3.jpg'
+import mirianDepois4 from '../assets/casas/mirian/depois/DEPOIS_4.jpg'
+import mirianDepois5 from '../assets/casas/mirian/depois/DEPOIS_5.jpg'
+import mirianDepois6 from '../assets/casas/mirian/depois/DEPOIS_6.jpg'
+import mirianDepois7 from '../assets/casas/mirian/depois/DEPOIS_7.jpg'
+import mirianDepois8 from '../assets/casas/mirian/depois/DEPOIS_8.jpg'
+import mirianDepois9 from '../assets/casas/mirian/depois/DEPOIS_9.jpg'
 
 /* ── Michelle — múltiplas fotos ── */
-import michelleAntes1 from '../assets/casas/michelle/antes/2.png'
-import michelleAntes2 from '../assets/casas/michelle/antes/3.png'
-import michelleAntes3 from '../assets/casas/michelle/antes/4.png'
-import michelleDepois1 from '../assets/casas/michelle/depois/IMG-20251105-WA0031.jpg'
-import michelleDepois2 from '../assets/casas/michelle/depois/IMG-20251105-WA0040.jpg'
+import michelleAntes1 from '../assets/casas/michelle/antes/ANTES_1.png'
+import michelleAntes2 from '../assets/casas/michelle/antes/ANTES_2.png'
+import michelleAntes3 from '../assets/casas/michelle/antes/ANTES_3.png'
+import michelleDepois1 from '../assets/casas/michelle/depois/DEPOIS_1.jpg'
+import michelleDepois2 from '../assets/casas/michelle/depois/DEPOIS_2.jpg'
+import michelleDepois3 from '../assets/casas/michelle/depois/DEPOIS_3.jpg'
+import michelleDepois4 from '../assets/casas/michelle/depois/DEPOIS_4.jpg'
 
 /* ── Ana — múltiplas fotos ── */
-import anaAntes1 from '../assets/casas/ana/antes/ANTES.jpg'
-import anaDepois1 from '../assets/casas/ana/depois/IMG-20251105-WA0032.jpg'
-import anaDepois2 from '../assets/casas/ana/depois/IMG-20251105-WA0035.jpg'
-import anaDepois3 from '../assets/casas/ana/depois/IMG-20251105-WA0046.jpg'
-import anaDepois4 from '../assets/casas/ana/depois/IMG-20251105-WA0050.jpg'
-import anaDepois5 from '../assets/casas/ana/depois/IMG-20251105-WA0058.jpg'
-import anaDepois6 from '../assets/casas/ana/depois/IMG-20251105-WA0066.jpg'
-import anaDepois7 from '../assets/casas/ana/depois/Screenshot_20251004_203118_Instagram.jpg'
-import anaDepois8 from '../assets/casas/ana/depois/Screenshot_20251004_203127_Instagram.jpg'
-import anaDepois9 from '../assets/casas/ana/depois/Screenshot_20251004_203148_Instagram.jpg'
-import anaDepois10 from '../assets/casas/ana/depois/Screenshot_20251004_203203_Instagram.jpg'
-import anaDepois11 from '../assets/casas/ana/depois/Screenshot_20251004_203218_Instagram.jpg'
-import anaDepois12 from '../assets/casas/ana/depois/Screenshot_20251004_203237_Instagram.jpg'
+import anaAntes1 from '../assets/casas/ana/antes/ANTES_01.jpg'
+import anaAntes2 from '../assets/casas/ana/antes/ANTES_02.jpg'
+import anaAntes3 from '../assets/casas/ana/antes/ANTES_03.jpg'
+import anaAntes4 from '../assets/casas/ana/antes/ANTES_04.jpg'
+import anaAntes5 from '../assets/casas/ana/antes/ANTES_05.jpg'
+import anaAntes6 from '../assets/casas/ana/antes/ANTES_06.jpg'
+import anaDepois1 from '../assets/casas/ana/depois/DEPOIS_01.jpg'
+import anaDepois2 from '../assets/casas/ana/depois/DEPOIS_02.jpg'
+import anaDepois3 from '../assets/casas/ana/depois/DEPOIS_03.jpg'
+import anaDepois4 from '../assets/casas/ana/depois/DEPOIS_04.jpg'
+import anaDepois5 from '../assets/casas/ana/depois/DEPOIS_05.jpg'
+import anaDepois6 from '../assets/casas/ana/depois/DEPOIS_06.jpg'
+import anaDepois7 from '../assets/casas/ana/depois/DEPOIS_07.jpg'
+import anaDepois8 from '../assets/casas/ana/depois/DEPOIS_08.jpg'
 
 /* ── Pequenino — múltiplas fotos ── */
-import pequeninoAntes1 from '../assets/casas/pequenino/antes/ANTES/IMG-20221104-WA0029.jpg'
-import pequeninoAntes2 from '../assets/casas/pequenino/antes/ANTES/IMG-20221104-WA0030.jpg'
-import pequeninoAntes3 from '../assets/casas/pequenino/antes/ANTES/IMG-20221104-WA0032.jpg'
-import pequeninoAntes4 from '../assets/casas/pequenino/antes/ANTES/IMG-20251105-WA0067.jpg'
-import pequeninoAntes5 from '../assets/casas/pequenino/antes/ANTES/IMG-20251105-WA0083.jpg'
-import pequeninoAntes6 from '../assets/casas/pequenino/antes/ANTES/IMG-20251105-WA0084.jpg'
-import pequeninoAntes7 from '../assets/casas/pequenino/antes/ANTES/IMG-20251105-WA0085.jpg'
-import pequeninoAntes8 from '../assets/casas/pequenino/antes/ANTES/IMG-20251105-WA0090.jpg'
-import pequeninoAntes9 from '../assets/casas/pequenino/antes/ANTES/IMG-20251105-WA0096.jpg'
-import pequeninoAntes10 from '../assets/casas/pequenino/antes/ANTES/WhatsApp Image 2022-10-26 at 16.26.28.jpeg'
-import pequeninoAntes11 from '../assets/casas/pequenino/antes/ANTES/WhatsApp Image 2022-10-26 at 16.26.29 (1).jpeg'
-import pequeninoDepois1 from '../assets/casas/pequenino/depois/IMG-20221210-WA0072.jpg'
-import pequeninoDepois2 from '../assets/casas/pequenino/depois/IMG-20221210-WA0073.jpg'
-import pequeninoDepois3 from '../assets/casas/pequenino/depois/IMG_20221212_145101831.jpg'
-import pequeninoDepois4 from '../assets/casas/pequenino/depois/IMG_20221212_145110021.jpg'
-import pequeninoDepois5 from '../assets/casas/pequenino/depois/IMG_20221212_145134851.jpg'
-import pequeninoDepois6 from '../assets/casas/pequenino/depois/IMG-20221212-WA0155.jpg'
-import pequeninoDepois7 from '../assets/casas/pequenino/depois/IMG_20221213_141502_274.jpg'
-import pequeninoDepois9 from '../assets/casas/pequenino/depois/IMG-20251105-WA0062.jpg'
-import pequeninoDepois10 from '../assets/casas/pequenino/depois/IMG-20251105-WA0069.jpg'
+import pequeninoAntes1 from '../assets/casas/pequenino/antes/ANTES_1.jpg'
+import pequeninoAntes2 from '../assets/casas/pequenino/antes/ANTES_2.jpg'
+import pequeninoAntes3 from '../assets/casas/pequenino/antes/ANTES_3.jpg'
+import pequeninoAntes4 from '../assets/casas/pequenino/antes/ANTES_4.jpg'
+import pequeninoDepois1 from '../assets/casas/pequenino/depois/DEPOIS_1.jpg'
+import pequeninoDepois2 from '../assets/casas/pequenino/depois/DEPOIS_2.jpg'
+import pequeninoDepois3 from '../assets/casas/pequenino/depois/DEPOIS_3.jpg'
+import pequeninoDepois4 from '../assets/casas/pequenino/depois/DEPOIS_4.jpg'
 
-/* ── Gêmeos — múltiplas fotos ── */
-import gemeosAntes1 from '../assets/casas/gemeos/antes/IMG-20220723-WA0019.jpg'
-import gemeosAntes2 from '../assets/casas/gemeos/antes/IMG-20220723-WA0021.jpg'
-import gemeosAntes3 from '../assets/casas/gemeos/antes/IMG-20220723-WA0022.jpg'
-import gemeosAntes4 from '../assets/casas/gemeos/antes/IMG-20220723-WA0024.jpg'
-import gemeosAntes5 from '../assets/casas/gemeos/antes/IMG-20220723-WA0025.jpg'
-import gemeosAntes6 from '../assets/casas/gemeos/antes/IMG-20220723-WA0027.jpg'
-import gemeosAntes7 from '../assets/casas/gemeos/antes/IMG-20220723-WA0030.jpg'
-import gemeosAntes8 from '../assets/casas/gemeos/antes/IMG-20220730-WA0044.jpg'
+/* ── Gemeos — múltiplas fotos ── */
+import gemeosAntes1 from '../assets/casas/gemeos/antes/ANTES_1.jpg'
+import gemeosAntes2 from '../assets/casas/gemeos/antes/ANTES_2.jpg'
+import gemeosAntes3 from '../assets/casas/gemeos/antes/ANTES_3.jpg'
+import gemeosAntes4 from '../assets/casas/gemeos/antes/ANTES_4.jpg'
+import gemeosDepois1 from '../assets/casas/gemeos/depois/DEPOIS_1.jpg'
+import gemeosDepois2 from '../assets/casas/gemeos/depois/DEPOIS_2.jpg'
+import gemeosDepois3 from '../assets/casas/gemeos/depois/DEPOIS_3.jpg'
+import gemeosDepois4 from '../assets/casas/gemeos/depois/DEPOIS_4.jpg'
 
-/* ── Verônica — múltiplas fotos ── */
-import veronicaAntes1 from '../assets/casas/veronica/antes/1.jpg'
-import veronicaAntes2 from '../assets/casas/veronica/antes/2.jpg'
-import veronicaAntes3 from '../assets/casas/veronica/antes/3.jpg'
-import veronicaAntes4 from '../assets/casas/veronica/antes/4.jpg'
-import veronicaAntes5 from '../assets/casas/veronica/antes/5.jpg'
+/* ── Veronica — múltiplas fotos ── */
+import veronicaAntes1 from '../assets/casas/veronica/antes/ANTES_01.jpg'
+import veronicaAntes2 from '../assets/casas/veronica/antes/ANTES_02.jpg'
+import veronicaAntes3 from '../assets/casas/veronica/antes/ANTES_03.jpg'
+import veronicaAntes4 from '../assets/casas/veronica/antes/ANTES_04.jpg'
+import veronicaAntes5 from '../assets/casas/veronica/antes/ANTES_05.jpg'
+import veronicaDepois1 from '../assets/casas/veronica/depois/DEPOIS_01.jpg'
+import veronicaDepois2 from '../assets/casas/veronica/depois/DEPOIS_02.jpg'
+import veronicaDepois3 from '../assets/casas/veronica/depois/DEPOIS_03.jpg'
+import veronicaDepois4 from '../assets/casas/veronica/depois/DEPOIS_04.jpg'
+import veronicaDepois5 from '../assets/casas/veronica/depois/DEPOIS_05.jpg'
+import veronicaDepois6 from '../assets/casas/veronica/depois/DEPOIS_06.jpg'
+import veronicaDepois7 from '../assets/casas/veronica/depois/DEPOIS_07.jpg'
 
-import veronicaDepois1 from '../assets/casas/veronica/depois/1.jpg'
-import veronicaDepois2 from '../assets/casas/veronica/depois/2.jpg'
-import veronicaDepois3 from '../assets/casas/veronica/depois/3.jpg'
-import veronicaDepois4 from '../assets/casas/veronica/depois/4.jpg'
-import veronicaDepois5 from '../assets/casas/veronica/depois/5.jpg'
-
-/* ── Ninha — múltiplas fotos (somente antes por enquanto) ── */
-import ninhaAntes1 from '../assets/casas/ninha/antes/20260411_093634.jpg'
-import ninhaAntes2 from '../assets/casas/ninha/antes/20260411_093747.jpg'
-import ninhaAntes3 from '../assets/casas/ninha/antes/20260411_094308.jpg'
-import ninhaAntes4 from '../assets/casas/ninha/antes/20260411_094411.jpg'
-import ninhaAntes5 from '../assets/casas/ninha/antes/20260411_094418.jpg'
-import ninhaAntes6 from '../assets/casas/ninha/antes/20260411_094502.jpg'
+/* ── Ellen — slides com antes e depois ── */
+import ellenSlide1 from '../assets/casas/ellen/01.jpg'
+import ellenSlide2 from '../assets/casas/ellen/02.jpg'
+import ellenSlide3 from '../assets/casas/ellen/03.jpg'
+import ellenSlide4 from '../assets/casas/ellen/04.jpg'
+import ellenSlide5 from '../assets/casas/ellen/05.jpg'
 
 export type StatusObra = 'andamento' | 'concluido'
 
@@ -125,68 +140,67 @@ export interface Obra {
 export const obrasData: Obra[] = [
   {
     id: 8,
-    titulo: 'Casa da Ivaneide',
-    localizacao: 'Nossa Senhora do Socorro/SE',
-    status: 'andamento',
+    titulo: 'Casa da Dona Ninha',
+    localizacao: 'Aracaju/SE',
+    status: 'concluido',
     ano: 2026,
     imagemAntes: antesNinha,
     imagemDepois: depoisNinha,
-    fotosAntes: [ninhaAntes1, ninhaAntes2, ninhaAntes3, ninhaAntes4, ninhaAntes5, ninhaAntes6],
+    historia: [
+      'Dona Ninha sempre teve o cuidado com a família como parte central de sua vida. Desde muito jovem, assumiu grandes responsabilidades e construiu sua história com força, dedicação e generosidade.',
+      'Na casa herdada do pai, onde hoje vive com a família, algumas condições ainda dificultavam a rotina, como o banheiro localizado no fundo do quintal e a falta de um portão adequado, comprometendo o conforto e a segurança.',
+      'O Projeto TransformAção abraçou essa história e realizou melhorias que trouxeram mais praticidade, proteção e dignidade ao dia a dia. Mais do que uma reforma, a obra representou o reconhecimento de uma vida inteira dedicada a cuidar de quem está ao seu redor.',
+    ],
+    fotosAntes: [ninhaAntes1, ninhaAntes2, ninhaAntes3, ninhaAntes4, ninhaAntes5, ninhaAntes6, ninhaAntes7],
+    fotosDepois: [ninhaDepois1, ninhaDepois2, ninhaDepois3, ninhaDepois4, ninhaDepois5, ninhaDepois6, ninhaDepois7],
   },
   {
     id: 7,
     titulo: 'Casa da Mirian',
-    localizacao: 'Nossa Senhora do Socorro/SE',
+    localizacao: 'Nossa Sra. do Socorro/SE',
     status: 'concluido',
     ano: 2025,
     imagemAntes: antesMirian,
     imagemDepois: depoisMirian,
-    fotosAntes: [mirianAntes1, mirianAntes2, mirianAntes3, mirianAntes4, mirianAntes5],
-    fotosDepois: [mirianDepois1, mirianDepois2, mirianDepois3, mirianDepois4, mirianDepois5],
+    historia: [
+      'Mirian é mãe de sete filhos e, ao lado do marido, sempre lutou para garantir o sustento e o bem-estar da família. Com o afastamento dele do trabalho por motivos de saúde, os desafios aumentaram e tornaram ainda mais difícil manter uma rotina com segurança e dignidade.',
+      'A casa também precisava de cuidados importantes, com problemas estruturais que comprometiam o conforto e a qualidade de vida de todos.',
+      'O Projeto TransformAção abraçou essa família e, com o apoio de voluntários, parceiros e doadores, tornou possível uma nova realidade. Mais do que melhorias na casa, a obra trouxe segurança, acolhimento e esperança para uma família que nunca deixou de acreditar em dias melhores.',
+    ],
+    fotosAntes: [mirianAntes1, mirianAntes2, mirianAntes3, mirianAntes4, mirianAntes5, mirianAntes6, mirianAntes7],
+    fotosDepois: [mirianDepois1, mirianDepois2, mirianDepois3, mirianDepois4, mirianDepois5, mirianDepois6, mirianDepois7, mirianDepois8, mirianDepois9],
   },
   {
     id: 6,
     titulo: 'Casa da Michelle',
-    localizacao: 'Nossa Senhora do Socorro/SE',
+    localizacao: 'Nossa Sra. do Socorro/SE',
     status: 'concluido',
     ano: 2024,
     imagemAntes: antesMichelle,
     imagemDepois: depoisMichelle,
     historia: [
-      'Michelle conhece a vida pela luta. Mãe solteira de cinco filhos, ela acordava todos os dias carregando o peso da responsabilidade de proteger, alimentar e cuidar da sua família, mesmo quando quase nada lhe sobrava. Com uma renda de apenas R$ 800, ela fazia o impossível para que os filhos nunca perdessem a esperança.',
-      'Mas a realidade era cruel.',
-      'A família vivia em um barraco, sem estrutura, sem segurança e sem as condições mínimas para oferecer conforto às crianças. Quando a chuva chegava, vinha também o medo. Medo da água invadindo, do frio, da insegurança e da incerteza sobre o amanhã.',
-      'Ainda assim, Michelle nunca desistiu.',
-      'Porque o amor de uma mãe consegue resistir até nos cenários mais difíceis.',
-      'Foi então que o Projeto Transformação encontrou essa família e decidiu abraçar uma das maiores missões da sua história: construir, do zero, uma casa para Michelle e seus filhos. Não seria apenas levantar paredes. Seria construir dignidade, proteção e um novo começo para seis vidas que precisavam urgentemente de esperança.',
-      'Cada tijolo colocado carregava solidariedade. Cada voluntário que chegou para ajudar fazia parte da realização de um sonho que, por muito tempo, parecia impossível. A corrida contra o tempo antes do período de chuvas não era apenas sobre terminar uma obra — era sobre garantir que aquelas crianças finalmente tivessem um lar seguro para dormir.',
-      'A casa de Michelle passou a representar muito mais do que concreto e telhado. Representou a força de uma mãe que nunca desistiu dos filhos e a união de pessoas que acreditaram que transformar vidas ainda vale a pena.',
-      'Porque, às vezes, uma casa não muda apenas um endereço. Ela muda o destino de uma família inteira.',
+      'Michelle é mãe solo de cinco filhos e sempre enfrentou grandes dificuldades para cuidar da família. Eles viviam em um barraco sem estrutura e segurança, onde o período de chuvas tornava a rotina ainda mais difícil e preocupante.',
+      'O Projeto TransformAção abraçou essa história e assumiu um dos maiores desafios de sua trajetória: construir, do zero, uma casa para Michelle e seus filhos. Cada etapa da obra foi movida pela solidariedade e pelo desejo de oferecer proteção, conforto e dignidade à família.',
+      'Mais do que um novo endereço, a casa representou um recomeço e a certeza de que a união de muitas pessoas pode transformar, de forma definitiva, a realidade de uma família inteira.',
     ],
     fotosAntes: [michelleAntes1, michelleAntes2, michelleAntes3],
-    fotosDepois: [michelleDepois1, michelleDepois2],
+    fotosDepois: [michelleDepois1, michelleDepois2, michelleDepois3, michelleDepois4],
   },
   {
     id: 5,
     titulo: 'Casa da Ana',
-    localizacao: 'Nossa Senhora do Socorro/SE',
+    localizacao: 'Nossa Sra. do Socorro/SE',
     status: 'concluido',
     ano: 2023,
     imagemAntes: antesAna,
     imagemDepois: depoisAna,
     historia: [
-      'Ana é uma mulher simples, mas dona de uma força imensa. Mãe, avó e o coração de uma família que aprendeu a sobreviver mesmo diante das maiores dificuldades. Dentro de uma casa pequena, ela dividia muito mais do que paredes: dividia amor, cuidado e esperança.',
-      'A realidade era dura. A casa tinha apenas um quarto e uma única cama de casal. Ana dormia ao lado da filha mais nova e da neta, enquanto a filha mais velha improvisava a própria vida dormindo em um sofá na sala. O espaço era apertado, as condições difíceis e, por muitas vezes, parecia impossível mudar aquele cenário.',
-      'Mas, mesmo em meio às limitações, Ana nunca deixou faltar acolhimento dentro de casa. Porque existem pessoas que, mesmo tendo pouco, conseguem oferecer tudo o que têm em forma de amor.',
-      'Foi então que o Projeto Transformação entrou nessa história. Não apenas para levantar paredes ou reformar cômodos, mas para devolver dignidade a uma família que há muito tempo sonhava com dias melhores. Cada melhoria realizada carregava um significado profundo: mais conforto, mais segurança e a chance de recomeçar.',
-      'A reforma da casa de Ana se tornou muito mais do que uma obra. Se tornou símbolo de solidariedade, esperança e humanidade. Porque transformar uma casa é importante. Mas transformar a realidade de uma mãe que luta diariamente pelas filhas e pela neta é algo que toca para sempre o coração de todos que fazem parte dessa história.',
+      'Ana é mãe, avó e o coração de uma família que sempre enfrentou as dificuldades com união e muito amor. Em uma casa pequena, dividia o único quarto e a única cama com a filha mais nova e a neta, enquanto a filha mais velha dormia no sofá da sala.',
+      'O Projeto TransformAção chegou para mudar essa realidade, trazendo mais conforto, segurança e dignidade para toda a família.',
+      'Mais do que reformar a casa, essa obra representou a possibilidade de viver com mais tranquilidade e mostrou como a solidariedade pode transformar, de forma concreta, a vida de quem mais precisa.',
     ],
-    fotosAntes: [anaAntes1],
-    fotosDepois: [
-      anaDepois1, anaDepois2, anaDepois3, anaDepois4, anaDepois5,
-      anaDepois6, anaDepois7, anaDepois8, anaDepois9, anaDepois10,
-      anaDepois11, anaDepois12
-    ],
+    fotosAntes: [anaAntes1, anaAntes2, anaAntes3, anaAntes4, anaAntes5, anaAntes6],
+    fotosDepois: [anaDepois1, anaDepois2, anaDepois3, anaDepois4, anaDepois5, anaDepois6, anaDepois7, anaDepois8],
   },
   {
     id: 4,
@@ -197,22 +211,12 @@ export const obrasData: Obra[] = [
     imagemAntes: antesPequenino,
     imagemDepois: depoisPequenino,
     historia: [
-      'Durante muitos anos, a Casa do Pequenino acolhe crianças com amor, dedicação e cuidado. Mas, mesmo sendo um espaço tão importante para tantas famílias, ainda não existia ali um ambiente pensado especialmente para que as crianças pudessem brincar, imaginar, aprender e simplesmente viver a infância da forma como ela merece ser vivida.',
-      'Foi olhando para essa necessidade que o Projeto Transformação decidiu agir.',
-      'Assim nasceu a reforma da brinquedoteca da Casa do Pequenino. Um espaço criado não apenas com tintas, móveis e brinquedos, mas com carinho, esperança e o desejo de proporcionar momentos felizes para centenas de crianças que passam pela instituição todos os anos.',
-      'Cada detalhe foi pensado para transformar aquele ambiente em um lugar de acolhimento, desenvolvimento e alegria. Porque brincar também é cuidado. Brincar também é educação. E oferecer um espaço digno para a infância é investir diretamente no futuro dessas crianças.',
-      'Hoje, a brinquedoteca representa muito mais do que uma sala nova. Representa a realização de um sonho antigo da instituição e a certeza de que pequenas transformações podem gerar impactos gigantes na vida de muitas crianças.',
+      'A Casa do Pequenino já era um espaço de acolhimento e cuidado para muitas crianças, mas ainda faltava um ambiente pensado especialmente para brincar, aprender e viver a infância com mais alegria.',
+      'O Projeto TransformAção abraçou essa necessidade e tornou possível a reforma da brinquedoteca, criando um espaço mais acolhedor, seguro e adequado ao desenvolvimento das crianças.',
+      'Mais do que uma nova sala, a brinquedoteca representa a realização de um sonho da instituição e a certeza de que investir na infância é também transformar futuros.',
     ],
-    fotosAntes: [
-      pequeninoAntes1, pequeninoAntes2, pequeninoAntes3, pequeninoAntes4,
-      pequeninoAntes5, pequeninoAntes6, pequeninoAntes7, pequeninoAntes8,
-      pequeninoAntes9, pequeninoAntes10, pequeninoAntes11,
-    ],
-    fotosDepois: [
-      pequeninoDepois1, pequeninoDepois2, pequeninoDepois3, pequeninoDepois4,
-      pequeninoDepois5, pequeninoDepois6, pequeninoDepois7,
-      pequeninoDepois9, pequeninoDepois10,
-    ],
+    fotosAntes: [pequeninoAntes1, pequeninoAntes2, pequeninoAntes3, pequeninoAntes4],
+    fotosDepois: [pequeninoDepois1, pequeninoDepois2, pequeninoDepois3, pequeninoDepois4],
   },
   {
     id: 3,
@@ -223,18 +227,11 @@ export const obrasData: Obra[] = [
     imagemAntes: antesApeDosGemeos,
     imagemDepois: depoisApeDosGemeos,
     historia: [
-      'Duas vidas marcadas pela perda precoce da mãe. E um apartamento simples, recebido como herança, que deveria representar segurança e recomeço… mas que, com o passar do tempo, acabou se tornando o retrato das dificuldades que eles enfrentavam.',
-      'Sozinhos e acolhidos institucionalmente em uma Casa-Lar, os irmãos carregavam não apenas a dor da ausência, mas também a incerteza sobre o futuro. O apartamento onde poderiam reconstruir suas vidas estava em condições precárias, sem estrutura adequada, sem conforto e sem dignidade para recebê-los de volta.',
-      'Mas a história deles não terminou na dor.',
-      'Foi então que o Projeto Transformação decidiu abraçar essa causa. Mais do que uma reforma, nasceu uma missão: transformar aquele espaço em um verdadeiro lar. Um lugar onde os gêmeos pudessem finalmente recomeçar, criar novas memórias e seguir suas vidas com mais esperança.',
-      'Cada parede recuperada representava cuidado. Cada móvel conquistado simbolizava amor. Cada pessoa que ajudou passou a fazer parte da reconstrução não apenas de um apartamento, mas da história de dois jovens que precisavam voltar a acreditar no amanhã.',
-      'Com o acompanhamento e autorização da Defensoria Pública, a reforma foi acontecendo aos poucos, movida pela solidariedade de pessoas que entenderam que ninguém deveria enfrentar a vida sem ter um lugar digno para chamar de casa.',
-      'Porque, às vezes, transformar um lar é também devolver pertencimento, esperança e a chance de sonhar novamente.',
+      'O apartamento dos gêmeos carregava uma história de afeto, memória e a possibilidade de um novo começo. Recebido como herança após a perda da mãe, o imóvel poderia se tornar o lar onde os irmãos reconstruiriam suas vidas, mas precisava de uma transformação para oferecer conforto, segurança e dignidade.',
+      'O Projeto TransformAção abraçou essa história e, com o acompanhamento da Defensoria Pública, transformou o espaço em um verdadeiro lar. Cada melhoria representou cuidado, acolhimento e a possibilidade de construir novas memórias. Mais do que reformar um apartamento, essa obra ajudou a devolver aos irmãos pertencimento, esperança e a chance de recomeçar.',
     ],
-    fotosAntes: [
-      gemeosAntes1, gemeosAntes2, gemeosAntes3, gemeosAntes4, gemeosAntes5,
-      gemeosAntes6, gemeosAntes7, gemeosAntes8,
-    ],
+    fotosAntes: [gemeosAntes1, gemeosAntes2, gemeosAntes3, gemeosAntes4],
+    fotosDepois: [gemeosDepois1, gemeosDepois2, gemeosDepois3, gemeosDepois4],
   },
   {
     id: 2,
@@ -245,18 +242,25 @@ export const obrasData: Obra[] = [
     imagemAntes: antesVeronica,
     imagemDepois: depoisVeronica,
     historia: [
-      'Verônica é mãe de quatro filhas. Uma mulher forte, daquelas que aprenderam a enfrentar a vida mesmo quando tudo parecia difícil demais. Entre desafios, contas, preocupações e dias cansativos, ela nunca deixou faltar amor dentro de casa. Mesmo com tantas dificuldades, sempre encontrou forças para cuidar das filhas e seguir em frente.',
-      'Mas a realidade da família era dura. A casa, marcada pelo tempo e pelas limitações, já não oferecia o conforto e a segurança que elas mereciam. Em muitos momentos, Verônica precisou esconder o próprio cansaço para continuar sendo abrigo, proteção e esperança para suas meninas.',
-      'Ainda assim, ela nunca desistiu. Porque mãe não desiste.',
-      'E foi nesse cenário de luta silenciosa que o Projeto Transformação chegou através do Grupo de Apoio a Família – GAF. Não apenas para reformar uma casa, mas para devolver dignidade a uma mãe que passou a vida inteira colocando as filhas em primeiro lugar. Cada parede reconstruída, cada melhoria realizada e cada ajuda recebida passou a carregar um significado muito maior: mostrar para Verônica que ela não está sozinha.',
-      'Hoje, essa reforma representa recomeço. Representa noites mais tranquilas, sonhos renovados e a esperança de dias melhores para uma mãe que já venceu tantas batalhas sem nunca perder o amor dentro do peito.',
-      'Porque transformar uma casa é importante. Mas transformar a vida de uma família inteira é algo que fica para sempre.'
+      'Verônica é mãe de três filhas e, mesmo diante de muitas dificuldades, nunca deixou faltar amor, cuidado e força dentro de casa. Entre desafios e preocupações, sempre colocou as meninas em primeiro lugar e seguiu em frente, mesmo quando a casa já não oferecia o conforto e a segurança que a família precisava.',
+      'Foi nesse momento que o Projeto TransformAção chegou, não apenas para reformar um lar, mas para trazer mais dignidade, proteção e esperança para Verônica e suas filhas.',
+      'Hoje, a nova casa representa um recomeço: dias mais tranquilos, sonhos renovados e a certeza de que, quando a solidariedade encontra uma história de luta, a transformação vai muito além das paredes.',
     ],
-    fotosAntes: [
-      veronicaAntes1, veronicaAntes2, veronicaAntes3, veronicaAntes4, veronicaAntes5,
+    fotosAntes: [veronicaAntes1, veronicaAntes2, veronicaAntes3, veronicaAntes4, veronicaAntes5],
+    fotosDepois: [veronicaDepois1, veronicaDepois2, veronicaDepois3, veronicaDepois4, veronicaDepois5, veronicaDepois6, veronicaDepois7],
+  },
+  {
+    id: 1,
+    titulo: 'Casa da Ellen',
+    localizacao: 'Aracaju/SE',
+    status: 'concluido',
+    ano: 2020,
+    imagemAntes: antesEllen,
+    imagemDepois: depoisEllen,
+    historia: [
+      'Ellen sempre acreditou na educação como caminho para transformar sua vida. Estudiosa e dedicada, conquistou uma bolsa de estudos, mas ainda sonhava com algo simples: ter um quarto só seu, onde pudesse estudar, descansar e seguir construindo seu futuro.',
+      'Com o Projeto TransformAção, esse sonho ganhou forma. A reforma trouxe mais dignidade, conforto e esperança para Ellen e sua família, mostrando que, quando muitas mãos se unem, sonhos podem se tornar realidade.',
     ],
-    fotosDepois: [
-      veronicaDepois1, veronicaDepois2, veronicaDepois3, veronicaDepois4, veronicaDepois5,
-    ],
+    fotosDepois: [ellenSlide1, ellenSlide2, ellenSlide3, ellenSlide4, ellenSlide5],
   },
 ]
